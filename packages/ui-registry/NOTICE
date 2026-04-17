@@ -1,0 +1,18 @@
+saaslens ui-registry
+
+This package is vendored from shadcn-storybook-registry, developed by Wondermove-Inc.
+It contains shadcn/ui components with Storybook stories for React 18/19.
+
+Original source: https://github.com/Wondermove-Inc/shadcn-storybook-registry
+License: MIT (see LICENSE)
+
+Components in this package may be further derived from:
+- shadcn/ui (MIT, https://github.com/shadcn-ui/ui)
+- Radix UI primitives (MIT, https://github.com/radix-ui/primitives)
+
+Third-party transitive dependency license declarations
+------------------------------------------------------
+
+- jszip (via exceljs): licensed under "MIT OR GPL-3.0-or-later" (SPDX).
+  This project selects the MIT option, consistent with the saaslens MIT license.
+  Source: https://github.com/Stuk/jszip

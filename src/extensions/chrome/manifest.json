@@ -1,0 +1,49 @@
+{
+  "manifest_version": 3,
+  "name": "SaaS Management Platform",
+  "version": "1.0.0",
+  "description": "Enterprise SaaS usage tracking and security monitoring. Detects login events and provides password breach alerts.",
+  "update_url": "https://clients2.google.com/service/update2/crx",
+  "minimum_chrome_version": "109",
+  "permissions": [
+    "storage",
+    "tabs",
+    "alarms",
+    "scripting",
+    "cookies",
+    "notifications",
+    "webNavigation"
+  ],
+  "host_permissions": ["<all_urls>"],
+  "optional_host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.svg",
+      "48": "icons/icon48.svg",
+      "128": "icons/icon128.svg"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.svg",
+    "48": "icons/icon48.svg",
+    "128": "icons/icon128.svg"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["*.js", "icons/*", "blocked.html", "onboarding.html"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  "storage": {
+    "managed_schema": "policy_templates/managed_storage.json"
+  }
+}

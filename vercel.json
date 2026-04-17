@@ -1,0 +1,22 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "npm run build",
+  "devCommand": "npm run dev",
+  "installCommand": "npm ci",
+  "framework": "nextjs",
+  "functions": {
+    "src/app/api/**/*.ts": {
+      "maxDuration": 60
+    }
+  },
+  "crons": [
+    {
+      "path": "/api/cron/review-apps-scan",
+      "schedule": "0 3 * * *"
+    },
+    {
+      "path": "/api/cron/auto-renewal",
+      "schedule": "0 1 * * *"
+    }
+  ]
+}

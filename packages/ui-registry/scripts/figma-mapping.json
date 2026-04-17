@@ -1,0 +1,27 @@
+{
+  "button-story": {
+    "url": "https://www.figma.com/file/Q7c53iozMSDxpPnunZsEM6/shadcn-ui-kit-for-Figma---August-2025?node-id=580-9181",
+    "nodeId": "580-9181",
+    "componentSetName": "Button"
+  },
+  "card-story": {
+    "url": "https://www.figma.com/file/Q7c53iozMSDxpPnunZsEM6/shadcn-ui-kit-for-Figma---August-2025?node-id=CARD_NODE_ID",
+    "nodeId": "CARD_NODE_ID",
+    "componentSetName": "Card"
+  },
+  "input-story": {
+    "url": "https://www.figma.com/file/Q7c53iozMSDxpPnunZsEM6/shadcn-ui-kit-for-Figma---August-2025?node-id=INPUT_NODE_ID",
+    "nodeId": "INPUT_NODE_ID",
+    "componentSetName": "Input"
+  },
+  "dialog-story": {
+    "url": "https://www.figma.com/file/Q7c53iozMSDxpPnunZsEM6/shadcn-ui-kit-for-Figma---August-2025?node-id=DIALOG_NODE_ID",
+    "nodeId": "DIALOG_NODE_ID",
+    "componentSetName": "Dialog"
+  },
+  "form-story": {
+    "url": "https://www.figma.com/file/Q7c53iozMSDxpPnunZsEM6/shadcn-ui-kit-for-Figma---August-2025?node-id=FORM_NODE_ID",
+    "nodeId": "FORM_NODE_ID",
+    "componentSetName": "Form"
+  }
+}

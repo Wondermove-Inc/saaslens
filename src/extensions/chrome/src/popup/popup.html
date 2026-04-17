@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shade SaaS Manager</title>
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --success: #22c55e;
+      --warning: #f59e0b;
+      --danger: #ef4444;
+      --gray-50: #f9fafb;
+      --gray-100: #f3f4f6;
+      --gray-200: #e5e7eb;
+      --gray-300: #d1d5db;
+      --gray-500: #6b7280;
+      --gray-600: #4b5563;
+      --gray-700: #374151;
+      --gray-900: #111827;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      width: 360px;
+      padding: 16px;
+      margin: 0;
+      background: white;
+      color: var(--gray-900);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .title {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--gray-900);
+    }
+
+    .toggle {
+      position: relative;
+      display: inline-block;
+      width: 44px;
+      height: 24px;
+    }
+
+    .toggle input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: var(--gray-300);
+      transition: .3s;
+      border-radius: 24px;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 18px;
+      width: 18px;
+      left: 3px;
+      bottom: 3px;
+      background-color: white;
+      transition: .3s;
+      border-radius: 50%;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    }
+
+    input:checked + .slider {
+      background-color: var(--primary);
+    }
+
+    input:checked + .slider:before {
+      transform: translateX(20px);
+    }
+
+    /* Section Styles */
+    .section {
+      margin-bottom: 16px;
+      padding: 12px;
+      background-color: var(--gray-50);
+      border-radius: 8px;
+      border: 1px solid var(--gray-200);
+    }
+
+    .section-title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--gray-700);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .section-title svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    /* Form Styles */
+    .form-group {
+      margin-bottom: 12px;
+    }
+
+    .form-group:last-child {
+      margin-bottom: 0;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 4px;
+      font-weight: 500;
+      font-size: 13px;
+      color: var(--gray-700);
+    }
+
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 8px 10px;
+      border: 1px solid var(--gray-300);
+      border-radius: 6px;
+      font-size: 13px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    input[type="text"]:focus, input[type="password"]:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+
+    input[readonly] {
+      background-color: var(--gray-100);
+      color: var(--gray-600);
+    }
+
+    /* Button Styles */
+    .button {
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      border-radius: 6px;
+      transition: background-color 0.2s;
+    }
+
+    .button:hover {
+      background-color: var(--primary-dark);
+    }
+
+    .button:disabled {
+      background-color: var(--gray-300);
+      cursor: not-allowed;
+    }
+
+    .button-secondary {
+      background-color: white;
+      color: var(--gray-700);
+      border: 1px solid var(--gray-300);
+    }
+
+    .button-secondary:hover {
+      background-color: var(--gray-50);
+    }
+
+    .button-success {
+      background-color: var(--success);
+    }
+
+    .button-success:hover {
+      background-color: #16a34a;
+    }
+
+    .button-sm {
+      padding: 6px 12px;
+      font-size: 12px;
+    }
+
+    /* Status Section */
+    .status-section {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .status-card {
+      background: white;
+      border: 1px solid var(--gray-200);
+      border-radius: 8px;
+      padding: 10px 12px;
+    }
+
+    .status-card-label {
+      font-size: 11px;
+      color: var(--gray-500);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    .status-card-value {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .status-active {
+      color: var(--success);
+    }
+
+    .status-disabled {
+      color: var(--gray-500);
+    }
+
+    .status-warning {
+      color: var(--warning);
+    }
+
+    .status-danger {
+      color: var(--danger);
+    }
+
+    /* Sync Section */
+    .sync-section {
+      margin-bottom: 16px;
+    }
+
+    .sync-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--gray-100);
+    }
+
+    .sync-row:last-child {
+      border-bottom: none;
+    }
+
+    .sync-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sync-label {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--gray-700);
+    }
+
+    .sync-time {
+      font-size: 11px;
+      color: var(--gray-500);
+    }
+
+    .sync-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 11px;
+      font-weight: 500;
+    }
+
+    .sync-badge-success {
+      background-color: #dcfce7;
+      color: #166534;
+    }
+
+    .sync-badge-pending {
+      background-color: #fef3c7;
+      color: #92400e;
+    }
+
+    .sync-badge-error {
+      background-color: #fee2e2;
+      color: #991b1b;
+    }
+
+    /* Tabs */
+    .tabs {
+      display: flex;
+      border-bottom: 1px solid var(--gray-200);
+      margin-bottom: 12px;
+    }
+
+    .tab {
+      padding: 8px 16px;
+      cursor: pointer;
+      border: none;
+      background: none;
+      font-size: 13px;
+      color: var(--gray-500);
+      border-bottom: 2px solid transparent;
+      transition: color 0.2s;
+    }
+
+    .tab:hover {
+      color: var(--gray-700);
+    }
+
+    .tab.active {
+      color: var(--primary);
+      border-bottom-color: var(--primary);
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    /* Usage Section */
+    .usage-section {
+      margin-top: 0;
+      padding: 0;
+      background: transparent;
+      border: none;
+    }
+
+    .usage-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .usage-title {
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--gray-700);
+    }
+
+    .usage-total {
+      font-size: 12px;
+      color: var(--gray-500);
+    }
+
+    .usage-list {
+      max-height: 140px;
+      overflow-y: auto;
+    }
+
+    .usage-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 6px 0;
+      border-bottom: 1px solid var(--gray-100);
+    }
+
+    .usage-item:last-child {
+      border-bottom: none;
+    }
+
+    .usage-domain {
+      font-size: 12px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 180px;
+      color: var(--gray-700);
+    }
+
+    .usage-time {
+      font-size: 12px;
+      color: var(--gray-500);
+      white-space: nowrap;
+    }
+
+    .usage-bar {
+      width: 100%;
+      height: 3px;
+      background-color: var(--gray-200);
+      border-radius: 2px;
+      margin-top: 4px;
+    }
+
+    .usage-bar-fill {
+      height: 100%;
+      background-color: var(--primary);
+      border-radius: 2px;
+    }
+
+    .no-data {
+      text-align: center;
+      color: var(--gray-500);
+      font-size: 12px;
+      padding: 20px 0;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 16px;
+      padding-top: 12px;
+      border-top: 1px solid var(--gray-200);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .version {
+      font-size: 11px;
+      color: var(--gray-500);
+    }
+
+    /* Icon helpers */
+    .icon {
+      display: inline-flex;
+      width: 16px;
+      height: 16px;
+    }
+
+    /* Animations */
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .spinning {
+      animation: spin 1s linear infinite;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <div class="header">
+    <div class="title">Shade SaaS Manager</div>
+    <label class="toggle" id="enabled-toggler">
+      <input type="checkbox" id="enabled-toggle" checked>
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <!-- Status Cards -->
+  <div class="status-section">
+    <div class="status-card">
+      <div class="status-card-label">Status</div>
+      <div class="status-card-value" id="status-text">Active</div>
+    </div>
+    <div class="status-card">
+      <div class="status-card-label">Blocked Sites</div>
+      <div class="status-card-value" id="blocked-count">0</div>
+    </div>
+    <div class="status-card">
+      <div class="status-card-label">Tracked Sites</div>
+      <div class="status-card-value" id="tracked-count">0</div>
+    </div>
+    <div class="status-card">
+      <div class="status-card-label">Today's Time</div>
+      <div class="status-card-value" id="today-time">0h 0m</div>
+    </div>
+  </div>
+
+  <!-- Sync Status Section -->
+  <div class="section sync-section">
+    <div class="section-title">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+      </svg>
+      Sync Status
+    </div>
+    <div class="sync-row">
+      <div class="sync-info">
+        <span class="sync-label">Blacklist</span>
+        <span class="sync-time" id="blacklist-sync-time">Last sync: Never</span>
+      </div>
+      <div>
+        <span class="sync-badge sync-badge-pending" id="blacklist-sync-badge">Pending</span>
+      </div>
+    </div>
+    <div class="sync-row">
+      <div class="sync-info">
+        <span class="sync-label">Whitelist</span>
+        <span class="sync-time" id="whitelist-sync-time">Last sync: Never</span>
+      </div>
+      <div>
+        <span class="sync-badge sync-badge-pending" id="whitelist-sync-badge">Pending</span>
+      </div>
+    </div>
+    <div class="sync-row">
+      <div class="sync-info">
+        <span class="sync-label">Usage Data</span>
+        <span class="sync-time" id="usage-sync-time">Last sync: Never</span>
+      </div>
+      <div>
+        <span class="sync-badge sync-badge-pending" id="usage-sync-badge">Pending</span>
+      </div>
+    </div>
+    <div class="sync-row">
+      <div class="sync-info">
+        <span class="sync-label">Browsing Logs</span>
+        <span class="sync-time" id="browsing-sync-time">Last sync: Never</span>
+      </div>
+      <div>
+        <span class="sync-badge sync-badge-pending" id="browsing-sync-badge">Pending</span>
+      </div>
+    </div>
+    <div class="sync-row">
+      <div class="sync-info">
+        <span class="sync-label">Block Logs</span>
+        <span class="sync-time" id="block-sync-time">Last sync: Never</span>
+      </div>
+      <div>
+        <span class="sync-badge sync-badge-pending" id="block-sync-badge">Pending</span>
+      </div>
+    </div>
+    <div style="text-align: center; margin-top: 10px;">
+      <button id="sync-all-button" class="button button-sm button-secondary">
+        Sync All Now
+      </button>
+    </div>
+  </div>
+
+  <!-- Settings Section (removed - config injected at build time) -->
+
+  <!-- Time Tracking Section -->
+  <div class="section">
+    <div class="section-title">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+      SaaS Usage
+    </div>
+
+    <div class="usage-section">
+      <div class="tabs">
+        <button class="tab active" data-tab="today">Today</button>
+        <button class="tab" data-tab="weekly">This Week</button>
+      </div>
+
+      <div id="today-content" class="tab-content active">
+        <div class="usage-header">
+          <span class="usage-title">Today's Usage</span>
+          <span class="usage-total" id="today-total">0h 0m</span>
+        </div>
+        <div class="usage-list" id="today-list">
+          <div class="no-data">No usage data yet</div>
+        </div>
+      </div>
+
+      <div id="weekly-content" class="tab-content">
+        <div class="usage-header">
+          <span class="usage-title">Weekly Usage</span>
+          <span class="usage-total" id="weekly-total">0h 0m</span>
+        </div>
+        <div class="usage-list" id="weekly-list">
+          <div class="no-data">No usage data yet</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <span class="version">v<span id="version-text">1.0.0</span></span>
+    <a href="#" id="admin-link" style="font-size: 12px; color: var(--primary); text-decoration: none;">Open Admin Dashboard</a>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

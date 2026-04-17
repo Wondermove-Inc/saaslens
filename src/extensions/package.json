@@ -1,0 +1,14 @@
+{
+  "name": "smp-extensions",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Extension build dependencies for SMP",
+  "dependencies": {
+    "@types/chrome": "^0.0.246",
+    "archiver": "^7.0.1",
+    "copy-webpack-plugin": "^11.0.0",
+    "ts-loader": "^9.4.4",
+    "typescript": "^5.9.2",
+    "webpack": "^5.88.2"
+  }
+}

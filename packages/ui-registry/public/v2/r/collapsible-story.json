@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "collapsible-story",
+  "type": "registry:component",
+  "title": "Collapsible Story",
+  "author": "Lloyd Richards <lloyd.d.richards@gmail.com>",
+  "description": "Interactive Storybook stories demonstrating collapsible component usage and variants",
+  "dependencies": ["lucide-react"],
+  "registryDependencies": ["collapsible"],
+  "files": [
+    {
+      "path": "src/registry/atoms/collapsible-story/collapsible.stories.tsx",
+      "content": "\"use client\";\n\nimport { Button } from \"@/components/ui/button\";\nimport {\n  Collapsible,\n  CollapsibleContent,\n  CollapsibleTrigger,\n} from \"@/components/ui/collapsible\";\nimport type { Meta, StoryObj } from \"@storybook/nextjs-vite\";\nimport { ChevronsUpDown } from \"lucide-react\";\nimport * as React from \"react\";\nimport { expect, userEvent } from \"storybook/test\";\n\nexport function CollapsibleDemo() {\n  const [isOpen, setIsOpen] = React.useState(false);\n\n  return (\n    <Collapsible\n      open={isOpen}\n      onOpenChange={setIsOpen}\n      className=\"flex w-[350px] flex-col gap-2\"\n    >\n      <div className=\"flex items-center justify-between gap-4 px-4\">\n        <h4 className=\"text-sm font-semibold\">\n          @peduarte starred 3 repositories\n        </h4>\n        <CollapsibleTrigger asChild>\n          <Button variant=\"ghost\" size=\"icon\" className=\"size-8\">\n            <ChevronsUpDown />\n            <span className=\"sr-only\">Toggle</span>\n          </Button>\n        </CollapsibleTrigger>\n      </div>\n      <div className=\"rounded-md border px-4 py-2 font-mono text-sm\">\n        @radix-ui/primitives\n      </div>\n      <CollapsibleContent className=\"flex flex-col gap-2\">\n        <div className=\"rounded-md border px-4 py-2 font-mono text-sm\">\n          @radix-ui/colors\n        </div>\n        <div className=\"rounded-md border px-4 py-2 font-mono text-sm\">\n          @stitches/react\n        </div>\n      </CollapsibleContent>\n    </Collapsible>\n  );\n}\n\n/**\n * An interactive component which expands/collapses a panel.\n */\nconst meta = {\n  title: \"ui/Collapsible\",\n  component: Collapsible,\n  tags: [\"autodocs\"],\n  parameters: {\n    layout: \"centered\",\n  },\n  excludeStories: /.*Demo$/,\n} satisfies Meta<typeof Collapsible>;\n\nexport default meta;\n\ntype Story = StoryObj<typeof meta>;\n\n/**\n * The default form of the collapsible with repository list example.\n */\nexport const Default: Story = {\n  render: () => <CollapsibleDemo />,\n};\n\nexport const ShouldOpenClose: Story = {\n  name: \"when collapsible trigger is clicked, should show content\",\n  tags: [\"!dev\", \"!autodocs\"],\n  render: () => <CollapsibleDemo />,\n  play: async ({ canvas, step }) => {\n    const trigger = canvas.getByRole(\"button\");\n\n    await step(\"Open the collapsible\", async () => {\n      await userEvent.click(trigger, { delay: 100 });\n      const content = await canvas.findByText(\"@radix-ui/colors\");\n      expect(content).toBeVisible();\n    });\n\n    await step(\"Close the collapsible\", async () => {\n      await userEvent.click(trigger, { delay: 100 });\n      const content = canvas.queryByText(\"@radix-ui/colors\");\n      expect(content).not.toBeInTheDocument();\n    });\n  },\n};\n",
+      "type": "registry:component"
+    }
+  ],
+  "categories": ["atoms", "storybook", "collapsible", "layout"]
+}

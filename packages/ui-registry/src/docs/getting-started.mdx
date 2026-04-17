@@ -1,0 +1,78 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Introduction/Getting Started" />
+
+# Getting Started
+
+Welcome to the **shadcn-storybook-registry**!
+
+이 프로젝트는 shadcn/ui 컴포넌트의 Storybook 스토리를 제공하는 레지스트리입니다.
+
+## Installation
+
+shadcn CLI를 사용하여 원하는 컴포넌트 스토리를 설치할 수 있습니다:
+
+```bash
+npx shadcn@latest add http://localhost:3000/v2/r/button-story.json
+```
+
+## Usage
+
+설치한 스토리 파일을 Storybook에서 바로 사용할 수 있습니다:
+
+```tsx
+import { Button } from "@/components/ui/button";
+
+export default function App() {
+  return <Button variant="default">Click me</Button>;
+}
+```
+
+## Available Components
+
+현재 46개 컴포넌트 스토리가 제공됩니다:
+
+### UI Components (46개)
+- **Form**: Button, Input, Checkbox, Radio, Select, Switch, Textarea, Label
+- **Layout**: Card, Separator, Aspect Ratio, Resizable, Scroll Area
+- **Navigation**: Accordion, Tabs, Breadcrumb, Navigation Menu, Menubar, Sidebar
+- **Overlay**: Dialog, Sheet, Drawer, Popover, Tooltip, Hover Card
+- **Feedback**: Alert, Progress, Skeleton, Sonner (Toast)
+- **Data Display**: Badge, Avatar, Table, Calendar, Date Picker, Chart
+- **Interactive**: Slider, Toggle, Toggle Group, Command, Combobox, Context Menu, Dropdown Menu
+
+### Design Tokens (5개)
+- Color, Typography, Spacing, Shadow, Radius
+
+### Templates (1개)
+- Dashboard Template
+
+## Features
+
+✅ **CSF 3.0 Format**: 최신 Storybook 스토리 형식
+✅ **TypeScript**: 완전한 타입 안전성
+✅ **Light/Dark Mode**: 테마 전환 지원
+✅ **Play Functions**: 자동화된 인터랙션 테스트
+✅ **Args Controls**: 동적 props 조작
+✅ **Accessibility**: WCAG 2.1 AA 준수
+
+## Development
+
+로컬 개발을 위해 다음 명령어를 사용하세요:
+
+```bash
+# Storybook 개발 서버 실행
+npm run storybook
+
+# Registry 빌드
+npm run registry:build
+
+# 테스트 실행
+npm run test
+```
+
+## Resources
+
+- [GitHub Repository](https://github.com/lloydrichards/shadcn-storybook-registry)
+- [shadcn/ui Documentation](https://ui.shadcn.com)
+- [Storybook Documentation](https://storybook.js.org)

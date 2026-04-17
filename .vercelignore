@@ -1,0 +1,17 @@
+# Build caches
+.next
+.serena
+coverage
+
+# Large files
+html/
+docs/draft/
+packages/fleetdm/
+
+# Test output
+test_output.txt
+tests/
+
+# Development
+*.log
+.env*.local
