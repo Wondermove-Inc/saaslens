@@ -68,7 +68,7 @@
     "@radix-ui/react-toast": "^1.2.15",
     "@radix-ui/react-tooltip": "^1.2.8",
     "@refinedev/core": "^5.0.6",
-    "@refinedev/nextjs-router": "^7.0.4",
+    "@refinedev/nextjs-router": "^7.0.5",
     "@refinedev/react-hook-form": "^5.0.3",
     "@refinedev/react-table": "^6.0.1",
     "@tanstack/react-query": "^5.90.12",
