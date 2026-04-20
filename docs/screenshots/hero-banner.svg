@@ -1,0 +1,25 @@
+<svg width="1280" height="640" viewBox="0 0 1280 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1280" y2="640" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#0F0F23"/><stop offset="50%" stop-color="#1a1a3e"/><stop offset="100%" stop-color="#0F0F23"/></linearGradient>
+    <linearGradient id="accentGrad" x1="0" y1="0" x2="400" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#6366F1"/><stop offset="100%" stop-color="#818CF8"/></linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#6366F1" stroke-width="0.3" opacity="0.15"/></pattern>
+  </defs>
+  <rect width="1280" height="640" fill="url(#bgGrad)"/>
+  <rect width="1280" height="640" fill="url(#grid)"/>
+  <circle cx="200" cy="320" r="200" fill="#6366F1" opacity="0.08"/>
+  <circle cx="1080" cy="320" r="200" fill="#818CF8" opacity="0.06"/>
+  <g transform="translate(540, 160) scale(3.5)">
+    <path d="M17.3913 6.35556C15.2217 6.35556 13.0733 6.44138 11.0688 6.60833C9.06437 6.77529 7.24294 7.0201 5.70878 7.32858C4.1746 7.63708 2.9575 8.00348 2.12721 8.40655C1.29695 8.80962 0.869564 9.24151 0.869564 9.67778C0.869565 10.114 1.29695 10.5459 2.12721 10.949C2.9575 11.3521 4.1746 11.7185 5.70878 12.027C7.24294 12.3355 9.06437 12.5803 11.0688 12.7472C12.8227 12.8933 14.6868 12.9773 16.5789 12.9961L17.3913 13V19.6444C15.1074 19.6444 12.846 19.3904 10.736 18.8968C8.62594 18.4032 6.70862 17.6798 5.09369 16.7677C3.47882 15.8556 2.19786 14.7728 1.32388 13.5812C0.449884 12.3895 0 11.1121 0 9.82222C0 8.53235 0.449884 7.25497 1.32388 6.06328C2.19786 4.87165 3.47882 3.7888 5.09369 2.87676C6.70862 1.96468 8.62594 1.24123 10.736 0.747613C12.846 0.254005 15.1074 0 17.3913 0V6.35556Z" fill="#6366F1"/>
+    <path d="M17.3913 19.6444C19.5609 19.6444 21.7093 19.5586 23.7137 19.3917C25.7182 19.2247 27.5396 18.9799 29.0738 18.6714C30.608 18.3629 31.8251 17.9965 32.6554 17.5934C33.4856 17.1904 33.913 16.7585 33.913 16.3222C33.913 15.886 33.4856 15.4541 32.6554 15.051C31.8251 14.6479 30.608 14.2815 29.0738 13.973C27.5396 13.6645 25.7182 13.4197 23.7137 13.2528C21.9598 13.1067 20.0958 13.0227 18.2037 13.004L17.3913 13V6.35556C19.6751 6.35556 21.9366 6.60956 24.0466 7.10317C26.1566 7.59678 28.074 8.32024 29.6889 9.23231C31.3038 10.1444 32.5847 11.2272 33.4587 12.4188C34.3327 13.6105 34.7826 14.8879 34.7826 16.1778C34.7826 17.4677 34.3327 18.745 33.4587 19.9367C32.5847 21.1284 31.3038 22.2112 29.6889 23.1232C28.074 24.0353 26.1566 24.7588 24.0466 25.2524C21.9366 25.746 19.6751 26 17.3913 26V19.6444Z" fill="#818CF8"/>
+  </g>
+  <text x="640" y="330" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="700" fill="white" letter-spacing="-2">saaslens</text>
+  <text x="640" y="390" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="24" fill="#A5B4FC" letter-spacing="0.5">Open-source SaaS spend intelligence platform</text>
+  <rect x="540" y="420" width="200" height="2" rx="1" fill="url(#accentGrad)" opacity="0.6"/>
+  <g font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#C7D2FE">
+    <rect x="280" y="455" width="160" height="36" rx="18" fill="#6366F1" opacity="0.15" stroke="#6366F1" stroke-width="1" stroke-opacity="0.3"/><text x="360" y="478" text-anchor="middle">Payment Matching</text>
+    <rect x="470" y="455" width="140" height="36" rx="18" fill="#6366F1" opacity="0.15" stroke="#6366F1" stroke-width="1" stroke-opacity="0.3"/><text x="540" y="478" text-anchor="middle">Seat Tracking</text>
+    <rect x="640" y="455" width="150" height="36" rx="18" fill="#6366F1" opacity="0.15" stroke="#6366F1" stroke-width="1" stroke-opacity="0.3"/><text x="715" y="478" text-anchor="middle">Cost Analytics</text>
+    <rect x="820" y="455" width="130" height="36" rx="18" fill="#6366F1" opacity="0.15" stroke="#6366F1" stroke-width="1" stroke-opacity="0.3"/><text x="885" y="478" text-anchor="middle">AI Insights</text>
+  </g>
+  <text x="640" y="560" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#6B7280">Self-hosted  |  MIT License  |  No vendor lock-in</text>
+</svg>

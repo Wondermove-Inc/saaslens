@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1440">
+<title>saaslens - Cost Analysis</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; background: #f8f8f8; overflow: hidden; }
+  .card-shadow { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+</style>
+</head>
+<body class="flex h-[900px] w-[1440px]">
+
+<!-- Sidebar -->
+<aside class="w-64 bg-white border-r border-gray-200 flex flex-col flex-shrink-0">
+  <div class="h-14 flex items-center px-5 border-b border-gray-100">
+    <span class="text-xl font-bold text-indigo-500">saaslens</span>
+  </div>
+  <nav class="flex-1 py-4 px-3 space-y-6 text-sm">
+    <div>
+      <div class="flex items-center gap-2 px-2 mb-2"><span class="w-1.5 h-1.5 rounded-full bg-indigo-500"></span><span class="text-xs font-medium text-gray-400 uppercase tracking-wider">Main</span></div>
+      <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        Dashboard
+      </a>
+      <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg bg-indigo-50 text-indigo-600 font-medium">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+        Reports
+      </a>
+    </div>
+    <div>
+      <div class="flex items-center gap-2 px-2 mb-2"><span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span><span class="text-xs font-medium text-gray-400 uppercase tracking-wider">Management</span></div>
+      <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 21h18M3 7h18M5 21V7m14 0v14M9 11h1m4 0h1"/></svg>Teams</a>
+      <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2"/><path d="M1 10h22"/></svg>Subscriptions</a>
+      <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 2v20l8-5 8 5V2z"/></svg>Payments</a>
+      <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>Extensions</a>
+    </div>
+    <div>
+      <div class="flex items-center gap-2 px-2 mb-2"><span class="w-1.5 h-1.5 rounded-full bg-slate-400"></span><span class="text-xs font-medium text-gray-400 uppercase tracking-wider">System</span></div>
+      <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>Integrations</a>
+      <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 01-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>Settings</a>
+    </div>
+  </nav>
+  <div class="p-3 border-t border-gray-100">
+    <div class="flex items-center gap-3 p-2">
+      <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center text-sm font-semibold text-indigo-600">AK</div>
+      <div class="flex-1 min-w-0"><div class="text-sm font-medium text-gray-700 truncate">Alex Kim</div><div class="text-xs text-gray-400 truncate">alex@demo.com</div></div>
+    </div>
+  </div>
+</aside>
+
+<!-- Main Area -->
+<div class="flex-1 flex flex-col min-w-0">
+  <!-- Header -->
+  <header class="h-14 bg-white/80 backdrop-blur-md border-b border-gray-200 flex items-center px-4 gap-3 flex-shrink-0">
+    <div class="flex-1 max-w-md"><div class="flex items-center gap-2 bg-gray-100 rounded-lg px-3 py-2 text-sm text-gray-400"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>Search... <span class="ml-auto text-xs bg-gray-200 px-1.5 py-0.5 rounded">⌘K</span></div></div>
+    <div class="flex items-center gap-2">
+      <button class="p-2 rounded-lg hover:bg-gray-100 text-gray-500 relative"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9M13.73 21a2 2 0 01-3.46 0"/></svg><span class="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full"></span></button>
+      <button class="p-2 rounded-lg hover:bg-gray-100 text-gray-500"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></button>
+      <button class="p-2 rounded-lg hover:bg-gray-100 text-gray-500"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 01-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg></button>
+      <div class="w-px h-6 bg-gray-200 mx-1"></div>
+      <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center text-sm font-semibold text-indigo-600">AK</div>
+    </div>
+  </header>
+
+  <!-- Content -->
+  <main class="flex-1 p-4 overflow-auto">
+    <!-- Page Header -->
+    <div class="flex items-center justify-between mb-4">
+      <h1 class="text-xl font-semibold text-gray-800">Cost Analysis</h1>
+      <div class="flex gap-2">
+        <button class="px-3 py-1.5 text-sm border border-gray-300 rounded-lg text-gray-600 hover:bg-gray-50 flex items-center gap-1.5"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>Excel</button>
+        <button class="px-3 py-1.5 text-sm border border-gray-300 rounded-lg text-gray-600 hover:bg-gray-50 flex items-center gap-1.5"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>CSV</button>
+        <button class="px-3 py-1.5 text-sm border border-gray-300 rounded-lg text-gray-600 hover:bg-gray-50 flex items-center gap-1.5"><svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>PDF</button>
+      </div>
+    </div>
+
+    <!-- KPI Cards -->
+    <div class="grid grid-cols-4 gap-3 mb-4">
+      <div class="bg-white rounded-xl card-shadow p-4 border-l-4 border-indigo-400/50">
+        <div class="flex items-center gap-2 mb-2"><div class="w-8 h-8 rounded-lg bg-indigo-50 flex items-center justify-center"><svg class="w-4 h-4 text-indigo-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div><span class="text-xs text-gray-500">Total Cost</span></div>
+        <div class="text-2xl font-bold text-gray-800">$18,750</div>
+        <div class="flex items-center gap-1 mt-1"><span class="text-xs px-1.5 py-0.5 rounded-full bg-green-100 text-green-700">▲ 12.3%</span><span class="text-xs text-gray-400">vs last month</span></div>
+      </div>
+      <div class="bg-white rounded-xl card-shadow p-4 border-l-4 border-indigo-400/50">
+        <div class="flex items-center gap-2 mb-2"><div class="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center"><svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 20V10M6 20V4M18 20v-6"/></svg></div><span class="text-xs text-gray-500">Monthly Average</span></div>
+        <div class="text-2xl font-bold text-gray-800">$17,130</div>
+        <div class="text-xs text-gray-400 mt-1">Last 6 months</div>
+      </div>
+      <div class="bg-white rounded-xl card-shadow p-4 border-l-4 border-indigo-400/50">
+        <div class="flex items-center gap-2 mb-2"><div class="w-8 h-8 rounded-lg bg-emerald-50 flex items-center justify-center"><svg class="w-4 h-4 text-emerald-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 2v20l8-5 8 5V2z"/></svg></div><span class="text-xs text-gray-500">Transactions</span></div>
+        <div class="text-2xl font-bold text-gray-800">156</div>
+        <div class="text-xs text-gray-400 mt-1">This month</div>
+      </div>
+      <div class="bg-white rounded-xl card-shadow p-4 border-l-4 border-indigo-400/50">
+        <div class="flex items-center gap-2 mb-2"><div class="w-8 h-8 rounded-lg bg-red-50 flex items-center justify-center"><svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div><span class="text-xs text-gray-500">Anomalies Detected</span></div>
+        <div class="text-2xl font-bold text-gray-800">3</div>
+        <div class="flex items-center gap-1 mt-1"><span class="text-xs px-1.5 py-0.5 rounded-full bg-red-100 text-red-700">Needs attention</span></div>
+      </div>
+    </div>
+
+    <!-- Monthly Trend Chart -->
+    <div class="bg-white rounded-xl card-shadow p-5 mb-4">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-sm font-semibold text-gray-800">Monthly Cost Trend</h2>
+        <div class="flex bg-gray-100 rounded-lg p-0.5 text-xs">
+          <button class="px-3 py-1 rounded-md text-gray-500">3M</button>
+          <button class="px-3 py-1 rounded-md bg-white shadow-sm text-indigo-600 font-medium">6M</button>
+          <button class="px-3 py-1 rounded-md text-gray-500">12M</button>
+        </div>
+      </div>
+      <div class="relative h-48">
+        <!-- Y-axis labels -->
+        <div class="absolute left-0 top-0 bottom-8 flex flex-col justify-between text-xs text-gray-400 w-16">
+          <span>$20K</span><span>$17.5K</span><span>$15K</span><span>$12.5K</span>
+        </div>
+        <!-- Chart area -->
+        <div class="ml-16 h-full">
+          <svg viewBox="0 0 700 180" class="w-full h-40">
+            <!-- Grid lines -->
+            <line x1="0" y1="0" x2="700" y2="0" stroke="#f0f0f0" stroke-width="1"/>
+            <line x1="0" y1="45" x2="700" y2="45" stroke="#f0f0f0" stroke-width="1" stroke-dasharray="4,4"/>
+            <line x1="0" y1="90" x2="700" y2="90" stroke="#f0f0f0" stroke-width="1" stroke-dasharray="4,4"/>
+            <line x1="0" y1="135" x2="700" y2="135" stroke="#f0f0f0" stroke-width="1" stroke-dasharray="4,4"/>
+            <line x1="0" y1="160" x2="700" y2="160" stroke="#e5e7eb" stroke-width="1"/>
+            <!-- Area fill -->
+            <path d="M0,128 L140,108 L280,92 L420,80 L560,72 L700,48 L700,160 L0,160Z" fill="url(#areaGrad)" />
+            <!-- Line -->
+            <path d="M0,128 L140,108 L280,92 L420,80 L560,72 L700,48" fill="none" stroke="#6366f1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <!-- Dots -->
+            <circle cx="0" cy="128" r="4" fill="#6366f1"/>
+            <circle cx="140" cy="108" r="4" fill="#6366f1"/>
+            <circle cx="280" cy="92" r="4" fill="#6366f1"/>
+            <circle cx="420" cy="80" r="4" fill="#6366f1"/>
+            <circle cx="560" cy="72" r="4" fill="#6366f1"/>
+            <circle cx="700" cy="48" r="5" fill="#6366f1" stroke="white" stroke-width="2"/>
+            <!-- Last point label -->
+            <rect x="620" y="24" width="80" height="22" rx="6" fill="#6366f1"/>
+            <text x="660" y="39" text-anchor="middle" fill="white" font-size="10" font-weight="600">$18.75K</text>
+            <defs>
+              <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="rgba(99,102,241,0.2)"/>
+                <stop offset="100%" stop-color="rgba(99,102,241,0)"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div class="flex justify-between text-xs text-gray-400 -mt-1 px-1">
+            <span>Nov</span><span>Dec</span><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Two-Column Section -->
+    <div class="grid grid-cols-2 gap-3">
+      <!-- Cost Distribution -->
+      <div class="bg-white rounded-xl card-shadow p-5">
+        <h2 class="text-sm font-semibold text-gray-800 mb-4">Cost Distribution by App</h2>
+        <div class="space-y-3">
+          <div class="flex items-center gap-3"><div class="w-8 h-8 rounded-lg bg-purple-100 flex items-center justify-center text-sm font-bold text-purple-600">S</div><div class="flex-1"><div class="flex justify-between mb-1"><span class="text-sm font-medium text-gray-700">Slack</span><span class="text-sm text-gray-500">$3,200 <span class="text-xs text-gray-400">(17.1%)</span></span></div><div class="h-2 bg-gray-100 rounded-full"><div class="h-2 bg-indigo-500 rounded-full" style="width:100%"></div></div></div></div>
+          <div class="flex items-center gap-3"><div class="w-8 h-8 rounded-lg bg-orange-100 flex items-center justify-center text-sm font-bold text-orange-600">A</div><div class="flex-1"><div class="flex justify-between mb-1"><span class="text-sm font-medium text-gray-700">AWS</span><span class="text-sm text-gray-500">$2,800 <span class="text-xs text-gray-400">(14.9%)</span></span></div><div class="h-2 bg-gray-100 rounded-full"><div class="h-2 bg-indigo-400 rounded-full" style="width:87%"></div></div></div></div>
+          <div class="flex items-center gap-3"><div class="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center text-sm font-bold text-gray-600">N</div><div class="flex-1"><div class="flex justify-between mb-1"><span class="text-sm font-medium text-gray-700">Notion</span><span class="text-sm text-gray-500">$1,950 <span class="text-xs text-gray-400">(10.4%)</span></span></div><div class="h-2 bg-gray-100 rounded-full"><div class="h-2 bg-indigo-300 rounded-full" style="width:61%"></div></div></div></div>
+          <div class="flex items-center gap-3"><div class="w-8 h-8 rounded-lg bg-pink-100 flex items-center justify-center text-sm font-bold text-pink-600">F</div><div class="flex-1"><div class="flex justify-between mb-1"><span class="text-sm font-medium text-gray-700">Figma</span><span class="text-sm text-gray-500">$1,680 <span class="text-xs text-gray-400">(9.0%)</span></span></div><div class="h-2 bg-gray-100 rounded-full"><div class="h-2 bg-indigo-300 rounded-full" style="width:52%"></div></div></div></div>
+          <div class="flex items-center gap-3"><div class="w-8 h-8 rounded-lg bg-gray-800 flex items-center justify-center text-sm font-bold text-white">G</div><div class="flex-1"><div class="flex justify-between mb-1"><span class="text-sm font-medium text-gray-700">GitHub</span><span class="text-sm text-gray-500">$1,450 <span class="text-xs text-gray-400">(7.7%)</span></span></div><div class="h-2 bg-gray-100 rounded-full"><div class="h-2 bg-indigo-200 rounded-full" style="width:45%"></div></div></div></div>
+        </div>
+      </div>
+
+      <!-- Cost Anomalies -->
+      <div class="bg-white rounded-xl card-shadow p-5">
+        <div class="flex items-center gap-2 mb-4">
+          <h2 class="text-sm font-semibold text-gray-800">Cost Anomalies</h2>
+          <span class="px-2 py-0.5 text-xs font-medium bg-red-100 text-red-700 rounded-full">3</span>
+        </div>
+        <div class="space-y-3">
+          <!-- Anomaly 1 -->
+          <div class="p-3 rounded-lg border border-red-200 bg-red-50/50">
+            <div class="flex items-center justify-between mb-1">
+              <div class="flex items-center gap-2"><div class="w-7 h-7 rounded-lg bg-green-100 flex items-center justify-center text-xs font-bold text-green-700">D</div><span class="text-sm font-medium text-gray-800">Datadog</span></div>
+              <span class="px-2 py-0.5 text-xs font-semibold bg-red-100 text-red-700 rounded">HIGH</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-gray-500 ml-9">
+              <span>$800</span><svg class="w-3 h-3 text-red-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg><span class="font-medium text-gray-700">$1,200</span>
+              <span class="text-red-600 font-medium">(+50%)</span>
+            </div>
+          </div>
+          <!-- Anomaly 2 -->
+          <div class="p-3 rounded-lg border border-amber-200 bg-amber-50/50">
+            <div class="flex items-center justify-between mb-1">
+              <div class="flex items-center gap-2"><div class="w-7 h-7 rounded-lg bg-blue-100 flex items-center justify-center text-xs font-bold text-blue-700">Z</div><span class="text-sm font-medium text-gray-800">Zoom</span></div>
+              <span class="px-2 py-0.5 text-xs font-semibold bg-amber-100 text-amber-700 rounded">MEDIUM</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-gray-500 ml-9">
+              <span>$500</span><svg class="w-3 h-3 text-amber-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg><span class="font-medium text-gray-700">$750</span>
+              <span class="text-amber-600 font-medium">(+50%)</span>
+            </div>
+          </div>
+          <!-- Anomaly 3 -->
+          <div class="p-3 rounded-lg border border-blue-200 bg-blue-50/50">
+            <div class="flex items-center justify-between mb-1">
+              <div class="flex items-center gap-2"><div class="w-7 h-7 rounded-lg bg-indigo-100 flex items-center justify-center text-xs font-bold text-indigo-700">L</div><span class="text-sm font-medium text-gray-800">Linear</span></div>
+              <span class="px-2 py-0.5 text-xs font-semibold bg-blue-100 text-blue-700 rounded">INFO</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-gray-500 ml-9">
+              <span>New subscription</span><span class="font-medium text-gray-700">$450/mo</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+</body>
+</html>

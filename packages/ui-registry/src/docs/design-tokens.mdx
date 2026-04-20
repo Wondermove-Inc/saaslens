@@ -1,0 +1,346 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Introduction/Design Tokens" />
+
+# Design Tokens
+
+shadcn-storybook-registry의 디자인 토큰 시스템입니다. 일관된 디자인 언어를 위한 체계적인 토큰 구조를 제공합니다.
+
+## Color System
+
+### Primary Colors
+브랜드의 주요 색상으로 버튼, 링크 등 주요 인터랙티브 요소에 사용됩니다.
+
+```css
+/* CSS Variables */
+--primary: 222.2 47.4% 11.2%;
+--primary-foreground: 210 40% 98%;
+```
+
+**사용 예시:**
+```tsx
+import { Button } from "@/components/ui/button";
+
+<Button variant="default">Primary Button</Button>
+```
+
+### Secondary Colors
+보조 색상으로 덜 강조되는 요소에 사용됩니다.
+
+```css
+--secondary: 210 40% 96.1%;
+--secondary-foreground: 222.2 47.4% 11.2%;
+```
+
+**사용 예시:**
+```tsx
+<Button variant="secondary">Secondary Button</Button>
+```
+
+### Destructive Colors
+경고, 에러, 삭제 등 위험한 동작을 나타냅니다.
+
+```css
+--destructive: 0 84.2% 60.2%;
+--destructive-foreground: 210 40% 98%;
+```
+
+**사용 예시:**
+```tsx
+<Button variant="destructive">Delete</Button>
+<Alert variant="destructive">Error message</Alert>
+```
+
+### Muted Colors
+배경, 비활성 상태, 보조 텍스트에 사용됩니다.
+
+```css
+--muted: 210 40% 96.1%;
+--muted-foreground: 215.4 16.3% 46.9%;
+```
+
+**사용 예시:**
+```tsx
+<div className="bg-muted text-muted-foreground">
+  Muted content
+</div>
+```
+
+### Accent Colors
+강조가 필요한 요소에 사용됩니다.
+
+```css
+--accent: 210 40% 96.1%;
+--accent-foreground: 222.2 47.4% 11.2%;
+```
+
+## Typography Scale
+
+### Font Sizes
+일관된 타이포그래피 계층을 위한 크기 시스템입니다.
+
+```css
+/* Tailwind CSS Classes */
+text-xs    /* 0.75rem (12px) */
+text-sm    /* 0.875rem (14px) */
+text-base  /* 1rem (16px) */
+text-lg    /* 1.125rem (18px) */
+text-xl    /* 1.25rem (20px) */
+text-2xl   /* 1.5rem (24px) */
+text-3xl   /* 1.875rem (30px) */
+text-4xl   /* 2.25rem (36px) */
+text-5xl   /* 3rem (48px) */
+```
+
+**사용 예시:**
+```tsx
+<h1 className="text-4xl font-bold">Heading 1</h1>
+<h2 className="text-3xl font-semibold">Heading 2</h2>
+<p className="text-base">Body text</p>
+<small className="text-sm text-muted-foreground">Helper text</small>
+```
+
+### Font Weights
+```css
+font-normal    /* 400 */
+font-medium    /* 500 */
+font-semibold  /* 600 */
+font-bold      /* 700 */
+```
+
+### Line Heights
+```css
+leading-none    /* 1 */
+leading-tight   /* 1.25 */
+leading-normal  /* 1.5 */
+leading-relaxed /* 1.625 */
+```
+
+## Spacing System
+
+Tailwind CSS 기반의 일관된 여백 시스템입니다.
+
+```css
+/* Padding & Margin Scale */
+p-0    /* 0px */
+p-0.5  /* 0.125rem (2px) */
+p-1    /* 0.25rem (4px) */
+p-2    /* 0.5rem (8px) */
+p-3    /* 0.75rem (12px) */
+p-4    /* 1rem (16px) */
+p-5    /* 1.25rem (20px) */
+p-6    /* 1.5rem (24px) */
+p-8    /* 2rem (32px) */
+p-10   /* 2.5rem (40px) */
+p-12   /* 3rem (48px) */
+p-16   /* 4rem (64px) */
+```
+
+**사용 예시:**
+```tsx
+<Card className="p-6">
+  <CardHeader className="pb-4">
+    <CardTitle className="mb-2">Title</CardTitle>
+  </CardHeader>
+  <CardContent className="pt-0">
+    Content with consistent spacing
+  </CardContent>
+</Card>
+```
+
+### Gap System
+```css
+gap-0   /* 0px */
+gap-1   /* 0.25rem */
+gap-2   /* 0.5rem */
+gap-4   /* 1rem */
+gap-6   /* 1.5rem */
+gap-8   /* 2rem */
+```
+
+## Shadow System
+
+깊이감을 표현하는 그림자 시스템입니다.
+
+```css
+/* CSS Variables */
+--shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+--shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+--shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+--shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+--shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+--shadow-2xl: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+```
+
+**사용 예시:**
+```tsx
+<div className="shadow-sm">Subtle elevation</div>
+<div className="shadow-md">Medium elevation</div>
+<div className="shadow-lg">High elevation</div>
+
+<Card className="shadow-lg">
+  Elevated card component
+</Card>
+```
+
+### Dark Mode Shadows
+Dark mode에서 그림자는 자동으로 조정됩니다:
+```css
+.dark {
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.25);
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.3), 0 1px 2px -1px rgb(0 0 0 / 0.3);
+  /* ... */
+}
+```
+
+## Radius System
+
+모서리 둥글기를 제어하는 시스템입니다.
+
+```css
+/* CSS Variables */
+--radius: 0.5rem;  /* Default radius (8px) */
+```
+
+**Tailwind Classes:**
+```css
+rounded-none  /* 0px */
+rounded-sm    /* calc(var(--radius) - 4px) */
+rounded       /* calc(var(--radius) - 2px) */
+rounded-md    /* calc(var(--radius)) */
+rounded-lg    /* calc(var(--radius) + 2px) */
+rounded-full  /* 9999px */
+```
+
+**사용 예시:**
+```tsx
+<Button className="rounded-md">Default Radius</Button>
+<Button className="rounded-full">Fully Rounded</Button>
+<Avatar className="rounded-full">A</Avatar>
+
+<Card className="rounded-lg">
+  Card with larger radius
+</Card>
+```
+
+## Border System
+
+테두리 스타일 시스템입니다.
+
+```css
+/* CSS Variables */
+--border: 214.3 31.8% 91.4%;
+--input: 214.3 31.8% 91.4%;
+--ring: 222.2 84% 4.9%;
+```
+
+**사용 예시:**
+```tsx
+<Input className="border border-input focus-visible:ring-2 focus-visible:ring-ring" />
+
+<div className="border rounded-md p-4">
+  Bordered container
+</div>
+```
+
+## Using Design Tokens
+
+### Reading CSS Variables in JavaScript
+```typescript
+const styles = getComputedStyle(document.documentElement);
+const primaryColor = styles.getPropertyValue('--primary');
+const radius = styles.getPropertyValue('--radius');
+```
+
+### Customizing Tokens
+`app/globals.css`에서 토큰을 커스터마이징할 수 있습니다:
+
+```css
+@layer base {
+  :root {
+    --primary: 210 100% 50%;  /* Custom blue */
+    --radius: 1rem;           /* Larger default radius */
+  }
+
+  .dark {
+    --primary: 210 100% 60%;  /* Lighter blue for dark mode */
+  }
+}
+```
+
+### Tailwind Integration
+모든 디자인 토큰은 Tailwind CSS v4와 완벽하게 통합됩니다:
+
+```tsx
+// Color
+<div className="bg-primary text-primary-foreground">Primary</div>
+
+// Typography
+<h1 className="text-4xl font-bold leading-tight">Heading</h1>
+
+// Spacing
+<div className="p-6 m-4 gap-2">Spaced content</div>
+
+// Shadow
+<div className="shadow-lg">Elevated</div>
+
+// Radius
+<div className="rounded-md">Rounded corners</div>
+```
+
+## Best Practices
+
+### 1. Use Semantic Tokens
+```tsx
+// ✅ Good - semantic meaning
+<Button variant="destructive">Delete</Button>
+
+// ❌ Bad - hardcoded color
+<Button className="bg-red-500">Delete</Button>
+```
+
+### 2. Maintain Consistency
+```tsx
+// ✅ Good - consistent spacing
+<div className="space-y-4">
+  <div className="p-4">Item 1</div>
+  <div className="p-4">Item 2</div>
+</div>
+
+// ❌ Bad - inconsistent spacing
+<div>
+  <div className="p-4">Item 1</div>
+  <div className="p-3">Item 2</div>
+</div>
+```
+
+### 3. Respect Dark Mode
+```tsx
+// ✅ Good - uses theme-aware tokens
+<div className="bg-background text-foreground">Content</div>
+
+// ❌ Bad - hardcoded colors don't adapt
+<div className="bg-white text-black">Content</div>
+```
+
+### 4. Use Spacing Scale
+```tsx
+// ✅ Good - uses spacing scale
+<div className="space-y-6">
+  <section className="mb-4">Section 1</section>
+  <section className="mb-4">Section 2</section>
+</div>
+
+// ❌ Bad - arbitrary values
+<div>
+  <section style={{ marginBottom: '17px' }}>Section 1</section>
+  <section style={{ marginBottom: '23px' }}>Section 2</section>
+</div>
+```
+
+## Resources
+
+- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- [shadcn/ui Theming](https://ui.shadcn.com/docs/theming)
+- [Design Tokens in Storybook](../design/color)
+- [CSS Custom Properties Guide](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties)

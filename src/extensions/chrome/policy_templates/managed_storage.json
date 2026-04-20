@@ -1,0 +1,98 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "api_url": {
+      "title": "API Server URL",
+      "description": "The backend API server URL for syncing data",
+      "type": "string"
+    },
+    "api_token": {
+      "title": "API Token",
+      "description": "Authentication token for API access",
+      "type": "string"
+    },
+    "enabled": {
+      "title": "Extension Enabled",
+      "description": "Whether the extension is enabled",
+      "type": "boolean",
+      "default": true
+    },
+    "locked": {
+      "title": "Settings Locked",
+      "description": "When true, users cannot modify settings via popup",
+      "type": "boolean",
+      "default": false
+    },
+    "device_id": {
+      "title": "Device ID",
+      "description": "Pre-configured device identifier",
+      "type": "string"
+    },
+    "department": {
+      "title": "Department",
+      "description": "Department name for this device",
+      "type": "string"
+    },
+    "blocking_enabled": {
+      "title": "Blocking Enabled",
+      "description": "Enable blocking of blacklisted domains",
+      "type": "boolean",
+      "default": true
+    },
+    "time_tracking_enabled": {
+      "title": "Time Tracking Enabled",
+      "description": "Enable time tracking for SaaS usage",
+      "type": "boolean",
+      "default": true
+    },
+    "hibp_check_enabled": {
+      "title": "HIBP Check Enabled",
+      "description": "Enable Have I Been Pwned password check",
+      "type": "boolean",
+      "default": true
+    },
+    "notifications_enabled": {
+      "title": "Notifications Enabled",
+      "description": "Enable browser notifications",
+      "type": "boolean",
+      "default": true
+    },
+    "username_filters": {
+      "title": "Username Filters",
+      "description": "List of patterns to filter from usernames",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "sync_interval_blacklist": {
+      "title": "Blacklist Sync Interval",
+      "description": "Interval in minutes for blacklist sync",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 1440
+    },
+    "sync_interval_whitelist": {
+      "title": "Whitelist Sync Interval",
+      "description": "Interval in minutes for whitelist sync",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 1440
+    },
+    "sync_interval_usage": {
+      "title": "Usage Sync Interval",
+      "description": "Interval in minutes for usage sync",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 1440
+    },
+    "sync_interval_config": {
+      "title": "Config Sync Interval",
+      "description": "Interval in minutes for config sync",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 1440
+    }
+  }
+}

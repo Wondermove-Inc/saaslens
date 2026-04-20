@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>사이트 차단됨</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+      background: #e74c3c;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      color: white;
+    }
+
+    .container {
+      text-align: center;
+      max-width: 600px;
+      width: 100%;
+    }
+
+    .icon {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 32px;
+      position: relative;
+    }
+
+    .icon-circle {
+      width: 120px;
+      height: 120px;
+      border: 6px solid white;
+      border-radius: 50%;
+      position: relative;
+    }
+
+    .icon-line {
+      position: absolute;
+      width: 80px;
+      height: 6px;
+      background: white;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      border-radius: 3px;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 24px;
+      line-height: 1.4;
+    }
+
+    @media (min-width: 480px) {
+      h1 {
+        font-size: 32px;
+      }
+    }
+
+    .reason-box {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-bottom: 32px;
+    }
+
+    .reason-label {
+      font-size: 14px;
+      opacity: 0.8;
+      margin-bottom: 8px;
+    }
+
+    .reason-text {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
+    }
+
+    @media (min-width: 480px) {
+      .button-group {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+
+    .btn {
+      padding: 14px 28px;
+      border-radius: 4px;
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      min-width: 180px;
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: white;
+      color: #e74c3c;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background: #f8f8f8;
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: white;
+      border: 2px solid white;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .details {
+      margin-top: 32px;
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      padding: 20px;
+      text-align: left;
+      display: none;
+    }
+
+    .details.show {
+      display: block;
+    }
+
+    .details-row {
+      display: flex;
+      margin-bottom: 12px;
+    }
+
+    .details-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .details-label {
+      font-size: 14px;
+      opacity: 0.7;
+      width: 100px;
+      flex-shrink: 0;
+    }
+
+    .details-value {
+      font-size: 14px;
+      word-break: break-all;
+    }
+
+    .footer {
+      margin-top: 48px;
+      font-size: 12px;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="icon">
+      <div class="icon-circle">
+        <div class="icon-line"></div>
+      </div>
+    </div>
+
+    <h1>방문하려는 사이트가<br>차단되었습니다.</h1>
+
+    <div class="reason-box">
+      <p class="reason-label">차단 사유</p>
+      <p class="reason-text" id="block-reason">조직의 보안 정책에 따라 이 웹사이트가 차단되었습니다.</p>
+    </div>
+
+    <div class="button-group">
+      <button class="btn btn-primary" onclick="goToSafePage()">안전한 페이지로 돌아가기</button>
+      <button class="btn btn-secondary" onclick="toggleDetails()">세부정보</button>
+    </div>
+
+    <div class="details" id="details">
+      <div class="details-row">
+        <span class="details-label">차단된 도메인</span>
+        <span class="details-value" id="blocked-domain">-</span>
+      </div>
+      <div class="details-row">
+        <span class="details-label">정책</span>
+        <span class="details-value">차단 앱 리스트</span>
+      </div>
+      <div class="details-row">
+        <span class="details-label">조치</span>
+        <span class="details-value">관리자에게 문의하여 차단 해제를 요청하세요.</span>
+      </div>
+    </div>
+
+    <p class="footer">
+      Protected by SaaS Management Platform
+    </p>
+  </div>
+
+  <script>
+    // Parse URL parameters
+    const params = new URLSearchParams(window.location.search);
+    const domain = params.get('domain') || '알 수 없음';
+    const reason = params.get('reason') || '조직의 보안 정책에 따라 이 웹사이트가 차단되었습니다.';
+
+    // Update page content
+    document.getElementById('blocked-domain').textContent = domain;
+    document.getElementById('block-reason').textContent = reason;
+
+    // Go to safe page function
+    function goToSafePage() {
+      // 차단 페이지 이전으로 돌아가기 (차단된 페이지 스킵)
+      if (window.history.length > 2) {
+        window.history.go(-2);
+      } else if (window.history.length > 1) {
+        window.history.back();
+      } else {
+        // 히스토리가 없으면 빈 페이지로
+        window.location.href = 'about:blank';
+      }
+    }
+
+    // Toggle details section
+    function toggleDetails() {
+      const details = document.getElementById('details');
+      details.classList.toggle('show');
+    }
+  </script>
+</body>
+</html>

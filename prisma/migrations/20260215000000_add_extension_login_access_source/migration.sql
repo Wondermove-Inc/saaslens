@@ -1,0 +1,2 @@
+-- AlterEnum
+ALTER TYPE "AccessSource" ADD VALUE 'EXTENSION_LOGIN';

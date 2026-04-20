@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "pagination-story",
+  "type": "registry:component",
+  "title": "Pagination Story",
+  "author": "Lloyd Richards <lloyd.d.richards@gmail.com>",
+  "description": "Interactive Storybook stories demonstrating pagination component usage and variants",
+  "registryDependencies": ["button"],
+  "files": [
+    {
+      "path": "src/registry/atoms/pagination-story/pagination.stories.tsx",
+      "content": "import type { Meta, StoryObj } from \"@storybook/nextjs-vite\";\nimport { expect, userEvent, within } from \"storybook/test\";\n\nimport {\n  Pagination,\n  PaginationContent,\n  PaginationEllipsis,\n  PaginationItem,\n  PaginationLink,\n  PaginationNext,\n  PaginationPrevious,\n} from \"@/components/ui/pagination\";\n\nfunction PaginationDemo() {\n  return (\n    <Pagination>\n      <PaginationContent>\n        <PaginationItem>\n          <PaginationPrevious href=\"#\" />\n        </PaginationItem>\n        <PaginationItem>\n          <PaginationLink href=\"#\">1</PaginationLink>\n        </PaginationItem>\n        <PaginationItem>\n          <PaginationLink href=\"#\" isActive>\n            2\n          </PaginationLink>\n        </PaginationItem>\n        <PaginationItem>\n          <PaginationLink href=\"#\">3</PaginationLink>\n        </PaginationItem>\n        <PaginationItem>\n          <PaginationEllipsis />\n        </PaginationItem>\n        <PaginationItem>\n          <PaginationNext href=\"#\" />\n        </PaginationItem>\n      </PaginationContent>\n    </Pagination>\n  );\n}\n\n/**\n * Pagination with page navigation, next and previous links.\n */\nconst meta = {\n  title: \"ui/Pagination\",\n  component: PaginationDemo,\n  tags: [\"autodocs\"],\n  parameters: {\n    layout: \"centered\",\n  },\n} satisfies Meta<typeof PaginationDemo>;\n\nexport default meta;\n\ntype Story = StoryObj<typeof meta>;\n\n/**\n * The default form of the pagination with active state.\n */\nexport const Default: Story = {};\n\nexport const ShouldNavigateBetweenPages: Story = {\n  name: \"when pagination links are clicked, should have correct href\",\n  tags: [\"!dev\", \"!autodocs\"],\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n\n    // 🎯 목적: Pagination 링크들이 올바른 href를 가지고 클릭 가능한지 확인\n    const previousLink = canvas.getByRole(\"link\", { name: /previous/i });\n    const nextLink = canvas.getByRole(\"link\", { name: /next/i });\n    const pageOneLink = canvas.getByRole(\"link\", { name: /^1$/i });\n    const pageTwoLink = canvas.getByRole(\"link\", { name: /^2$/i });\n\n    // href 속성 확인\n    await expect(previousLink).toHaveAttribute(\"href\", \"#\");\n    await expect(nextLink).toHaveAttribute(\"href\", \"#\");\n    await expect(pageOneLink).toHaveAttribute(\"href\", \"#\");\n    await expect(pageTwoLink).toHaveAttribute(\"href\", \"#\");\n\n    // 활성 상태 확인 (페이지 2가 활성)\n    await expect(pageTwoLink).toHaveAttribute(\"aria-current\", \"page\");\n\n    // 링크 클릭 가능 확인\n    await userEvent.click(pageOneLink);\n    await userEvent.click(nextLink);\n    await userEvent.click(previousLink);\n  },\n};\n",
+      "type": "registry:component"
+    }
+  ],
+  "categories": ["atoms", "storybook", "pagination", "navigation"]
+}

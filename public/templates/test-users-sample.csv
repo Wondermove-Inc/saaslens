@@ -1,0 +1,26 @@
+email,name,role,department,jobTitle,employeeId
+admin@testcorp.com,Admin User,ADMIN,IT,System Administrator,EMP001
+alice.johnson@testcorp.com,Alice Johnson,MEMBER,Engineering,Senior Software Engineer,EMP002
+bob.smith@testcorp.com,Bob Smith,MEMBER,Engineering,Software Engineer,EMP003
+carol.white@testcorp.com,Carol White,MEMBER,Engineering,Frontend Developer,EMP004
+david.brown@testcorp.com,David Brown,MEMBER,Engineering,Backend Developer,EMP005
+emma.davis@testcorp.com,Emma Davis,MEMBER,Engineering,DevOps Engineer,EMP006
+frank.miller@testcorp.com,Frank Miller,MEMBER,Engineering,QA Engineer,EMP007
+grace.wilson@testcorp.com,Grace Wilson,VIEWER,Marketing,Marketing Manager,EMP008
+henry.moore@testcorp.com,Henry Moore,MEMBER,Marketing,Content Strategist,EMP009
+iris.taylor@testcorp.com,Iris Taylor,MEMBER,Marketing,SEO Specialist,EMP010
+james.anderson@testcorp.com,James Anderson,VIEWER,HR,HR Manager,EMP011
+karen.thomas@testcorp.com,Karen Thomas,MEMBER,HR,Recruiter,EMP012
+liam.jackson@testcorp.com,Liam Jackson,MEMBER,HR,HR Coordinator,EMP013
+mia.harris@testcorp.com,Mia Harris,VIEWER,Finance,Finance Manager,EMP014
+noah.martin@testcorp.com,Noah Martin,MEMBER,Finance,Accountant,EMP015
+olivia.garcia@testcorp.com,Olivia Garcia,MEMBER,Finance,Financial Analyst,EMP016
+peter.martinez@testcorp.com,Peter Martinez,MEMBER,Engineering,Mobile Developer,EMP017
+quinn.robinson@testcorp.com,Quinn Robinson,MEMBER,Engineering,Data Engineer,EMP018
+rachel.clark@testcorp.com,Rachel Clark,MEMBER,Marketing,Social Media Manager,EMP019
+samuel.rodriguez@testcorp.com,Samuel Rodriguez,MEMBER,Engineering,Security Engineer,EMP020
+tina.lewis@testcorp.com,Tina Lewis,MEMBER,HR,Training Specialist,EMP021
+umar.lee@testcorp.com,Umar Lee,MEMBER,Finance,Budget Analyst,EMP022
+victoria.walker@testcorp.com,Victoria Walker,MEMBER,Engineering,Cloud Architect,EMP023
+william.hall@testcorp.com,William Hall,MEMBER,Marketing,Product Marketing Manager,EMP024
+xena.allen@testcorp.com,Xena Allen,MEMBER,Engineering,ML Engineer,EMP025

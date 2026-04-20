@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "calendar-story",
+  "type": "registry:component",
+  "title": "Calendar Story",
+  "author": "Lloyd Richards <lloyd.d.richards@gmail.com>",
+  "description": "Interactive Storybook stories demonstrating calendar component usage and variants",
+  "dependencies": ["date-fns"],
+  "registryDependencies": ["calendar"],
+  "files": [
+    {
+      "path": "src/registry/atoms/calendar-story/calendar.stories.tsx",
+      "content": "\"use client\";\n\nimport type { Meta, StoryObj } from \"@storybook/nextjs-vite\";\nimport * as React from \"react\";\nimport { expect, userEvent, waitFor, within } from \"storybook/test\";\n\nimport { Calendar } from \"@/components/ui/calendar\";\n\nexport function CalendarDemo() {\n  const [date, setDate] = React.useState<Date | undefined>(new Date());\n\n  return (\n    <Calendar\n      mode=\"single\"\n      selected={date}\n      onSelect={setDate}\n      className=\"rounded-md border\"\n    />\n  );\n}\n\n/**\n * A date field component that allows users to enter and edit date.\n */\nconst meta = {\n  title: \"ui/Calendar\",\n  component: Calendar,\n  tags: [\"autodocs\"],\n  parameters: {\n    layout: \"centered\",\n  },\n  excludeStories: /.*Demo$/,\n  render: () => <CalendarDemo />,\n} satisfies Meta<typeof Calendar>;\n\nexport default meta;\n\ntype Story = StoryObj<typeof meta>;\n\n/**\n * The default form of the calendar.\n */\nexport const Default: Story = {};\n\n/**\n * Calendar with form example.\n */\nexport const Form: Story = {\n  render: () => {\n    const [date, setDate] = React.useState<Date | undefined>();\n\n    return (\n      <form className=\"space-y-8\">\n        <Calendar\n          mode=\"single\"\n          selected={date}\n          onSelect={setDate}\n          className=\"rounded-md border\"\n        />\n      </form>\n    );\n  },\n};\n\nexport const ShouldSelectDate: Story = {\n  name: \"when user clicks a date, should select it\",\n  tags: [\"!dev\", \"!autodocs\"],\n  render: () => <CalendarDemo />,\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n\n    // 🎯 목적: Calendar에서 날짜를 클릭하면 선택되고 시각적으로 표시되는지 확인\n    // 날짜 버튼 찾기 (현재 월의 15일 찾기)\n    const dateButtons = canvas.getAllByRole(\"button\");\n    const date15Button = dateButtons.find(\n      (button) => button.textContent?.trim() === \"15\",\n    );\n\n    if (date15Button) {\n      // 날짜 클릭\n      await userEvent.click(date15Button);\n\n      // 선택된 날짜가 aria-selected 속성을 가지는지 확인\n      await waitFor(() => {\n        expect(date15Button).toHaveAttribute(\"aria-selected\", \"true\");\n      });\n    }\n  },\n};\n",
+      "type": "registry:component"
+    }
+  ],
+  "categories": ["atoms", "storybook", "calendar", "date"]
+}

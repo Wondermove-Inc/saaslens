@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "sonner-story",
+  "type": "registry:component",
+  "title": "Sonner Story",
+  "author": "Lloyd Richards <lloyd.d.richards@gmail.com>",
+  "description": "Interactive Storybook stories demonstrating toast notifications usage and variants",
+  "dependencies": ["sonner"],
+  "registryDependencies": ["sonner", "button"],
+  "files": [
+    {
+      "path": "src/registry/atoms/sonner-story/sonner.stories.tsx",
+      "content": "\"use client\";\n\nimport type { Meta, StoryObj } from \"@storybook/nextjs-vite\";\nimport { toast } from \"sonner\";\nimport { expect, userEvent, waitFor, within } from \"storybook/test\";\n\nimport { Button } from \"@/components/ui/button\";\nimport { Toaster } from \"@/components/ui/sonner\";\n\n// Default example from official docs\nexport function SonnerDemo() {\n  return (\n    <Button\n      variant=\"outline\"\n      onClick={() =>\n        toast(\"Event has been created\", {\n          description: \"Sunday, December 03, 2023 at 9:00 AM\",\n          action: {\n            label: \"Undo\",\n            onClick: () => console.log(\"Undo\"),\n          },\n        })\n      }\n    >\n      Show Toast\n    </Button>\n  );\n}\n\n/**\n * An opinionated toast component for React.\n */\nconst meta = {\n  title: \"ui/Sonner\",\n  component: Toaster,\n  tags: [\"autodocs\"],\n  parameters: {\n    layout: \"centered\",\n  },\n  excludeStories: /.*Demo$/,\n  render: () => (\n    <div className=\"flex min-h-[350px] items-center justify-center\">\n      <SonnerDemo />\n      <Toaster />\n    </div>\n  ),\n} satisfies Meta<typeof Toaster>;\n\nexport default meta;\n\ntype Story = StoryObj<typeof meta>;\n\n/**\n * The default form of the sonner toast.\n */\nexport const Default: Story = {};\n\nexport const ShouldShowToast: Story = {\n  name: \"when button clicked, should display toast\",\n  tags: [\"!dev\", \"!autodocs\"],\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement.ownerDocument.body);\n\n    // 🎯 목적: Toast 버튼 클릭 시 Toast가 표시되고 내용이 올바른지 확인\n    const button = canvas.getByText(\"Show Toast\");\n    await userEvent.click(button);\n\n    // Toast가 표시될 때까지 대기\n    await waitFor(\n      () => {\n        const toastTitle = canvas.getByText(\"Event has been created\");\n        expect(toastTitle).toBeVisible();\n      },\n      { timeout: 3000 },\n    );\n\n    // Toast description 확인\n    const toastDescription = canvas.getByText(\n      \"Sunday, December 03, 2023 at 9:00 AM\",\n    );\n    await expect(toastDescription).toBeVisible();\n\n    // Undo 버튼 확인\n    const undoButton = canvas.getByRole(\"button\", { name: /undo/i });\n    await expect(undoButton).toBeVisible();\n  },\n};\n",
+      "type": "registry:component"
+    }
+  ],
+  "categories": ["atoms", "storybook", "toast", "feedback"]
+}

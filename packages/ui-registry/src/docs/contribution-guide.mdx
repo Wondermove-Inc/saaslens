@@ -1,0 +1,214 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+
+<Meta title="Introduction/Contribution Guide" />
+
+# Contribution Guide
+
+shadcn-storybook-registry에 기여하는 방법을 안내합니다.
+
+## Adding a New Story
+
+새로운 컴포넌트 스토리를 추가하는 방법:
+
+### 1. Create Story File
+
+스토리 파일을 생성합니다:
+
+```bash
+# 파일 경로
+src/registry/atoms/[component]-story/[component].stories.tsx
+```
+
+### 2. Follow Story Structure Pattern
+
+CSF 3.0 형식을 따릅니다:
+
+```typescript
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+import { Component } from "@/components/ui/component";
+
+/**
+ * 컴포넌트의 목적과 사용법을 설명합니다.
+ */
+const meta: Meta<typeof Component> = {
+  title: "ui/Component",
+  component: Component,
+  tags: ["autodocs"],
+  parameters: {
+    layout: "centered",
+  },
+} satisfies Meta<typeof Component>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+/**
+ * 기본 스토리 설명.
+ */
+export const Default: Story = {
+  args: {
+    variant: 'default',
+    children: 'Example',
+  },
+};
+```
+
+### 3. Add Registry Entry
+
+`registry.json`에 엔트리를 추가합니다:
+
+```json
+{
+  "name": "component-story",
+  "type": "registry:component",
+  "title": "Component Story",
+  "description": "Interactive Storybook stories for component",
+  "categories": ["atoms", "storybook"],
+  "registryDependencies": ["component"],
+  "dependencies": ["lucide-react"],
+  "files": [{
+    "path": "src/registry/atoms/component-story/component.stories.tsx",
+    "type": "registry:component"
+  }]
+}
+```
+
+### 4. Build Registry
+
+Registry를 빌드합니다:
+
+```bash
+npm run registry:build
+```
+
+### 5. Test Locally
+
+로컬에서 설치 테스트:
+
+```bash
+npx shadcn@latest add http://localhost:3000/v2/r/component-story.json
+```
+
+### 6. Verify in Storybook
+
+Storybook에서 확인:
+
+```bash
+npm run storybook
+# http://localhost:6006에서 스토리 확인
+```
+
+### 7. Run Quality Checks
+
+품질 검사 실행:
+
+```bash
+npm run lint
+npm run type-check
+npm run test
+```
+
+## Code Style Guidelines
+
+### TypeScript
+
+- `satisfies Meta<typeof Component>` 사용
+- Explicit types 선호 (`any` 금지)
+- Form 스키마는 `zod`로 정의
+
+### Imports
+
+```typescript
+// Framework imports
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
+
+// ALWAYS use @ imports
+import { Button } from "@/components/ui/button";
+
+// Icons
+import { ChevronRight, Loader2 } from "lucide-react";
+```
+
+### Story Naming
+
+- Default: 기본 사용 예제
+- Variants: 다양한 variant (outline, ghost, secondary 등)
+- States: Loading, Disabled
+- Sizes: Small, Default, Large
+
+### Play Functions
+
+인터랙티브 테스트 추가:
+
+```typescript
+import { expect, userEvent, within } from "storybook/test";
+
+export const InteractionTest: Story = {
+  name: "when user clicks, should show success message",
+  tags: ["!dev", "!autodocs"],
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    await userEvent.click(canvas.getByRole('button'));
+    await expect(canvas.getByText('Success')).toBeInTheDocument();
+  },
+};
+```
+
+## Documentation
+
+### JSDoc Comments
+
+모든 story export에 JSDoc 주석 추가:
+
+```typescript
+/**
+ * Outline variant를 사용하여 보조 액션을 나타냅니다.
+ */
+export const Outline: Story = {
+  args: { variant: "outline" },
+};
+```
+
+### Korean Comments
+
+코드 주석은 한국어로 작성:
+
+```typescript
+// 🎯 목적: 사용자 입력 검증
+// 📝 주의사항: 최소 6자 이상 필수
+```
+
+## Commit Message Format
+
+Conventional Commits 형식 사용:
+
+```bash
+feat: add Calendar story with date range picker
+
+- Update registry.json with calendar-story entry
+- Add Korean comments to date picker implementation
+- Add Play function for interaction testing
+
+Related to Component Story Enhancement
+
+🤖 Generated with [Claude Code](https://claude.com/claude-code)
+
+Co-Authored-By: Claude <noreply@anthropic.com>
+```
+
+## Pull Request Process
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Run all quality checks
+5. Commit with proper message
+6. Push to your fork
+7. Create Pull Request
+
+## Questions?
+
+- [GitHub Issues](https://github.com/lloydrichards/shadcn-storybook-registry/issues)
+- [Discussions](https://github.com/lloydrichards/shadcn-storybook-registry/discussions)
+
+Thank you for contributing! 🎉

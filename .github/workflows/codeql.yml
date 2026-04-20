@@ -1,0 +1,22 @@
+name: CodeQL
+
+# CodeQL is temporarily disabled while this repo is private.
+# GitHub Advanced Security is required for code scanning on private repositories.
+# Re-enable automatic triggers when the repo is made public.
+on:
+  workflow_dispatch: {}
+
+jobs:
+  analyze:
+    name: Analyze (javascript-typescript)
+    runs-on: ubuntu-latest
+    permissions:
+      actions: read
+      contents: read
+      security-events: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: github/codeql-action/init@v3
+        with:
+          languages: javascript-typescript
+      - uses: github/codeql-action/analyze@v3

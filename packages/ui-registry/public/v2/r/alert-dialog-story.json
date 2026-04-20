@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "alert-dialog-story",
+  "type": "registry:component",
+  "title": "Alert Dialog Story",
+  "author": "Lloyd Richards <lloyd.d.richards@gmail.com>",
+  "description": "Interactive Storybook stories demonstrating alert dialog component usage and variants",
+  "registryDependencies": ["alert-dialog"],
+  "files": [
+    {
+      "path": "src/registry/atoms/alert-dialog-story/alert-dialog.stories.tsx",
+      "content": "import type { Meta, StoryObj } from \"@storybook/nextjs-vite\";\nimport { expect, userEvent, waitFor, within } from \"storybook/test\";\n\nimport {\n  AlertDialog,\n  AlertDialogAction,\n  AlertDialogCancel,\n  AlertDialogContent,\n  AlertDialogDescription,\n  AlertDialogFooter,\n  AlertDialogHeader,\n  AlertDialogTitle,\n  AlertDialogTrigger,\n} from \"@/components/ui/alert-dialog\";\nimport { Button } from \"@/components/ui/button\";\n\nexport function AlertDialogDemo() {\n  return (\n    <AlertDialog>\n      <AlertDialogTrigger asChild>\n        <Button variant=\"outline\">Show Dialog</Button>\n      </AlertDialogTrigger>\n      <AlertDialogContent>\n        <AlertDialogHeader>\n          <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>\n          <AlertDialogDescription>\n            This action cannot be undone. This will permanently delete your\n            account and remove your data from our servers.\n          </AlertDialogDescription>\n        </AlertDialogHeader>\n        <AlertDialogFooter>\n          <AlertDialogCancel>Cancel</AlertDialogCancel>\n          <AlertDialogAction>Continue</AlertDialogAction>\n        </AlertDialogFooter>\n      </AlertDialogContent>\n    </AlertDialog>\n  );\n}\n\n/**\n * A modal dialog that interrupts the user with important content and expects\n * a response.\n */\nconst meta = {\n  title: \"ui/AlertDialog\",\n  component: AlertDialog,\n  tags: [\"autodocs\"],\n  parameters: {\n    layout: \"centered\",\n  },\n  excludeStories: /.*Demo$/,\n  render: () => <AlertDialogDemo />,\n} satisfies Meta<typeof AlertDialog>;\n\nexport default meta;\n\ntype Story = StoryObj<typeof meta>;\n\n/**\n * The default form of the alert dialog.\n */\nexport const Default: Story = {};\n\nexport const ShouldOpenAndCloseDialog: Story = {\n  name: \"when trigger is clicked, should open dialog and allow cancel/continue\",\n  tags: [\"!dev\", \"!autodocs\"],\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n\n    // 🎯 목적: Alert Dialog가 트리거 버튼 클릭으로 열리고, Cancel/Continue 버튼이 동작하는지 확인\n    const triggerButton = canvas.getByRole(\"button\", { name: /show dialog/i });\n    await expect(triggerButton).toBeInTheDocument();\n\n    // 트리거 버튼 클릭하여 다이얼로그 열기\n    await userEvent.click(triggerButton);\n\n    // 다이얼로그가 열렸는지 확인\n    await waitFor(async () => {\n      const dialogTitle = await canvas.findByRole(\"heading\", {\n        name: /are you absolutely sure/i,\n      });\n      await expect(dialogTitle).toBeInTheDocument();\n    });\n\n    // Cancel 버튼 확인\n    const cancelButton = canvas.getByRole(\"button\", { name: /cancel/i });\n    await expect(cancelButton).toBeInTheDocument();\n\n    // Continue 버튼 확인\n    const continueButton = canvas.getByRole(\"button\", { name: /continue/i });\n    await expect(continueButton).toBeInTheDocument();\n\n    // Cancel 버튼 클릭 (다이얼로그 닫기)\n    await userEvent.click(cancelButton);\n  },\n};\n",
+      "type": "registry:component"
+    }
+  ],
+  "categories": ["atoms", "storybook", "dialog", "modal"]
+}

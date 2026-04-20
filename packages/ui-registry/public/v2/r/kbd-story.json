@@ -1,0 +1,24 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "kbd-story",
+  "type": "registry:component",
+  "title": "Kbd Story",
+  "author": "Lloyd Richards <lloyd.d.richards@gmail.com>",
+  "description": "Interactive Storybook stories demonstrating keyboard key display component for shortcuts and key combinations",
+  "dependencies": ["lucide-react"],
+  "registryDependencies": [
+    "kbd",
+    "button",
+    "button-group",
+    "tooltip",
+    "input-group"
+  ],
+  "files": [
+    {
+      "path": "src/registry/atoms/kbd-story/kbd.stories.tsx",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport { ButtonGroup } from \"@/components/ui/button-group\";\nimport {\n  InputGroup,\n  InputGroupAddon,\n  InputGroupInput,\n} from \"@/components/ui/input-group\";\nimport { Kbd, KbdGroup } from \"@/components/ui/kbd\";\nimport {\n  Tooltip,\n  TooltipContent,\n  TooltipProvider,\n  TooltipTrigger,\n} from \"@/components/ui/tooltip\";\nimport type { Meta, StoryObj } from \"@storybook/nextjs-vite\";\nimport { Bold, Code, Italic, SearchIcon, Underline } from \"lucide-react\";\n\n/**\n * Used to display textual user input from keyboard.\n * Shows keyboard keys and shortcuts in a visually distinct style.\n */\nconst meta = {\n  title: \"ui/Kbd\",\n  component: Kbd,\n  tags: [\"autodocs\"],\n  parameters: {\n    layout: \"centered\",\n  },\n  decorators: [\n    (Story) => (\n      <TooltipProvider>\n        <Story />\n      </TooltipProvider>\n    ),\n  ],\n} satisfies Meta<typeof Kbd>;\n\nexport default meta;\ntype Story = StoryObj<typeof meta>;\n\n/**\n * KbdGroup을 사용한 키보드 단축키 표시입니다.\n * 문장 내에서 여러 키 조합을 보여줍니다.\n */\nexport const Group: Story = {\n  render: () => (\n    <div className=\"flex flex-col items-center gap-4\">\n      <p className=\"text-muted-foreground text-sm\">\n        Use{\" \"}\n        <KbdGroup>\n          <Kbd>Ctrl + B</Kbd>\n          <Kbd>Ctrl + K</Kbd>\n        </KbdGroup>{\" \"}\n        to open the command palette\n      </p>\n    </div>\n  ),\n};\n\n/**\n * 버튼 내부에서 Kbd 사용 예제입니다.\n * 버튼의 액션과 관련된 키보드 단축키를 표시합니다.\n */\nexport const ButtonExample: Story = {\n  render: () => (\n    <div className=\"flex flex-wrap items-center gap-4\">\n      <Button variant=\"outline\" size=\"sm\" className=\"pr-2\">\n        Accept <Kbd>⏎</Kbd>\n      </Button>\n      <Button variant=\"outline\" size=\"sm\" className=\"pr-2\">\n        Cancel <Kbd>Esc</Kbd>\n      </Button>\n    </div>\n  ),\n};\n\n/**\n * 툴팁과 함께 Kbd를 사용하는 예제입니다.\n * 툴팁 내부에서 키보드 단축키 정보를 제공합니다.\n */\nexport const TooltipExample: Story = {\n  render: () => (\n    <ButtonGroup>\n      <Tooltip>\n        <TooltipTrigger asChild>\n          <Button size=\"icon\" variant=\"outline\">\n            <Bold />\n          </Button>\n        </TooltipTrigger>\n        <TooltipContent>\n          Bold <Kbd>⌘ B</Kbd>\n        </TooltipContent>\n      </Tooltip>\n      <Tooltip>\n        <TooltipTrigger asChild>\n          <Button size=\"icon\" variant=\"outline\">\n            <Italic />\n          </Button>\n        </TooltipTrigger>\n        <TooltipContent>\n          Italic <Kbd>⌘ I</Kbd>\n        </TooltipContent>\n      </Tooltip>\n      <Tooltip>\n        <TooltipTrigger asChild>\n          <Button size=\"icon\" variant=\"outline\">\n            <Underline />\n          </Button>\n        </TooltipTrigger>\n        <TooltipContent>\n          Underline <Kbd>⌘ U</Kbd>\n        </TooltipContent>\n      </Tooltip>\n      <Tooltip>\n        <TooltipTrigger asChild>\n          <Button size=\"icon\" variant=\"outline\">\n            <Code />\n          </Button>\n        </TooltipTrigger>\n        <TooltipContent>\n          Code <Kbd>⌘ `</Kbd>\n        </TooltipContent>\n      </Tooltip>\n    </ButtonGroup>\n  ),\n};\n\n/**\n * Input Group과 함께 Kbd를 사용하는 예제입니다.\n * 검색 입력 필드에 키보드 단축키를 표시합니다.\n */\nexport const InputGroupExample: Story = {\n  render: () => (\n    <div className=\"flex w-full max-w-xs flex-col gap-6\">\n      <InputGroup>\n        <InputGroupInput placeholder=\"Search...\" />\n        <InputGroupAddon>\n          <SearchIcon />\n        </InputGroupAddon>\n        <InputGroupAddon align=\"inline-end\">\n          <Kbd>⌘</Kbd>\n          <Kbd>K</Kbd>\n        </InputGroupAddon>\n      </InputGroup>\n    </div>\n  ),\n};\n",
+      "type": "registry:component"
+    }
+  ],
+  "categories": ["atoms", "storybook", "kbd", "keyboard"]
+}

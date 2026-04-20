@@ -1,0 +1,257 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+/* Tailwind dark mode variant: .dark 클래스를 가진 요소와 그 자식 모두에 적용 */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* 기본 테마 변수 정의 (:root 레벨) - Indigo Primary Theme (#6366F1) */
+:root {
+  --background: #ffffff;
+  --foreground: #333333;
+  --card: #ffffff;
+  --card-foreground: #333333;
+  --popover: #ffffff;
+  --popover-foreground: #333333;
+  --primary: #6366f1;
+  --primary-foreground: #ffffff;
+  --secondary: #f5f5f5;
+  --secondary-foreground: #4b5666;
+  --muted: #f8f8f8;
+  --muted-foreground: #6c727e;
+  --accent: #e0e7ff;
+  --accent-foreground: #3730a3;
+  --destructive: #f14444;
+  --border: #e4e8ef;
+  --input: #e4e8ef;
+  --ring: #6366f1;
+  --chart-1: #6366f1;
+  --chart-2: #818cf8;
+  --chart-3: #4f46e5;
+  --chart-4: #4338ca;
+  --chart-5: #3730a3;
+
+  /* Purple 색상 계열 (Figma: #6474F3) */
+  --purple-primary: #6474f3;
+  --purple-secondary: rgba(100, 116, 243, 0.6);
+  --purple-tertiary: rgba(100, 116, 243, 0.15);
+  --purple-gray: rgba(100, 116, 243, 0.05);
+
+  /* Magenta 색상 계열 (Figma: #D165D3) */
+  --magenta-primary: #d165d3;
+  --magenta-secondary: rgba(209, 101, 211, 0.6);
+  --magenta-tertiary: rgba(209, 101, 211, 0.15);
+  --magenta-gray: rgba(209, 101, 211, 0.05);
+  --sidebar: #f8f8f8;
+  --sidebar-foreground: #090909;
+  --sidebar-primary: #161616;
+  --sidebar-primary-foreground: #f8f8f8;
+  --sidebar-accent: #e4e4e4;
+  --sidebar-accent-foreground: #161616;
+  --sidebar-border: #e4e4e4;
+  --sidebar-ring: #a1a1a1;
+
+  --font-sans:
+    "Geist", "Geist Fallback", ui-sans-serif, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+    "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol", "Noto Color Emoji";
+  --font-serif: Source Serif 4, serif;
+  --font-mono: JetBrains Mono, monospace;
+
+  --radius: 0.375rem;
+
+  --shadow-2xs: 0 1px 3px 0px rgb(0 0 0 / 0.05);
+  --shadow-xs: 0 1px 3px 0px rgb(0 0 0 / 0.05);
+  --shadow-sm: 0 1px 3px 0px rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow: 0 1px 3px 0px rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 1px 3px 0px rgb(0 0 0 / 0.1), 0 2px 4px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 1px 3px 0px rgb(0 0 0 / 0.1), 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 1px 3px 0px rgb(0 0 0 / 0.1), 0 8px 10px -1px rgb(0 0 0 / 0.1);
+  --shadow-2xl: 0 1px 3px 0px rgb(0 0 0 / 0.25);
+}
+
+/* 다크모드 테마 변수 - Indigo Primary Dark Theme (#6366F1) */
+.dark {
+  --background: #161616;
+  --foreground: #e4e4e4;
+  --card: #171717;
+  --card-foreground: #e4e4e4;
+  --popover: #262626;
+  --popover-foreground: #e4e4e4;
+  --primary: #818cf8;
+  --primary-foreground: #1e1b4b;
+  --secondary: #262626;
+  --secondary-foreground: #e4e4e4;
+  --muted: #262626;
+  --muted-foreground: #a4a4a4;
+  --accent: #312e81;
+  --accent-foreground: #c7d2fe;
+  --destructive: #f14444;
+  --border: #404040;
+  --input: #404040;
+  --ring: #818cf8;
+  --chart-1: #a5b4fc;
+  --chart-2: #818cf8;
+  --chart-3: #6366f1;
+  --chart-4: #4f46e5;
+  --chart-5: #4338ca;
+
+  /* Purple 색상 계열 (Figma: #6474F3) - 다크모드 동일 */
+  --purple-primary: #6474f3;
+  --purple-secondary: rgba(100, 116, 243, 0.6);
+  --purple-tertiary: #6474f326;
+  --purple-gray: #6474f326;
+
+  /* Magenta 색상 계열 (Figma: #D165D3) - 다크모드 동일 */
+  --magenta-primary: #d165d3;
+  --magenta-secondary: rgba(209, 101, 211, 0.6);
+  --magenta-tertiary: rgba(209, 101, 211, 0.15);
+  --magenta-gray: rgba(209, 101, 211, 0.15);
+  --sidebar: #18181d;
+  --sidebar-foreground: #fcfcfc;
+  --sidebar-primary: #6366f1;
+  --sidebar-primary-foreground: #fcfcfc;
+  --sidebar-accent: #26262b;
+  --sidebar-accent-foreground: #fcfcfc;
+  --sidebar-border: #ffffff1a;
+  --sidebar-ring: #70707d;
+
+  --shadow-2xs: 0 1px 3px 0px rgb(0 0 0 / 0.05);
+  --shadow-xs: 0 1px 3px 0px rgb(0 0 0 / 0.05);
+  --shadow-sm: 0 1px 3px 0px rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow: 0 1px 3px 0px rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 1px 3px 0px rgb(0 0 0 / 0.1), 0 2px 4px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 1px 3px 0px rgb(0 0 0 / 0.1), 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 1px 3px 0px rgb(0 0 0 / 0.1), 0 8px 10px -1px rgb(0 0 0 / 0.1);
+  --shadow-2xl: 0 1px 3px 0px rgb(0 0 0 / 0.25);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  /* Purple 색상 계열 */
+  --color-purple-primary: var(--purple-primary);
+  --color-purple-secondary: var(--purple-secondary);
+  --color-purple-tertiary: var(--purple-tertiary);
+  --color-purple-gray: var(--purple-gray);
+
+  /* Magenta 색상 계열 */
+  --color-magenta-primary: var(--magenta-primary);
+  --color-magenta-secondary: var(--magenta-secondary);
+  --color-magenta-tertiary: var(--magenta-tertiary);
+  --color-magenta-gray: var(--magenta-gray);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --font-serif: var(--font-serif);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --shadow-2xs: var(--shadow-2xs);
+  --shadow-xs: var(--shadow-xs);
+  --shadow-sm: var(--shadow-sm);
+  --shadow: var(--shadow);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-xl: var(--shadow-xl);
+  --shadow-2xl: var(--shadow-2xl);
+
+  /* 애니메이션 */
+  --animate-tada: tada 1s ease-in-out;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+
+@keyframes auth-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tada 애니메이션 키프레임 */
+@keyframes tada {
+  0% {
+    transform: scale(1);
+  }
+  10%,
+  20% {
+    transform: scale(0.9) rotate(-3deg);
+  }
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: scale(1.1) rotate(3deg);
+  }
+  40%,
+  60%,
+  80% {
+    transform: scale(1.1) rotate(-3deg);
+  }
+  100% {
+    transform: scale(1) rotate(0);
+  }
+}
+
+.animate-tada {
+  animation: var(--animate-tada);
+}
+
+/* Optimization Hero 그라데이션 배경 */
+.optimization-hero-gradient {
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1174 130' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(116.58 13 -12.767 87.644 8.218 0.0000062816)'><stop stop-color='rgba(135,148,246,1)' offset='0'/><stop stop-color='rgba(185,139,242,1)' offset='0.5'/><stop stop-color='rgba(235,130,238,1)' offset='1'/></radialGradient></defs></svg>");
+  background-size: cover;
+}
+
+/* 다크모드: Figma 디자인 기반 그라데이션 */
+.dark .optimization-hero-gradient {
+  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 1174 130' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='none'><rect x='0' y='0' height='100%' width='100%' fill='url(%23grad)' opacity='1'/><defs><radialGradient id='grad' gradientUnits='userSpaceOnUse' cx='0' cy='0' r='10' gradientTransform='matrix(116.58 13 -12.767 87.644 8.218 0.0000062816)'><stop stop-color='rgba(72,62,142,1)' offset='0'/><stop stop-color='rgba(121,56,123,1)' offset='1'/></radialGradient></defs></svg>");
+  background-size: cover;
+}

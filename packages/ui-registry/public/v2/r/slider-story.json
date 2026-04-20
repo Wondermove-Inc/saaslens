@@ -1,0 +1,17 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "slider-story",
+  "type": "registry:component",
+  "title": "Slider Story",
+  "author": "Lloyd Richards <lloyd.d.richards@gmail.com>",
+  "description": "Interactive Storybook stories demonstrating slider component usage and variants",
+  "registryDependencies": ["slider"],
+  "files": [
+    {
+      "path": "src/registry/atoms/slider-story/slider.stories.tsx",
+      "content": "// Replace nextjs-vite with the name of your framework\nimport type { Meta, StoryObj } from \"@storybook/nextjs-vite\";\nimport { expect, userEvent, within } from \"storybook/test\";\n\nimport { Slider } from \"@/components/ui/slider\";\nimport { cn } from \"@/lib/utils\";\n\ntype SliderProps = React.ComponentProps<typeof Slider>;\n\nexport function SliderDemo({ className, ...props }: SliderProps) {\n  return (\n    <div className=\"w-[350px]\">\n      <Slider\n        defaultValue={[50]}\n        max={100}\n        step={1}\n        className={cn(\"w-full\", className)}\n        {...props}\n      />\n    </div>\n  );\n}\n\n/**\n * An input where the user selects a value from within a given range.\n */\nconst meta = {\n  title: \"ui/Slider\",\n  component: Slider,\n  tags: [\"autodocs\"],\n  parameters: {\n    layout: \"centered\",\n  },\n  excludeStories: /.*Demo$/,\n  argTypes: {\n    min: {\n      control: \"number\",\n      description: \"The minimum value of the slider\",\n    },\n    max: {\n      control: \"number\",\n      description: \"The maximum value of the slider\",\n    },\n    step: {\n      control: \"number\",\n      description: \"The step increment for the slider\",\n    },\n    disabled: {\n      control: \"boolean\",\n      description: \"Whether the slider is disabled\",\n    },\n  },\n  args: {\n    min: 0,\n    max: 100,\n    step: 1,\n    disabled: false,\n  },\n  render: (args) => (\n    <div className=\"w-[350px]\">\n      <Slider\n        defaultValue={[50]}\n        min={args.min}\n        max={args.max}\n        step={args.step}\n        disabled={args.disabled}\n        className=\"w-full\"\n      />\n    </div>\n  ),\n} satisfies Meta<typeof Slider>;\n\nexport default meta;\n\ntype Story = StoryObj<typeof meta>;\n\n/**\n * The default form of the slider.\n */\nexport const Default: Story = {};\n\n/**\n * Use the `inverted` prop to have the slider fill from right to left.\n */\nexport const Inverted: Story = {\n  render: () => <SliderDemo inverted />,\n};\n\n/**\n * Use the `disabled` prop to disable the slider.\n */\nexport const Disabled: Story = {\n  render: () => <SliderDemo disabled />,\n};\n\nexport const ShouldChangeValue: Story = {\n  name: \"when user interacts with slider, should change value\",\n  tags: [\"!dev\", \"!autodocs\"],\n  render: () => <SliderDemo />,\n  play: async ({ canvasElement, step }) => {\n    const canvas = within(canvasElement);\n\n    await step(\"focus slider and press arrow key\", async () => {\n      const slider = canvas.getByRole(\"slider\");\n      await userEvent.click(slider);\n\n      // Get initial value\n      const initialValue = slider.getAttribute(\"aria-valuenow\");\n\n      // Press right arrow key to increase value\n      await userEvent.keyboard(\"{ArrowRight}\");\n\n      // Verify value changed\n      const newValue = slider.getAttribute(\"aria-valuenow\");\n      await expect(Number(newValue)).toBeGreaterThan(Number(initialValue));\n    });\n  },\n};\n",
+      "type": "registry:component"
+    }
+  ],
+  "categories": ["atoms", "storybook", "slider", "form"]
+}

@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1440">
+  <title>saaslens - Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#6366F1',
+            muted: '#6c727e',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: system-ui, -apple-system, 'Segoe UI', sans-serif; background: #f8f8f8; color: #333333; }
+    .card-shadow { box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+    .gradient-hero {
+      background: linear-gradient(135deg, rgba(135,148,246,1) 0%, rgba(180,130,238,0.9) 50%, rgba(235,130,238,0.8) 100%);
+    }
+    .usage-segment { width: 18px; height: 10px; border-radius: 2px; margin-right: 2px; }
+    .usage-filled { background: #6366F1; }
+    .usage-empty { background: #e5e7eb; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 3px; }
+  </style>
+</head>
+<body class="min-h-screen flex">
+
+  <!-- Sidebar -->
+  <aside class="w-64 min-h-screen bg-white border-r border-gray-200 flex flex-col flex-shrink-0">
+    <!-- Logo -->
+    <div class="h-[55px] flex items-center px-5 border-b border-gray-100">
+      <span class="text-xl font-bold text-primary tracking-tight">saaslens</span>
+    </div>
+
+    <!-- Menu -->
+    <nav class="flex-1 py-4 px-3 space-y-6 overflow-y-auto">
+      <!-- MAIN -->
+      <div>
+        <div class="flex items-center gap-2 px-3 mb-2">
+          <span class="w-2 h-2 rounded-full bg-indigo-500"></span>
+          <span class="text-[11px] font-semibold text-gray-400 uppercase tracking-wider">Main</span>
+        </div>
+        <ul class="space-y-0.5">
+          <li>
+            <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg bg-indigo-50 text-primary font-medium text-sm">
+              <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+              Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50 text-sm">
+              <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+              Reports
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- MANAGEMENT -->
+      <div>
+        <div class="flex items-center gap-2 px-3 mb-2">
+          <span class="w-2 h-2 rounded-full bg-amber-500"></span>
+          <span class="text-[11px] font-semibold text-gray-400 uppercase tracking-wider">Management</span>
+        </div>
+        <ul class="space-y-0.5">
+          <li>
+            <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50 text-sm">
+              <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              Teams
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50 text-sm">
+              <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
+              Subscriptions
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50 text-sm">
+              <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              Payments
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50 text-sm">
+              <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h7"/></svg>
+              Extensions
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- SYSTEM -->
+      <div>
+        <div class="flex items-center gap-2 px-3 mb-2">
+          <span class="w-2 h-2 rounded-full bg-slate-400"></span>
+          <span class="text-[11px] font-semibold text-gray-400 uppercase tracking-wider">System</span>
+        </div>
+        <ul class="space-y-0.5">
+          <li>
+            <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50 text-sm">
+              <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+              Integrations
+            </a>
+          </li>
+          <li>
+            <a href="#" class="flex items-center gap-3 px-3 py-2 rounded-lg text-gray-600 hover:bg-gray-50 text-sm">
+              <svg class="w-[18px] h-[18px]" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><circle cx="12" cy="12" r="3"/></svg>
+              Settings
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- User -->
+    <div class="border-t border-gray-100 p-3">
+      <div class="flex items-center gap-3 px-2 py-2">
+        <div class="w-8 h-8 rounded-full bg-indigo-100 text-primary flex items-center justify-center text-sm font-semibold">A</div>
+        <div class="flex-1 min-w-0">
+          <div class="text-sm font-medium text-gray-800 truncate">Alex Kim</div>
+          <div class="text-xs text-gray-400 truncate">alex@demo.com</div>
+        </div>
+        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 9l4-4 4 4m0 6l-4 4-4-4"/></svg>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Main Area -->
+  <div class="flex-1 flex flex-col min-h-screen">
+
+    <!-- Header -->
+    <header class="h-[55px] sticky top-0 z-30 bg-white/80 backdrop-blur border-b border-gray-200 flex items-center justify-between px-5">
+      <!-- Search -->
+      <div class="relative">
+        <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+        <input type="text" placeholder="Search...  &#8984;K" class="pl-9 pr-4 py-1.5 w-64 text-sm bg-gray-100 rounded-lg border-0 outline-none focus:ring-2 focus:ring-indigo-200 placeholder-gray-400">
+      </div>
+      <!-- Right icons -->
+      <div class="flex items-center gap-4">
+        <!-- Notification bell -->
+        <button class="relative text-gray-500 hover:text-gray-700">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+          <span class="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full text-[10px] text-white flex items-center justify-center font-medium">3</span>
+        </button>
+        <!-- Language -->
+        <button class="text-gray-500 hover:text-gray-700">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10A15.3 15.3 0 0112 2z"/></svg>
+        </button>
+        <!-- Settings -->
+        <button class="text-gray-500 hover:text-gray-700">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><circle cx="12" cy="12" r="3"/></svg>
+        </button>
+        <!-- User Avatar -->
+        <div class="w-8 h-8 rounded-full bg-indigo-100 text-primary flex items-center justify-center text-sm font-semibold">A</div>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <main class="flex-1 p-4 space-y-3 overflow-y-auto">
+
+      <!-- Row 1: Optimization Hero Card -->
+      <div class="gradient-hero rounded-xl card-shadow h-32 flex items-center text-white overflow-hidden">
+        <!-- Left -->
+        <div class="flex-[2] px-6 py-4">
+          <div class="text-xs font-medium uppercase tracking-wider opacity-80 mb-1">Monthly Savings</div>
+          <div class="text-3xl font-bold tracking-tight">$2,450</div>
+          <div class="text-sm opacity-80 mt-1">Annual $29,400</div>
+        </div>
+        <!-- Divider -->
+        <div class="w-px h-16 bg-white/30"></div>
+        <!-- Middle -->
+        <div class="flex-1 px-6 py-4 text-center">
+          <div class="text-xs font-medium uppercase tracking-wider opacity-80 mb-1">Unused Licenses</div>
+          <div class="text-3xl font-bold">23</div>
+        </div>
+        <!-- Divider -->
+        <div class="w-px h-16 bg-white/30"></div>
+        <!-- Right -->
+        <div class="flex-1 px-6 py-4 text-center">
+          <div class="text-xs font-medium uppercase tracking-wider opacity-80 mb-1">Over-Provisioned</div>
+          <div class="text-3xl font-bold">4 <span class="text-base font-normal opacity-80">apps</span></div>
+        </div>
+      </div>
+
+      <!-- Row 2: KPI Cards -->
+      <div class="grid grid-cols-4 gap-3">
+        <!-- Total Cost -->
+        <div class="bg-white rounded-xl card-shadow p-4 border-l-4 border-indigo-400/50">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs text-gray-400 font-medium uppercase tracking-wider">Total Cost</span>
+            <div class="w-8 h-8 rounded-lg bg-indigo-50 flex items-center justify-center">
+              <svg class="w-4 h-4 text-primary" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            </div>
+          </div>
+          <div class="text-2xl font-bold text-gray-800">$18,750</div>
+          <div class="mt-1">
+            <span class="inline-flex items-center gap-1 text-xs font-medium text-green-600 bg-green-50 px-2 py-0.5 rounded-full">
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 15l7-7 7 7"/></svg>
+              +12.3% vs last month
+            </span>
+          </div>
+        </div>
+
+        <!-- Anomalies -->
+        <div class="bg-white rounded-xl card-shadow p-4 border-l-4 border-indigo-400/50">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs text-gray-400 font-medium uppercase tracking-wider">Anomalies</span>
+            <div class="w-8 h-8 rounded-lg bg-orange-50 flex items-center justify-center">
+              <svg class="w-4 h-4 text-orange-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4.5c-.77-.833-2.694-.833-3.464 0L3.34 16.5c-.77.833.192 2.5 1.732 2.5z"/></svg>
+            </div>
+          </div>
+          <div class="text-2xl font-bold text-gray-800">3</div>
+          <div class="mt-1 text-xs text-gray-400">Detected this month</div>
+        </div>
+
+        <!-- Terminated Users -->
+        <div class="bg-white rounded-xl card-shadow p-4 border-l-4 border-indigo-400/50">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs text-gray-400 font-medium uppercase tracking-wider">Terminated Users</span>
+            <div class="w-8 h-8 rounded-lg bg-red-50 flex items-center justify-center">
+              <svg class="w-4 h-4 text-red-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/><path d="M22 11h-6"/></svg>
+            </div>
+          </div>
+          <div class="text-2xl font-bold text-gray-800">11</div>
+          <div class="mt-1 text-xs text-gray-400">With active licenses</div>
+        </div>
+
+        <!-- Apps Without Sub -->
+        <div class="bg-white rounded-xl card-shadow p-4 border-l-4 border-indigo-400/50">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-xs text-gray-400 font-medium uppercase tracking-wider">Apps Without Sub</span>
+            <div class="w-8 h-8 rounded-lg bg-gray-100 flex items-center justify-center">
+              <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+            </div>
+          </div>
+          <div class="text-2xl font-bold text-gray-800">6</div>
+          <div class="mt-1 text-xs text-gray-400">Unmanaged apps</div>
+        </div>
+      </div>
+
+      <!-- Row 3: Charts -->
+      <div class="grid grid-cols-2 gap-3">
+        <!-- Monthly Cost Trend -->
+        <div class="bg-white rounded-xl card-shadow p-5">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-sm font-semibold text-gray-800">Monthly Cost Trend</h3>
+            <div class="flex items-center gap-1 bg-gray-100 rounded-lg p-0.5 text-xs font-medium">
+              <button class="px-2.5 py-1 rounded-md text-gray-500">3M</button>
+              <button class="px-2.5 py-1 rounded-md bg-white text-primary shadow-sm">6M</button>
+              <button class="px-2.5 py-1 rounded-md text-gray-500">12M</button>
+            </div>
+          </div>
+          <div class="relative" style="height: 200px;">
+            <svg viewBox="0 0 500 200" class="w-full h-full" preserveAspectRatio="none">
+              <!-- Grid lines -->
+              <line x1="50" y1="20" x2="480" y2="20" stroke="#f3f4f6" stroke-width="1"/>
+              <line x1="50" y1="60" x2="480" y2="60" stroke="#f3f4f6" stroke-width="1"/>
+              <line x1="50" y1="100" x2="480" y2="100" stroke="#f3f4f6" stroke-width="1"/>
+              <line x1="50" y1="140" x2="480" y2="140" stroke="#f3f4f6" stroke-width="1"/>
+              <line x1="50" y1="175" x2="480" y2="175" stroke="#e5e7eb" stroke-width="1"/>
+
+              <!-- Y-axis labels -->
+              <text x="45" y="24" text-anchor="end" fill="#9ca3af" font-size="10">$20K</text>
+              <text x="45" y="64" text-anchor="end" fill="#9ca3af" font-size="10">$18K</text>
+              <text x="45" y="104" text-anchor="end" fill="#9ca3af" font-size="10">$16K</text>
+              <text x="45" y="144" text-anchor="end" fill="#9ca3af" font-size="10">$14K</text>
+
+              <!-- Area fill -->
+              <path d="M 80 140 L 160 125 L 240 130 L 320 100 L 400 80 L 460 55 L 460 175 L 80 175 Z" fill="rgba(99,102,241,0.08)"/>
+
+              <!-- Line -->
+              <polyline points="80,140 160,125 240,130 320,100 400,80 460,55" fill="none" stroke="#6366F1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+              <!-- Data points -->
+              <circle cx="80" cy="140" r="3.5" fill="white" stroke="#6366F1" stroke-width="2"/>
+              <circle cx="160" cy="125" r="3.5" fill="white" stroke="#6366F1" stroke-width="2"/>
+              <circle cx="240" cy="130" r="3.5" fill="white" stroke="#6366F1" stroke-width="2"/>
+              <circle cx="320" cy="100" r="3.5" fill="white" stroke="#6366F1" stroke-width="2"/>
+              <circle cx="400" cy="80" r="3.5" fill="white" stroke="#6366F1" stroke-width="2"/>
+              <circle cx="460" cy="55" r="4" fill="#6366F1" stroke="white" stroke-width="2"/>
+
+              <!-- X-axis labels -->
+              <text x="80" y="192" text-anchor="middle" fill="#9ca3af" font-size="11">Nov</text>
+              <text x="160" y="192" text-anchor="middle" fill="#9ca3af" font-size="11">Dec</text>
+              <text x="240" y="192" text-anchor="middle" fill="#9ca3af" font-size="11">Jan</text>
+              <text x="320" y="192" text-anchor="middle" fill="#9ca3af" font-size="11">Feb</text>
+              <text x="400" y="192" text-anchor="middle" fill="#9ca3af" font-size="11">Mar</text>
+              <text x="460" y="192" text-anchor="middle" fill="#9ca3af" font-size="11">Apr</text>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Top Apps by Cost -->
+        <div class="bg-white rounded-xl card-shadow p-5">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="text-sm font-semibold text-gray-800">Top Apps by Cost</h3>
+            <span class="text-xs text-gray-400">Monthly</span>
+          </div>
+          <table class="w-full text-sm">
+            <thead>
+              <tr class="text-[11px] text-gray-400 uppercase tracking-wider border-b border-gray-100">
+                <th class="pb-2 text-left font-medium w-8">#</th>
+                <th class="pb-2 text-left font-medium">App</th>
+                <th class="pb-2 text-right font-medium">Cost</th>
+                <th class="pb-2 text-center font-medium w-28">Usage</th>
+                <th class="pb-2 text-center font-medium w-12">Grade</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Row 1 -->
+              <tr class="border-b border-gray-50">
+                <td class="py-2.5"><span class="w-5 h-5 inline-flex items-center justify-center rounded-md bg-indigo-100 text-primary text-[10px] font-bold">1</span></td>
+                <td class="py-2.5 font-medium text-gray-700">Salesforce</td>
+                <td class="py-2.5 text-right text-gray-600">$4,200</td>
+                <td class="py-2.5">
+                  <div class="flex justify-center gap-[2px]">
+                    <div class="usage-segment usage-filled"></div>
+                    <div class="usage-segment usage-filled"></div>
+                    <div class="usage-segment usage-filled"></div>
+                    <div class="usage-segment usage-filled"></div>
+                    <div class="usage-segment usage-filled"></div>
+                  </div>
+                </td>
+                <td class="py-2.5 text-center"><span class="inline-flex items-center justify-center w-6 h-5 rounded text-[11px] font-bold bg-green-100 text-green-700">A</span></td>
+              </tr>
+              <!-- Row 2 -->
+              <tr class="border-b border-gray-50">
+                <td class="py-2.5"><span class="w-5 h-5 inline-flex items-center justify-center rounded-md bg-gray-100 text-gray-500 text-[10px] font-bold">2</span></td>
+                <td class="py-2.5 font-medium text-gray-700">Slack</td>
+                <td class="py-2.5 text-right text-gray-600">$3,150</td>
+                <td class="py-2.5">
+                  <div class="flex justify-center gap-[2px]">
+                    <div class="usage-segment usage-filled"></div>
+                    <div class="usage-segment usage-filled"></div>
+                    <div class="usage-segment usage-filled"></div>
+                    <div class="usage-segment usage-filled"></div>
+                    <div class="usage-segment usage-empty"></div>
+                  </div>
+                </td>
+                <td class="py-2.5 text-center"><span class="inline-flex items-center justify-center w-6 h-5 rounded text-[11px] font-bold bg-green-100 text-green-700">A</span></td>
+              </tr>
+              <!-- Row 3 -->
+              <tr class="border-b border-gray-50">
+                <td class="py-2.5"><span class="w-5 h-5 inline-flex items-center justify-center rounded-md bg-gray-100 text-gray-500 text-[10px] font-bold">3</span></td>
+                <td class="py-2.5 font-medium text-gray-700">AWS</td>
+                <td class="py-2.5 text-right text-gray-600">$2,890</td>
+                <td class="py-2.5">
+                  <div class="flex justify-center gap-[2px]">
+                    <div class="usage-segment usage-filled"></div>
+                    <div class="usage-segment usage-filled"></div>
+                    <div class="usage-segment usage-filled"></div>
+                    <div class="usage-segment usage-filled"></div>
+                    <div class="usage-segment usage-empty"></div>
+                  </div>
+                </td>
+                <td class="py-2.5 text-center"><span class="inline-flex items-center justify-center w-6 h-5 rounded text-[11px] font-bold bg-blue-100 text-blue-700">B</span></td>
+              </tr>
+              <!-- Row 4 -->
+              <tr class="border-b border-gray-50">
+                <td class="py-2.5"><span class="w-5 h-5 inline-flex items-center justify-center rounded-md bg-gray-100 text-gray-500 text-[10px] font-bold">4</span></td>
+                <td class="py-2.5 font-medium text-gray-700">Notion</td>
+                <td class="py-2.5 text-right text-gray-600">$2,340</td>
+                <td class="py-2.5">
+                  <div class="flex justify-center gap-[2px]">
+                    <div class="usage-segment usage-filled"></div>
+                    <div class="usage-segment usage-filled"></div>
+                    <div class="usage-segment usage-filled"></div>
+                    <div class="usage-segment usage-empty"></div>
+                    <div class="usage-segment usage-empty"></div>
+                  </div>
+                </td>
+                <td class="py-2.5 text-center"><span class="inline-flex items-center justify-center w-6 h-5 rounded text-[11px] font-bold bg-blue-100 text-blue-700">B</span></td>
+              </tr>
+              <!-- Row 5 -->
+              <tr class="border-b border-gray-50">
+                <td class="py-2.5"><span class="w-5 h-5 inline-flex items-center justify-center rounded-md bg-gray-100 text-gray-500 text-[10px] font-bold">5</span></td>
+                <td class="py-2.5 font-medium text-gray-700">Figma</td>
+                <td class="py-2.5 text-right text-gray-600">$1,870</td>
+                <td class="py-2.5">
+                  <div class="flex justify-center gap-[2px]">
+                    <div class="usage-segment usage-filled"></div>
+                    <div class="usage-segment usage-filled"></div>
+                    <div class="usage-segment usage-filled"></div>
+                    <div class="usage-segment usage-empty"></div>
+                    <div class="usage-segment usage-empty"></div>
+                  </div>
+                </td>
+                <td class="py-2.5 text-center"><span class="inline-flex items-center justify-center w-6 h-5 rounded text-[11px] font-bold bg-yellow-100 text-yellow-700">C</span></td>
+              </tr>
+              <!-- Row 6 -->
+              <tr class="border-b border-gray-50">
+                <td class="py-2.5"><span class="w-5 h-5 inline-flex items-center justify-center rounded-md bg-gray-100 text-gray-500 text-[10px] font-bold">6</span></td>
+                <td class="py-2.5 font-medium text-gray-700">Datadog</td>
+                <td class="py-2.5 text-right text-gray-600">$1,650</td>
+                <td class="py-2.5">
+                  <div class="flex justify-center gap-[2px]">
+                    <div class="usage-segment usage-filled"></div>
+                    <div class="usage-segment usage-filled"></div>
+                    <div class="usage-segment usage-empty"></div>
+                    <div class="usage-segment usage-empty"></div>
+                    <div class="usage-segment usage-empty"></div>
+                  </div>
+                </td>
+                <td class="py-2.5 text-center"><span class="inline-flex items-center justify-center w-6 h-5 rounded text-[11px] font-bold bg-yellow-100 text-yellow-700">C</span></td>
+              </tr>
+              <!-- Row 7 -->
+              <tr>
+                <td class="py-2.5"><span class="w-5 h-5 inline-flex items-center justify-center rounded-md bg-gray-100 text-gray-500 text-[10px] font-bold">7</span></td>
+                <td class="py-2.5 font-medium text-gray-700">Zoom</td>
+                <td class="py-2.5 text-right text-gray-600">$1,420</td>
+                <td class="py-2.5">
+                  <div class="flex justify-center gap-[2px]">
+                    <div class="usage-segment usage-filled"></div>
+                    <div class="usage-segment usage-filled"></div>
+                    <div class="usage-segment usage-empty"></div>
+                    <div class="usage-segment usage-empty"></div>
+                    <div class="usage-segment usage-empty"></div>
+                  </div>
+                </td>
+                <td class="py-2.5 text-center"><span class="inline-flex items-center justify-center w-6 h-5 rounded text-[11px] font-bold bg-red-100 text-red-600">D</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Row 4: Three columns -->
+      <div class="grid grid-cols-3 gap-3">
+        <!-- Seat Utilization -->
+        <div class="bg-white rounded-xl card-shadow p-5">
+          <h3 class="text-sm font-semibold text-gray-800 mb-4">Seat Utilization</h3>
+          <div class="space-y-4">
+            <!-- Zoom -->
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="text-sm text-gray-600">Zoom</span>
+                <span class="text-sm font-semibold text-red-500">50%</span>
+              </div>
+              <div class="w-full h-2.5 bg-gray-100 rounded-full overflow-hidden">
+                <div class="h-full rounded-full bg-red-400" style="width: 50%"></div>
+              </div>
+            </div>
+            <!-- Datadog -->
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="text-sm text-gray-600">Datadog</span>
+                <span class="text-sm font-semibold text-orange-500">53%</span>
+              </div>
+              <div class="w-full h-2.5 bg-gray-100 rounded-full overflow-hidden">
+                <div class="h-full rounded-full bg-orange-400" style="width: 53%"></div>
+              </div>
+            </div>
+            <!-- Jira -->
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="text-sm text-gray-600">Jira</span>
+                <span class="text-sm font-semibold text-yellow-600">67%</span>
+              </div>
+              <div class="w-full h-2.5 bg-gray-100 rounded-full overflow-hidden">
+                <div class="h-full rounded-full bg-yellow-400" style="width: 67%"></div>
+              </div>
+            </div>
+            <!-- Figma -->
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="text-sm text-gray-600">Figma</span>
+                <span class="text-sm font-semibold text-indigo-500">72%</span>
+              </div>
+              <div class="w-full h-2.5 bg-gray-100 rounded-full overflow-hidden">
+                <div class="h-full rounded-full bg-indigo-400" style="width: 72%"></div>
+              </div>
+            </div>
+            <!-- Notion -->
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="text-sm text-gray-600">Notion</span>
+                <span class="text-sm font-semibold text-green-600">85%</span>
+              </div>
+              <div class="w-full h-2.5 bg-gray-100 rounded-full overflow-hidden">
+                <div class="h-full rounded-full bg-green-400" style="width: 85%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Upcoming Renewals -->
+        <div class="bg-white rounded-xl card-shadow p-5">
+          <h3 class="text-sm font-semibold text-gray-800 mb-4">Upcoming Renewals</h3>
+          <div class="space-y-3">
+            <!-- Item 1 -->
+            <div class="flex items-center gap-3 p-3 rounded-lg bg-red-50/60 border border-red-100">
+              <div class="w-9 h-9 rounded-lg bg-white flex items-center justify-center shadow-sm">
+                <span class="text-sm font-bold text-gray-600">S</span>
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="text-sm font-medium text-gray-800">Salesforce</div>
+                <div class="text-xs text-gray-400">$4,200/mo</div>
+              </div>
+              <div class="text-right">
+                <div class="text-xs font-semibold text-red-600">May 3</div>
+                <div class="text-[10px] text-red-400">13 days</div>
+              </div>
+            </div>
+            <!-- Item 2 -->
+            <div class="flex items-center gap-3 p-3 rounded-lg bg-orange-50/60 border border-orange-100">
+              <div class="w-9 h-9 rounded-lg bg-white flex items-center justify-center shadow-sm">
+                <span class="text-sm font-bold text-gray-600">A</span>
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="text-sm font-medium text-gray-800">AWS</div>
+                <div class="text-xs text-gray-400">$2,890/mo</div>
+              </div>
+              <div class="text-right">
+                <div class="text-xs font-semibold text-orange-600">May 15</div>
+                <div class="text-[10px] text-orange-400">25 days</div>
+              </div>
+            </div>
+            <!-- Item 3 -->
+            <div class="flex items-center gap-3 p-3 rounded-lg bg-gray-50 border border-gray-100">
+              <div class="w-9 h-9 rounded-lg bg-white flex items-center justify-center shadow-sm">
+                <span class="text-sm font-bold text-gray-600">F</span>
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="text-sm font-medium text-gray-800">Figma</div>
+                <div class="text-xs text-gray-400">$1,870/mo</div>
+              </div>
+              <div class="text-right">
+                <div class="text-xs font-semibold text-gray-600">Jun 1</div>
+                <div class="text-[10px] text-gray-400">42 days</div>
+              </div>
+            </div>
+            <!-- Item 4 -->
+            <div class="flex items-center gap-3 p-3 rounded-lg bg-gray-50 border border-gray-100">
+              <div class="w-9 h-9 rounded-lg bg-white flex items-center justify-center shadow-sm">
+                <span class="text-sm font-bold text-gray-600">D</span>
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="text-sm font-medium text-gray-800">Datadog</div>
+                <div class="text-xs text-gray-400">$1,650/mo</div>
+              </div>
+              <div class="text-right">
+                <div class="text-xs font-semibold text-gray-600">Jun 20</div>
+                <div class="text-[10px] text-gray-400">61 days</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Apps by Category -->
+        <div class="bg-white rounded-xl card-shadow p-5">
+          <h3 class="text-sm font-semibold text-gray-800 mb-4">Apps by Category</h3>
+          <div class="space-y-4">
+            <!-- Productivity -->
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="text-sm text-gray-600">Productivity</span>
+                <span class="text-xs font-semibold text-gray-500">35%</span>
+              </div>
+              <div class="w-full h-2.5 bg-gray-100 rounded-full overflow-hidden">
+                <div class="h-full rounded-full bg-indigo-500" style="width: 35%"></div>
+              </div>
+            </div>
+            <!-- DevTools -->
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="text-sm text-gray-600">DevTools</span>
+                <span class="text-xs font-semibold text-gray-500">25%</span>
+              </div>
+              <div class="w-full h-2.5 bg-gray-100 rounded-full overflow-hidden">
+                <div class="h-full rounded-full bg-violet-500" style="width: 25%"></div>
+              </div>
+            </div>
+            <!-- Analytics -->
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="text-sm text-gray-600">Analytics</span>
+                <span class="text-xs font-semibold text-gray-500">20%</span>
+              </div>
+              <div class="w-full h-2.5 bg-gray-100 rounded-full overflow-hidden">
+                <div class="h-full rounded-full bg-blue-500" style="width: 20%"></div>
+              </div>
+            </div>
+            <!-- Communication -->
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="text-sm text-gray-600">Communication</span>
+                <span class="text-xs font-semibold text-gray-500">15%</span>
+              </div>
+              <div class="w-full h-2.5 bg-gray-100 rounded-full overflow-hidden">
+                <div class="h-full rounded-full bg-cyan-500" style="width: 15%"></div>
+              </div>
+            </div>
+            <!-- Other -->
+            <div>
+              <div class="flex items-center justify-between mb-1.5">
+                <span class="text-sm text-gray-600">Other</span>
+                <span class="text-xs font-semibold text-gray-500">5%</span>
+              </div>
+              <div class="w-full h-2.5 bg-gray-100 rounded-full overflow-hidden">
+                <div class="h-full rounded-full bg-gray-400" style="width: 5%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+</body>
+</html>

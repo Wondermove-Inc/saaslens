@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "range-calendar-story",
+  "type": "registry:component",
+  "title": "Range Calendar Story",
+  "author": "Lloyd Richards <lloyd.d.richards@gmail.com>",
+  "description": "Interactive Storybook stories demonstrating date range selection calendar component with start and end date picking",
+  "dependencies": ["date-fns"],
+  "registryDependencies": ["calendar"],
+  "files": [
+    {
+      "path": "src/registry/atoms/range-calendar-story/range-calendar.stories.tsx",
+      "content": "\"use client\";\n\nimport type { Meta, StoryObj } from \"@storybook/nextjs-vite\";\nimport * as React from \"react\";\nimport { expect, waitFor, within } from \"storybook/test\";\n\nimport { Calendar } from \"@/components/ui/calendar\";\n\nconst meta: Meta = {\n  title: \"ui/Calendar/Blocks/Range Calendar\",\n  tags: [\"autodocs\"],\n  parameters: {\n    layout: \"centered\",\n  },\n};\n\nexport default meta;\n\ntype Story = StoryObj<typeof meta>;\n\nexport const Default: Story = {\n  render: () => {\n    const [date, setDate] = React.useState<Date | undefined>(\n      new Date(2025, 5, 12),\n    );\n\n    return (\n      <Calendar\n        mode=\"single\"\n        defaultMonth={date}\n        numberOfMonths={2}\n        selected={date}\n        onSelect={setDate}\n        className=\"rounded-lg border shadow-sm\"\n      />\n    );\n  },\n};\n\nexport const ShouldDisplayTwoMonths: Story = {\n  name: \"when rendered, should display two months calendar\",\n  tags: [\"!dev\", \"!autodocs\"],\n  render: () => {\n    const [date, setDate] = React.useState<Date | undefined>(\n      new Date(2025, 5, 12),\n    );\n\n    return (\n      <div data-testid=\"range-calendar-container\">\n        <Calendar\n          mode=\"single\"\n          defaultMonth={date}\n          numberOfMonths={2}\n          selected={date}\n          onSelect={setDate}\n          className=\"rounded-lg border shadow-sm\"\n        />\n      </div>\n    );\n  },\n  play: async ({ canvasElement }) => {\n    const canvas = within(canvasElement);\n\n    // 🎯 목적: Range Calendar가 2개월을 동시에 표시하는지 확인\n    const container = canvas.getByTestId(\"range-calendar-container\");\n    await expect(container).toBeInTheDocument();\n\n    // Calendar grid 확인 (2개월 = 2개의 grid가 있어야 함)\n    await waitFor(\n      () => {\n        const grids = canvas.getAllByRole(\"grid\");\n        expect(grids.length).toBeGreaterThanOrEqual(2);\n      },\n      { timeout: 2000 },\n    );\n\n    // 날짜 버튼이 존재하는지 확인\n    await waitFor(\n      () => {\n        const dateButtons = canvas.getAllByRole(\"gridcell\");\n        expect(dateButtons.length).toBeGreaterThan(0);\n      },\n      { timeout: 2000 },\n    );\n  },\n};\n",
+      "type": "registry:component"
+    }
+  ],
+  "categories": ["atoms", "storybook", "calendar", "date", "range"]
+}

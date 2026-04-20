@@ -1,0 +1,4492 @@
+{
+  "language": {
+    "ko": "Korean",
+    "en": "English"
+  },
+  "common": {
+    "profile": "Profile",
+    "settings": "Settings",
+    "logout": "Log out",
+    "count": "",
+    "filter": {
+      "teamPlaceholder": "Select team",
+      "allTeams": "All teams",
+      "userPlaceholder": "Select user",
+      "allUsers": "All users"
+    },
+    "columnsDropdown": {
+      "button": "Columns",
+      "label": "Display columns"
+    },
+    "dateRangeSelector": {
+      "period": "Period",
+      "custom": "Custom",
+      "start": "Start date",
+      "end": "End date",
+      "apply": "Apply"
+    },
+    "statusBalloon": {
+      "excellent": "Excellent!",
+      "perfect": "Perfect!",
+      "outstanding": "Outstanding!"
+    },
+    "saving": "Saving...",
+    "save": "Save"
+  },
+  "auth": {
+    "brand": {
+      "tagline": "All Your SaaS Costs at a Glance.",
+      "taglineHighlight": "No Waste. No Gaps.",
+      "feature1": "Real-time expenditure tracking",
+      "feature2": "Automated subscription discovery",
+      "feature3": "Usage-based optimization",
+      "feature4": "insights",
+      "copyright": "© 2026 SaaS Management Platform. All rights reserved."
+    },
+    "login": {
+      "brand": "SaaS Management Platform",
+      "description": "Log in with your email verification code",
+      "errors": {
+        "credentials": "Email or password is incorrect",
+        "emailNotVerified": "Email verification is not complete. Please check your inbox.",
+        "default": "An error occurred during login",
+        "invalidOtp": "The verification code is incorrect",
+        "userNotFound": "This email is not registered",
+        "cooldownActive": "Please try again in {seconds} seconds",
+        "otpExpired": "The verification code has expired. Please request a new one.",
+        "maxAttempts": "Too many attempts. Please request a new verification code.",
+        "emailSendFailed": "Failed to send the email"
+      },
+      "info": {
+        "verifyEmail": "Please verify your email before logging in. Check your inbox.",
+        "passwordReset": "Your password has been updated. Please log in again."
+      },
+      "form": {
+        "email": "Email",
+        "emailPlaceholder": "name@company.com",
+        "password": "Password",
+        "passwordPlaceholder": "••••••••",
+        "forgotPassword": "Forgot your password?",
+        "rememberMe": "Remember me",
+        "submit": "Log in",
+        "signingIn": "Signing in...",
+        "sendOtp": "Send verification code",
+        "sendingOtp": "Sending...",
+        "resendOtp": "Resend verification code",
+        "resendCooldown": "Resend available in {seconds}s",
+        "otpLabel": "Verification code",
+        "otpDescription": "Enter the 6-digit code sent to your email",
+        "changeEmail": "Change email"
+      },
+      "socialDivider": "OR",
+      "social": {
+        "google": "Continue with Google",
+        "github": "Continue with GitHub",
+        "githubSoon": "Coming soon"
+      },
+      "footer": {
+        "noAccount": "Don’t have an account?",
+        "signUp": "Sign up"
+      },
+      "title": "Sign In"
+    },
+    "signup": {
+      "title": "Sign up",
+      "description": "Create your SaaS Management Platform account",
+      "errors": {
+        "emailExistsGoogle": "This email is already registered with Google",
+        "emailExistsCredentials": "This email is already registered",
+        "emailExists": "This email is already in use",
+        "default": "An error occurred during sign up",
+        "googleLogin": "Log in with Google",
+        "loginLink": "Go to login"
+      },
+      "social": {
+        "googleContinue": "Continue with Google"
+      },
+      "emailDivider": "Or sign up with email",
+      "form": {
+        "name": "Name",
+        "namePlaceholder": "Jane Doe",
+        "email": "Email",
+        "emailPlaceholder": "name@company.com",
+        "password": "Password",
+        "passwordPlaceholder": "8+ characters with upper/lowercase, number, symbol",
+        "passwordHint": "Use at least 8 characters with uppercase, lowercase, number, and symbol",
+        "submit": "Create account"
+      },
+      "footer": {
+        "hasAccount": "Already have an account?",
+        "login": "Log in",
+        "agreePrefix": "By signing up, you agree to the",
+        "terms": "Terms of Service",
+        "and": "and",
+        "privacy": "Privacy Policy",
+        "agreeSuffix": "."
+      }
+    },
+    "forgot": {
+      "success": {
+        "title": "Check your email",
+        "description": "We sent a password reset link to your email address.",
+        "notice": "If you don’t see the email, check your spam folder. The link is valid for 1 hour.",
+        "backToLogin": "Back to login"
+      },
+      "title": "Reset password",
+      "description": "Enter your email to receive a password reset link.",
+      "form": {
+        "email": "Email",
+        "emailPlaceholder": "name@company.com",
+        "submit": "Send reset link"
+      },
+      "footer": {
+        "backToLogin": "Back to login"
+      }
+    },
+    "reset": {
+      "invalid": {
+        "title": "Invalid request",
+        "description": "This reset link is invalid.",
+        "cta": "Request another reset"
+      },
+      "invalidLink": {
+        "title": "Invalid link",
+        "description": "The reset link is invalid or already used.",
+        "cta": "Request another reset"
+      },
+      "expired": {
+        "title": "Link expired",
+        "description": "The reset link has expired. Please request again.",
+        "cta": "Request another reset"
+      },
+      "title": "Set a new password",
+      "description": "Enter a new password to continue.",
+      "form": {
+        "password": "New password",
+        "passwordPlaceholder": "8+ characters with upper/lowercase, number, symbol",
+        "passwordHint": "Use at least 8 characters with uppercase, lowercase, number, and symbol",
+        "submit": "Update password"
+      }
+    },
+    "verify": {
+      "invalid": {
+        "title": "Verification failed",
+        "description": "This verification link is invalid.",
+        "cta": "Go to login"
+      },
+      "success": {
+        "title": "Verified"
+      },
+      "failure": {
+        "title": "Verification failed"
+      },
+      "cta": "Go to login"
+    },
+    "invite": {
+      "title": "Accept invitation",
+      "invalid": "This invitation link is invalid.",
+      "success": "Invitation accepted. Go to the dashboard to view your team.",
+      "cta": "Go to login"
+    },
+    "onboarding": {
+      "step": "Step 1 · Organization setup",
+      "title": "Start right after creating your organization",
+      "description": "Enter your organization name and choose your goals to tailor the dashboard.",
+      "interestBadge": "(Optional) {count} interests selected",
+      "org": {
+        "title": "Organization details",
+        "description": "Enter the organization/team name to start managing SaaS. You can connect apps and subscriptions next.",
+        "name": "Organization name *",
+        "placeholder": "e.g. AGA HQ, Growth Team",
+        "helper": "This name appears in the dashboard header and invitation emails.",
+        "domain": "Company Domain *",
+        "domainPlaceholder": "company.com",
+        "domainHelper": "Enter your company email domain. This is used for Extension user verification."
+      },
+      "goals": {
+        "title": "What are your goals? (Optional)",
+        "description": "Selected items prioritize Shadow IT, renewal, and security cards.",
+        "selected": "{count} selected"
+      },
+      "interests": {
+        "security": "Security/SSO",
+        "renewal": "Renewal alerts",
+        "cost": "Cost optimization",
+        "shadow": "Shadow IT detection",
+        "inventory": "Inventory",
+        "automation": "Automation"
+      },
+      "actions": {
+        "creating": "Creating...",
+        "start": "Get started"
+      }
+    }
+  },
+  "settings": {
+    "overview": {
+      "title": "Settings overview",
+      "subtitle": "Choose a setting from the left menu"
+    },
+    "fields": {
+      "name": "Name",
+      "nameEmpty": "Not set",
+      "email": "Email",
+      "organizationId": "Organization ID",
+      "organizationIdEmpty": "Not set",
+      "role": "Role"
+    },
+    "roles": {
+      "admin": "Admin",
+      "member": "Member",
+      "viewer": "Viewer",
+      "unknown": "Not set"
+    },
+    "sidebar": {
+      "profile": {
+        "title": "Profile",
+        "description": "Manage your personal profile"
+      },
+      "organization": {
+        "title": "Organization",
+        "description": "Manage organization details and members"
+      },
+      "team": {
+        "title": "Team",
+        "description": "Invite members and manage roles"
+      },
+      "budget": {
+        "title": "Budget",
+        "description": "Set monthly budget and currency"
+      },
+      "appearance": {
+        "title": "Appearance",
+        "description": "Theme and display settings"
+      },
+      "notifications": {
+        "title": "Notifications",
+        "description": "Configure notification delivery"
+      }
+    },
+    "organization": {
+      "tabs": {
+        "info": "Organization info",
+        "teams": "Teams/Departments",
+        "domains": "Domains",
+        "extension": "Extension"
+      },
+      "fields": {
+        "name": "Organization name *",
+        "domain": "Domain",
+        "domainPlaceholder": "example.com",
+        "logo": "Logo URL",
+        "logoPlaceholder": "https://example.com/logo.png",
+        "address": "Address",
+        "addressPlaceholder": "Enter business address"
+      },
+      "actions": {
+        "save": "Save",
+        "saving": "Saving..."
+      },
+      "toast": {
+        "updated": "Organization details updated"
+      }
+    },
+    "profile": {
+      "title": "Profile Settings",
+      "description": "Manage your personal profile information",
+      "avatar": {
+        "title": "Avatar",
+        "randomize": "Regenerate",
+        "helper": "Click to generate a new random avatar",
+        "variantLabel": "Style"
+      },
+      "fields": {
+        "name": "Name *",
+        "title": "Title",
+        "titlePlaceholder": "e.g. Product Engineer",
+        "department": "Department",
+        "departmentPlaceholder": "e.g. Platform Team",
+        "email": "Email"
+      },
+      "actions": {
+        "save": "Save",
+        "saving": "Saving..."
+      },
+      "toast": {
+        "updated": "Profile updated"
+      }
+    },
+    "invitations": {
+      "title": "Invitations",
+      "description": "Manage pending invitations",
+      "statusLabel": "Status",
+      "filters": {
+        "all": "All",
+        "pending": "Pending",
+        "completed": "Completed/Expired"
+      },
+      "item": {
+        "expiresAt": "Expires: {date}",
+        "status": "Status",
+        "completed": "Completed"
+      },
+      "actions": {
+        "resend": "Resend",
+        "resending": "Resending...",
+        "cancel": "Cancel invite",
+        "canceling": "Canceling..."
+      },
+      "toast": {
+        "resent": "Invitation resent",
+        "resendFailed": "Failed to resend invitation",
+        "canceled": "Invitation canceled",
+        "cancelFailed": "Failed to cancel invitation"
+      },
+      "empty": "No active invitations."
+    },
+    "team": {
+      "title": "Team/Department management",
+      "description": "Add or remove teams and departments. They appear in member profiles.",
+      "new": {
+        "placeholder": "New team/department name"
+      },
+      "empty": {
+        "title": "No teams/departments yet",
+        "description": "Add one using the input above"
+      },
+      "count": "Total {count} teams/departments registered",
+      "toast": {
+        "empty": "Enter a team/department name",
+        "duplicate": "Team/department already exists",
+        "updated": "Team/department updated",
+        "saveFailed": "Failed to save"
+      }
+    },
+    "budget": {
+      "currency": {
+        "label": "Currency",
+        "placeholder": "Select currency"
+      },
+      "auto": {
+        "title": "Auto set from last month spend",
+        "description": "Set budget automatically based on last month card approvals",
+        "noticeLine1": "Budget is set from last month's card approval total.",
+        "noticeLine2": "It appears in the Monthly SaaS Spend Trend chart."
+      },
+      "monthly": {
+        "label": "Monthly budget",
+        "placeholder": "0",
+        "ariaLabel": "Monthly budget",
+        "helper": "Set your monthly SaaS spend budget."
+      },
+      "threshold": {
+        "label": "Budget alert threshold",
+        "description": "Notify when spend exceeds {percent}% of budget"
+      },
+      "summary": {
+        "title": "Current settings summary",
+        "currency": "Currency: {name} ({symbol})",
+        "budgetPrefix": "Budget:",
+        "auto": "Based on last month card approvals",
+        "unset": "Not set",
+        "threshold": "Alert threshold: {percent}%"
+      },
+      "actions": {
+        "save": "Save",
+        "saving": "Saving..."
+      },
+      "toast": {
+        "saved": "Budget settings saved",
+        "saveFailed": "Failed to save settings"
+      }
+    },
+    "notifications": {
+      "email": {
+        "title": "Email notifications",
+        "description": "Enable email notifications",
+        "toggleLabel": "Enable email notifications",
+        "toggleDescription": "Receive important alerts by email"
+      },
+      "renewal": {
+        "title": "Renewal alerts",
+        "description": "Choose when to be notified before renewal",
+        "option": "Notify {label} before renewal"
+      },
+      "offboarding": {
+        "title": "Offboarding alerts",
+        "description": "Get notified when access remains for leavers",
+        "toggleLabel": "Offboarding alerts",
+        "toggleDescription": "Alert when offboarded users still have app access"
+      },
+      "shadow": {
+        "title": "Shadow IT alerts",
+        "description": "Alert on unapproved AI tools or SaaS usage",
+        "toggleLabel": "Shadow IT detection alerts",
+        "toggleDescription": "Alert on payments to ChatGPT, Claude, Copilot, etc."
+      },
+      "cost": {
+        "title": "Cost anomaly detection",
+        "description": "Get notified when costs spike month over month",
+        "toggleLabel": "Cost anomaly alerts",
+        "toggleDescription": "Alert when costs rise beyond the threshold",
+        "thresholdLabel": "Increase threshold",
+        "thresholdHint": "(Notify on {percent}%+ increase vs. last month)"
+      },
+      "weekly": {
+        "title": "Weekly summary",
+        "description": "Receive a weekly SaaS management digest",
+        "toggleLabel": "Weekly summary email",
+        "toggleDescription": "Every Monday morning, get a summary of last week and upcoming renewals"
+      },
+      "saving": "Saving settings...",
+      "toast": {
+        "emailUpdated": "Email notification settings updated",
+        "renewalUpdated": "Renewal alert settings updated",
+        "offboardingUpdated": "Offboarding alert settings updated",
+        "weeklyUpdated": "Weekly summary updated",
+        "shadowUpdated": "Shadow IT alert settings updated",
+        "costUpdated": "Cost anomaly alert settings updated",
+        "thresholdUpdated": "Cost anomaly threshold updated",
+        "failed": "Update failed"
+      }
+    },
+    "appearance": {
+      "title": "Theme",
+      "description": "Choose the app theme",
+      "preview": "Preview",
+      "themes": {
+        "light": {
+          "title": "Light",
+          "description": "Default light theme"
+        },
+        "dark": {
+          "title": "Dark",
+          "description": "Eye-friendly dark theme"
+        },
+        "system": {
+          "title": "System",
+          "description": "Match system preference"
+        }
+      }
+    },
+    "delete": {
+      "title": "Danger zone",
+      "description": "Deleting your account permanently removes all data and cannot be undone.",
+      "action": "Delete account",
+      "confirmText": "delete",
+      "dialog": {
+        "title": "Delete your account?",
+        "description": "This action cannot be undone. All account data will be permanently removed.",
+        "confirmLabel": "Type <strong>{text}</strong> to confirm:",
+        "cancel": "Cancel",
+        "deleting": "Deleting...",
+        "confirm": "Delete account"
+      }
+    },
+    "domains": {
+      "title": "Domain management",
+      "description": "Manage additional domains used by your organization. Used for Extension onboarding email verification.",
+      "primary": "Primary domain",
+      "addPlaceholder": "Add domain (e.g. subsidiary.com)",
+      "empty": {
+        "title": "No additional domains registered",
+        "description": "Add one using the input above"
+      },
+      "count": "Total {count} additional domains registered",
+      "toast": {
+        "empty": "Enter a domain",
+        "invalid": "Enter a valid domain format (e.g. example.com)",
+        "duplicate": "Domain already registered",
+        "samePrimary": "Same as the primary domain",
+        "updated": "Domains updated",
+        "saveFailed": "Failed to save"
+      }
+    }
+  },
+  "devices": {
+    "page": {
+      "title": "Device management",
+      "description": "Review FleetDM devices and app usage status.",
+      "metaTitle": "Device management | SaaS Management Platform",
+      "metaDescription": "FleetDM device inventory and app usage status"
+    },
+    "kpi": {
+      "totalDevices": "Total devices",
+      "online": "Online",
+      "onlineDescription": "Currently connected",
+      "installationRate": "Installation rate",
+      "installationDescription": "Agent installed",
+      "shadowIT": "Shadow IT",
+      "shadowITDescription": "Unapproved apps"
+    },
+    "tabs": {
+      "devices": "Device list",
+      "shadowIT": "Shadow IT detection"
+    },
+    "filters": {
+      "searchPlaceholder": "Search by hostname or serial number...",
+      "status": {
+        "label": "Status",
+        "all": "All statuses"
+      },
+      "platform": {
+        "label": "Platform",
+        "all": "All platforms"
+      }
+    },
+    "status": {
+      "ONLINE": "Online",
+      "OFFLINE": "Offline",
+      "PENDING": "Pending",
+      "RETIRED": "Retired"
+    },
+    "platform": {
+      "WINDOWS": "Windows",
+      "MACOS": "macOS",
+      "LINUX": "Linux",
+      "IOS": "iOS",
+      "ANDROID": "Android",
+      "OTHER": "Other"
+    },
+    "table": {
+      "headers": {
+        "device": "Device",
+        "platform": "Platform",
+        "status": "Status",
+        "user": "User",
+        "apps": "Installed apps",
+        "lastSeen": "Last seen"
+      },
+      "loading": "Loading...",
+      "emptyValue": "-",
+      "appCount": "{count} apps",
+      "empty": {
+        "title": "Waiting for agent installation",
+        "descriptionLine1": "No devices have FleetDM agent installed yet.",
+        "descriptionLine2": "Use the guide below to install the agent.",
+        "action": "View install guide"
+      }
+    },
+    "usersAlert": {
+      "title": "Users without agent ({count})",
+      "more": "+{count} more",
+      "action": "View install guide"
+    },
+    "shadowIT": {
+      "title": "Unapproved app detection",
+      "empty": "No unapproved apps detected.",
+      "headers": {
+        "appName": "App name",
+        "deviceCount": "Devices installed",
+        "actions": "Actions"
+      },
+      "deviceCount": "{count} devices",
+      "actions": {
+        "approve": "Approve",
+        "block": "Block"
+      }
+    },
+    "installGuide": {
+      "title": "Install FleetDM agent",
+      "description": "Install the FleetDM agent to enable device monitoring.",
+      "tabs": {
+        "macos": "macOS",
+        "windows": "Windows",
+        "linux": "Linux"
+      },
+      "macos": {
+        "homebrewTitle": "1. Install via Homebrew (recommended)",
+        "pkgTitle": "2. Or download the PKG file",
+        "pkgDescription": "Download the macOS installer (.pkg) from the official website."
+      },
+      "windows": {
+        "installTitle": "Windows install",
+        "step1": "1. Download the Windows installer (.msi) from the page below.",
+        "step2": "2. Run the downloaded .msi to install.",
+        "step3": "3. The agent starts automatically after installation.",
+        "powershellTitle": "PowerShell install (admin)"
+      },
+      "linux": {
+        "debTitle": "Linux install (DEB)",
+        "rpmTitle": "Linux install (RPM)"
+      },
+      "resources": {
+        "title": "Additional resources",
+        "link": "Visit official download page"
+      },
+      "actions": {
+        "close": "Close"
+      }
+    }
+  },
+  "header": {
+    "notifications": {
+      "label": "Notifications",
+      "recent": "Recent notifications",
+      "empty": "No notifications",
+      "types": {
+        "renewal": {
+          "title": "Renewal: {value}",
+          "detail": "Renewal date {value}"
+        },
+        "offboarding": {
+          "title": "Offboarding: {value}",
+          "detail": "{value} apps unrecovered"
+        },
+        "shadowIT": {
+          "title": "Shadow IT: {value}",
+          "detail": "Suspected {value}"
+        },
+        "costAnomaly": {
+          "title": "Cost anomaly: {value}",
+          "detail": "{value} vs last month"
+        },
+        "pendingReview": {
+          "title": "{value} pending review",
+          "detail": "Suspected {value} apps"
+        }
+      },
+      "items": {
+        "renewal30": {
+          "title": "Renewal in 30 days: Figma",
+          "detail": "Renewal on Apr 15, owner review required"
+        },
+        "unapprovedApp": {
+          "title": "Unapproved app detected: Notion AI",
+          "detail": "Classified as needs review"
+        },
+        "costChange": {
+          "title": "Cost change: Slack",
+          "detail": "This month's cost up 12%"
+        },
+        "offboarding": {
+          "title": "Access recovery for leavers",
+          "detail": "3 accounts need access revoked"
+        },
+        "securityAlert": {
+          "title": "Security alert: Dropbox",
+          "detail": "5 external share links detected"
+        },
+        "renewal60": {
+          "title": "Renewal in 60 days: Zoom",
+          "detail": "Estimated cost ₩1,200,000"
+        },
+        "paymentFailed": {
+          "title": "Payment failed: GitHub",
+          "detail": "Payment method update required"
+        },
+        "fleetdmInstall": {
+          "title": "FleetDM install rate",
+          "detail": "92% installed (6 pending)"
+        },
+        "shadowAi": {
+          "title": "Shadow AI detected",
+          "detail": "2 found in card transactions"
+        },
+        "llmConfirm": {
+          "title": "LLM Confirm pending",
+          "detail": "4 awaiting review"
+        }
+      }
+    },
+    "language": {
+      "label": "Language"
+    }
+  },
+  "sidebar": {
+    "brand": {
+      "title": "SMP",
+      "subtitle": "Service Management Platform"
+    },
+    "group": {
+      "main": "Main",
+      "dashboard": "Dashboard",
+      "management": "Management",
+      "system": "System"
+    },
+    "menu": {
+      "dashboard": "Dashboard",
+      "reports": {
+        "root": "Reports",
+        "cost": "Cost analysis",
+        "costDescription": "Analyze SaaS costs and trends",
+        "renewal": "Renewal risk",
+        "renewalDescription": "Subscription renewal schedule and risks",
+        "usage": "Usage",
+        "usageDescription": "SaaS usage and utilization analysis",
+        "browsingUsage": "Browsing usage",
+        "browsingUsageDescription": "Web browsing usage analysis",
+        "registeredAppUsage": "Registered app usage",
+        "registeredAppUsageDescription": "Registered app access analysis",
+        "blockEvents": "Block events",
+        "blockEventsDescription": "Blocked apps and event overview",
+        "audit": "Audit log",
+        "auditDescription": "System activity audit log"
+      },
+      "users": {
+        "root": "Users",
+        "list": "User list",
+        "offboarded": "Offboarded"
+      },
+      "teams": "Organization",
+      "subscriptions": {
+        "root": "Subscriptions",
+        "list": "Subscription list",
+        "listDescription": "Manage subscriptions and costs",
+        "suggestions": "Subscription review",
+        "suggestionsDescription": "Payment-based subscription suggestions",
+        "calendar": "Renewal calendar",
+        "calendarDescription": "Manage subscription renewal schedule",
+        "new": "Register Subscription"
+      },
+      "apps": {
+        "root": "Apps",
+        "list": "App list",
+        "listDescription": "Manage registered SaaS apps",
+        "new": "Register App"
+      },
+      "payments": {
+        "root": "Payments",
+        "records": "Payment records",
+        "recordsDescription": "View and manage payment records",
+        "cards": "Corporate cards",
+        "cardsDescription": "Register and manage corporate cards"
+      },
+      "integrations": "Integrations",
+      "extensions": {
+        "root": "Extensions",
+        "usage": "Usage",
+        "usageDescription": "Analyze extension usage",
+        "registeredApps": "Registered apps",
+        "registeredAppsDescription": "Manage installed apps",
+        "reviewApps": "Review apps",
+        "reviewAppsDescription": "Review pending apps",
+        "blockedApps": "Blocked apps",
+        "blockedAppsDescription": "Manage blocked apps",
+        "builds": "Download",
+        "buildsDescription": "Download extension builds",
+        "onboarding": "Onboarding Monitor",
+        "onboardingDescription": "Track extension onboarding progress",
+        "status": "Status Monitor",
+        "statusDescription": "Monitor extension status"
+      },
+      "settings": "Settings",
+      "org": {
+        "root": "Organization",
+        "teams": "Organization List",
+        "teamsDescription": "Manage teams and departments",
+        "users": "User Management",
+        "usersDescription": "Manage organization users",
+        "offboarded": "Offboarded Users",
+        "offboardedDescription": "Manage offboarded user accounts",
+        "sync": "Org & User Sync",
+        "syncDescription": "Sync organization data with external systems"
+      }
+    },
+    "user": {
+      "fallbackName": "User"
+    }
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "subtitle": "Monitor SaaS spend, Shadow IT, renewals, and security risks at a glance.",
+    "common": {
+      "saas": "SaaS",
+      "nonSaas": "Non-SaaS",
+      "total": "Total",
+      "importPayments": "Import payments",
+      "emptyPayments": "No payment records.",
+      "emptyData": "No data available.",
+      "emptyValue": "-"
+    },
+    "priority": {
+      "label": "Priority",
+      "titleWithRenewal": "{appName} renewal is coming soon",
+      "titleDefault": "Upcoming renewals and security actions",
+      "description": "Resolve {unmatchedCount} unmatched payments and {securityPending} security reviews to keep reports clean.",
+      "renewalLabel": "Renewal {label}"
+    },
+    "badges": {
+      "securityReview": "Security review {count}",
+      "unmatched": "Unmatched {count}",
+      "dDay": "D-Day"
+    },
+    "sections": {
+      "discovery": {
+        "title": "Discovery & inventory",
+        "subtitle": "Review Shadow IT, new discoveries, and source distribution."
+      },
+      "departments": {
+        "title": "Department insights",
+        "subtitle": "Review department costs and top apps."
+      },
+      "recentActivity": {
+        "title": "Recent activity"
+      },
+      "savings": {
+        "title": "Seat Savings Opportunity",
+        "badge": "Savings available",
+        "description": "Optimize unused seats in PER_SEAT subscriptions to reduce costs.",
+        "annualSavings": "Annual savings possible",
+        "perYear": "/year",
+        "detail": "Details",
+        "empty": "No savings opportunities available at this time."
+      }
+    },
+    "dateRange": {
+      "presets": {
+        "7d": "Last 7 days",
+        "30d": "Last 30 days",
+        "1y": "Last 1 year",
+        "custom": "Date range"
+      },
+      "options": {
+        "7d": "7 days",
+        "30d": "30 days",
+        "1y": "1 year",
+        "custom": "Custom"
+      },
+      "header": "Date range",
+      "actions": {
+        "cancel": "Cancel",
+        "apply": "Apply"
+      },
+      "customFallback": "Custom"
+    },
+    "statsCards": {
+      "totalApps": {
+        "title": "Total apps",
+        "hint": "Registered SaaS"
+      },
+      "activeSubscriptions": {
+        "title": "Active subscriptions",
+        "hint": "Paid subscriptions"
+      },
+      "totalUsers": {
+        "title": "Total users",
+        "hint": "Organization users"
+      },
+      "monthlyCost": {
+        "title": "Monthly SaaS cost",
+        "hint": "Last 30 days"
+      },
+      "saasRatio": {
+        "title": "SaaS cost ratio",
+        "hint": "vs. total cost"
+      },
+      "shadowIt": {
+        "title": "Shadow IT",
+        "hint": "Review/block candidates"
+      },
+      "securityReview": {
+        "title": "Security review",
+        "hint": "Pending review/block"
+      },
+      "unmatchedPayments": {
+        "title": "Unmatched payments",
+        "hint": "Needs matching"
+      },
+      "renewals30d": {
+        "title": "D-30 renewals",
+        "hint": "Expires within 30 days"
+      }
+    },
+    "costSummary": {
+      "title": "Total cost",
+      "empty": "No payment records.",
+      "importLink": "Import payments",
+      "comparePreviousMonth": "Compared to last month",
+      "transactionCount": "Transactions",
+      "monthlyAverage": "Monthly SaaS avg.",
+      "countSuffix": " tx",
+      "unmatchedTitle": "Unmatched payments",
+      "unmatchedDescription": "<strong>{count} payments</strong> are unmatched.",
+      "view": "Review"
+    },
+    "upcomingRenewals": {
+      "title": "Upcoming renewals",
+      "empty": "No renewals in the next 30 days.",
+      "table": {
+        "app": "App",
+        "date": "Renewal date",
+        "amount": "Amount",
+        "dday": "D-Day"
+      }
+    },
+    "recentActivity": {
+      "empty": "No recent activity yet.",
+      "system": "System"
+    },
+    "discoveryKpis": {
+      "totalApps": "Total discovered apps",
+      "shadowIt": "Shadow / unapproved",
+      "pendingReview": "Pending review",
+      "newly7": "New in last 7 days"
+    },
+    "monthlyCostTrend": {
+      "title": "Monthly cost trend",
+      "summaryLabel": "Avg. within period",
+      "export": {
+        "month": "Month",
+        "displayLabel": "Display label",
+        "saasCost": "SaaS cost (KRW)",
+        "nonSaasCost": "Non-SaaS cost (KRW)",
+        "totalCost": "Total cost (KRW)"
+      },
+      "footer": {
+        "period": "Period",
+        "periodValue": "{count} months"
+      },
+      "timeRange": "Select period",
+      "months": " months"
+    },
+    "topApps": {
+      "title": "Top cost apps",
+      "summaryLabel": "Total SaaS cost",
+      "empty": "No payment data.",
+      "export": {
+        "appName": "App name",
+        "appId": "App ID",
+        "cost": "Cost (KRW)",
+        "percentage": "Share (%)"
+      }
+    },
+    "appsByCategory": {
+      "title": "Apps by category",
+      "summaryLabel": "Total apps",
+      "summaryValue": "{count}",
+      "empty": "No registered apps.",
+      "uncategorized": "Other",
+      "export": {
+        "category": "Category",
+        "count": "App count",
+        "percentage": "Share (%)"
+      },
+      "legendValue": "{count} apps ({percentage}%)",
+      "tooltipCount": "{count}",
+      "totalLabel": "Total",
+      "totalApps": "Total Apps",
+      "countUnit": ""
+    },
+    "costAnomaly": {
+      "title": "Cost anomaly detected ({count} apps)",
+      "description": "Automatically detects apps with 50%+ month-over-month increases."
+    },
+    "security": {
+      "items": {
+        "offboarding": {
+          "title": "Offboarding gaps",
+          "hint": "Review access"
+        },
+        "pendingApps": {
+          "title": "Apps pending review",
+          "hint": "Needs review"
+        },
+        "blockedApps": {
+          "title": "Blocked apps",
+          "hint": "Blocked status"
+        },
+        "unmatchedPayments": {
+          "title": "Unmatched payments"
+        }
+      },
+      "sso": {
+        "title": "SSO coverage",
+        "description": "Share of apps discovered/managed via SSO"
+      },
+      "riskyApps": {
+        "title": "Apps to review/block (Top 5)",
+        "empty": "No apps to review or block.",
+        "viewAll": "View All",
+        "table": {
+          "app": "App",
+          "status": "Status",
+          "source": "Source",
+          "category": "Category",
+          "discovered": "Discovered",
+          "domain": "Domain",
+          "type": "Type",
+          "visits": "Visits",
+          "scannedAt": "Scanned"
+        },
+        "status": {
+          "blocked": "Blocked",
+          "review": "Review"
+        },
+        "type": {
+          "malicious": "Malicious",
+          "saas": "SaaS"
+        }
+      },
+      "offboarding": {
+        "title": "Offboarding gaps (Top 5)",
+        "empty": "No access gaps.",
+        "table": {
+          "user": "User",
+          "app": "App",
+          "lastUsed": "Last used",
+          "source": "Source"
+        }
+      },
+      "shadowAi": {
+        "title": "Shadow AI (keyword-based)",
+        "countValue": "{count}",
+        "monthlyCost": "Estimated monthly cost {cost}",
+        "topMerchants": "Top merchants",
+        "topApps": "Top AI apps",
+        "merchantValue": "{count} · {total}",
+        "appValue": "{count} · {total}",
+        "other": "AI/Other"
+      }
+    },
+    "departments": {
+      "title": "Department spend summary",
+      "empty": "No department data.",
+      "table": {
+        "department": "Department",
+        "totalCost": "Estimated total cost",
+        "headcount": "Headcount",
+        "perEmployee": "Cost per employee",
+        "headcountValue": "{count}"
+      },
+      "topAppsTitle": "Top cost apps (Top 5)"
+    },
+    "exports": {
+      "defaultRange": "Last 30 days",
+      "csv": {
+        "trend": {
+          "month": "Month",
+          "cost": "Cost",
+          "transactions": "Transactions"
+        },
+        "apps": {
+          "name": "App name",
+          "cost": "Cost",
+          "share": "Share (%)"
+        },
+        "renewals": {
+          "name": "App name",
+          "date": "Renewal date",
+          "dday": "D-Day",
+          "amount": "Amount"
+        }
+      },
+      "summary": {
+        "range": "Date range",
+        "totalApps": "Total apps",
+        "activeSubscriptions": "Active subscriptions",
+        "totalUsers": "Total users",
+        "totalCost": "Total cost",
+        "monthlyAverage": "Monthly average",
+        "costChange": "Cost change",
+        "shadowIt": "Shadow IT",
+        "securityPending": "Security pending"
+      },
+      "excel": {
+        "sheet": {
+          "summary": "Summary",
+          "trend": "Monthly trend",
+          "topApps": "Top apps",
+          "renewals": "Renewals",
+          "departments": "Departments"
+        },
+        "columns": {
+          "label": "Label",
+          "value": "Value",
+          "month": "Month",
+          "cost": "Cost",
+          "transactions": "Transactions",
+          "appName": "App name",
+          "percentage": "Share (%)",
+          "renewalDate": "Renewal date",
+          "dday": "D-Day",
+          "amount": "Amount",
+          "department": "Department",
+          "estimatedCost": "Estimated cost",
+          "userCount": "User count",
+          "appCount": "App count"
+        },
+        "title": {
+          "summary": "Dashboard summary report",
+          "trend": "Monthly cost trend",
+          "topApps": "Top cost apps",
+          "renewals": "Upcoming renewals",
+          "departments": "Department costs"
+        }
+      },
+      "pdf": {
+        "title": "Dashboard report",
+        "subtitle": "{range} | Generated: {date}",
+        "organization": "SaaS Management Platform",
+        "sections": {
+          "kpis": "Key metrics",
+          "securityDiscovery": "Security & discovery"
+        },
+        "tables": {
+          "trend": {
+            "title": "Monthly cost trend",
+            "headers": {
+              "month": "Month",
+              "cost": "Cost",
+              "transactions": "Transactions"
+            }
+          },
+          "topApps": {
+            "title": "Top cost apps",
+            "headers": {
+              "name": "App name",
+              "cost": "Cost",
+              "share": "Share"
+            }
+          },
+          "renewals": {
+            "title": "Upcoming renewals (within 7 days)",
+            "headers": {
+              "name": "App name",
+              "date": "Renewal date",
+              "dday": "D-Day",
+              "amount": "Amount"
+            }
+          }
+        }
+      },
+      "security": {
+        "shadowIt": "Shadow IT apps",
+        "newApps7d": "New apps (7 days)",
+        "pendingReview": "Security review pending",
+        "blockedApps": "Blocked apps",
+        "offboardingGaps": "Offboarding gaps"
+      },
+      "actions": {
+        "export": "Export",
+        "exporting": "Exporting...",
+        "csv": "Export CSV",
+        "excel": "Export Excel",
+        "pdf": "Export PDF"
+      }
+    },
+    "customization": {
+      "trigger": "Customize dashboard",
+      "title": "Customize dashboard",
+      "description": "Select which components to display on your dashboard.",
+      "sections": {
+        "dashboard": {
+          "title": "Dashboard",
+          "description": "Main dashboard component display settings"
+        },
+        "discovery": {
+          "title": "Discovery & inventory",
+          "description": "Shadow IT and app discovery components"
+        },
+        "departments": {
+          "title": "Department insights",
+          "description": "Department analytics and activity"
+        }
+      },
+      "items": {
+        "priorityCard": "Priority card",
+        "pendingConfirmations": "Pending confirmations",
+        "statsCards": "Stats cards",
+        "costSummary": "Cost summary",
+        "topAppsCostChart": "Top apps cost chart",
+        "monthlyCostTrend": "Monthly cost trend",
+        "upcomingRenewals": "Upcoming renewals",
+        "securityOverview": "Security overview",
+        "discoveryKpis": "Discovery KPIs",
+        "appsByCategory": "Apps by category",
+        "discoverySources": "Discovery sources",
+        "departmentOverview": "Department overview",
+        "recentActivity": "Recent activity"
+      },
+      "actions": {
+        "reset": "Reset",
+        "save": "Save",
+        "saving": "Saving..."
+      },
+      "toast": {
+        "saveSuccess": "Dashboard settings saved",
+        "saveError": "Failed to save settings"
+      }
+    },
+    "pendingConfirmations": {
+      "title": "Needs review",
+      "description": "Review AI classification results with 50–80% confidence",
+      "badge": "{total}",
+      "approve": "Approve",
+      "reject": "Reject",
+      "noAppId": "App ID is missing",
+      "approveError": "Error while approving",
+      "rejectError": "Error while rejecting",
+      "empty": "No items need review",
+      "viewMore": "View {count} more"
+    },
+    "discoverySources": {
+      "sourceLabels": {
+        "manual": "Manual"
+      },
+      "title": "Discovery sources",
+      "recentTitle": "Recent discoveries",
+      "table": {
+        "app": "App",
+        "source": "Source",
+        "status": "Status",
+        "discoveredAt": "Discovered"
+      },
+      "status": {
+        "review": "Review",
+        "blocked": "Blocked",
+        "active": "Active",
+        "inactive": "Inactive"
+      },
+      "empty": "No recently discovered apps.",
+      "count": "{count}"
+    }
+  },
+  "subscriptions": {
+    "page": {
+      "title": "Subscription List",
+      "description": "Manage SaaS subscriptions and track costs",
+      "metaTitle": "Subscription management | SaaS Management Platform",
+      "metaDescription": "Manage SaaS subscriptions and track costs"
+    },
+    "kpi": {
+      "total": "Total subscriptions",
+      "active": "Active subscriptions",
+      "monthlyCost": "Monthly cost",
+      "monthlyCostDescription": "Based on active subscriptions",
+      "renewingSoon": "Renewing in 30 days"
+    },
+    "actions": {
+      "calendar": "Renewal calendar",
+      "new": "Add subscription",
+      "edit": "Edit",
+      "delete": "Delete",
+      "cancel": "Cancel",
+      "save": "Save",
+      "register": "Add subscription",
+      "deleting": "Deleting...",
+      "loading": "Loading...",
+      "saveSuccess": "Subscription saved successfully",
+      "saveError": "Failed to save subscription",
+      "createSuccess": "Subscription created successfully",
+      "createError": "Failed to create subscription"
+    },
+    "list": {
+      "columns": {
+        "app": "App",
+        "status": "Status",
+        "billingCycle": "Billing cycle",
+        "amount": "Amount",
+        "licenses": "Licenses",
+        "renewalDate": "Renewal date",
+        "autoRenewal": "Auto renewal"
+      },
+      "searchPlaceholder": "Search by app name",
+      "empty": "No subscriptions registered",
+      "emptyAction": "Register first subscription",
+      "menuOpen": "Open menu"
+    },
+    "status": {
+      "all": "All",
+      "active": "Active",
+      "pending": "Pending",
+      "expired": "Expired",
+      "cancelled": "Cancelled"
+    },
+    "billingCycle": {
+      "monthly": "Monthly",
+      "quarterly": "Quarterly",
+      "yearly": "Yearly",
+      "oneTime": "One-time"
+    },
+    "billingType": {
+      "flatRate": "Flat Rate",
+      "perSeat": "Per Seat"
+    },
+    "currency": {
+      "krw": "KRW (Won)",
+      "usd": "USD (Dollar)",
+      "eur": "EUR (Euro)",
+      "jpy": "JPY (Yen)"
+    },
+    "autoRenewal": {
+      "auto": "Auto",
+      "manual": "Manual"
+    },
+    "delete": {
+      "title": "Delete subscription",
+      "description": "Are you sure you want to delete the {appName} subscription? This action cannot be undone.",
+      "confirm": "Delete",
+      "cancelled": "Cancel",
+      "error": "Failed to delete subscription",
+      "errorUnknown": "An unknown error occurred while deleting subscription",
+      "success": "\"{appName}\" subscription has been deleted",
+      "noPermission": "Only administrators can delete subscriptions"
+    },
+    "form": {
+      "basicInfo": {
+        "title": "Basic information",
+        "description": "Enter basic subscription information",
+        "appSelect": "Select app *",
+        "appPlaceholder": "Select an app",
+        "billingCycle": "Billing cycle *",
+        "billingCyclePlaceholder": "Select billing cycle",
+        "currency": "Currency",
+        "currencyPlaceholder": "Select currency",
+        "billingType": "Billing Type",
+        "billingTypePlaceholder": "Select billing type",
+        "amount": "Amount *",
+        "amountPlaceholder": "Enter amount",
+        "notes": "Notes",
+        "notesPlaceholder": "Enter notes about the subscription"
+      },
+      "license": {
+        "title": "License information",
+        "description": "Enter license quantity",
+        "total": "Total licenses",
+        "totalPlaceholder": "Total licenses",
+        "used": "Used licenses",
+        "usedPlaceholder": "Used licenses",
+        "seatTitle": "Seat management",
+        "seatDescription": "Set total seats and assign users",
+        "totalSeats": "Total seats",
+        "totalSeatsPlaceholder": "Total seats",
+        "assignUsers": "Assign users",
+        "selectUsers": "Select users to assign",
+        "usersSelected": "{count} user(s) selected",
+        "searchUsers": "Search users...",
+        "noUsersFound": "No users found",
+        "seatStatus": "Assigned: {assigned} / {total} Seat"
+      },
+      "pricing": {
+        "title": "Pricing",
+        "description": "Set billing cycle, billing type, and amount"
+      },
+      "contract": {
+        "title": "Contract",
+        "description": "Enter contract URL",
+        "url": "Contract URL",
+        "urlPlaceholder": "https://example.com/contract.pdf"
+      },
+      "status": {
+        "title": "Status",
+        "description": "Set the current subscription status",
+        "placeholder": "Select status"
+      },
+      "period": {
+        "title": "Period",
+        "description": "Set subscription start and end dates",
+        "startDate": "Start date *",
+        "endDate": "End date",
+        "renewalDate": "Renewal date",
+        "datePlaceholder": "Select date"
+      },
+      "autoRenewal": {
+        "title": "Auto renewal",
+        "description": "Auto renewal and notification settings",
+        "label": "Auto renewal",
+        "helpText": "Automatically renew when subscription expires"
+      },
+      "renewalAlert": {
+        "title": "Renewal alerts",
+        "helpText": "Get notified before renewal date",
+        "alert30": "30 days before",
+        "alert60": "60 days before",
+        "alert90": "90 days before"
+      },
+      "assignment": {
+        "title": "Assignment",
+        "description": "Assign teams and users for this subscription",
+        "teamLabel": "Assigned team",
+        "noTeamsForApp": "No teams assigned to this app",
+        "selectAppFirst": "Select an app first",
+        "teamPlaceholder": "Select a team",
+        "noSelection": "None",
+        "userLabel": "Assigned users",
+        "selectTeamFirst": "Select a team first",
+        "noUsersForTeam": "No users in this team",
+        "usersSelected": "{count} selected",
+        "selectUsersPlaceholder": "Select users",
+        "searchUsers": "Search users...",
+        "noUsersFound": "No users found"
+      },
+      "validation": {
+        "appRequired": "Please select an app",
+        "billingCycleRequired": "Please select a billing cycle",
+        "amountRequired": "Please enter the amount",
+        "amountInvalid": "Please enter a valid amount",
+        "startDateRequired": "Please enter a start date",
+        "contractUrlInvalid": "Please enter a valid URL",
+        "notesTooLong": "Notes must be 1000 characters or less"
+      }
+    },
+    "newPage": {
+      "metaTitle": "Add Subscription | SaaS Management Platform",
+      "metaDescription": "Register a new SaaS subscription",
+      "title": "Add Subscription",
+      "description": "Register a new SaaS subscription"
+    },
+    "detail": {
+      "title": "{appName} subscription",
+      "subtitle": "Subscription details",
+      "kpi": {
+        "amount": "Payment amount",
+        "license": "Licenses",
+        "renewalDate": "Renewal date",
+        "autoRenewal": "Auto renewal",
+        "active": "Active",
+        "inactive": "Inactive"
+      },
+      "period": {
+        "title": "Period information",
+        "description": "Subscription period and renewal schedule",
+        "startDate": "Start date",
+        "endDate": "End date",
+        "renewalDate": "Renewal date",
+        "daysLeft": "{days} days left",
+        "today": "Today",
+        "daysPast": "{days} days past"
+      },
+      "payments": {
+        "title": "Linked payment records"
+      },
+      "additional": {
+        "title": "Additional information",
+        "description": "Contract and notes",
+        "contract": "Contract",
+        "viewContract": "View contract",
+        "notes": "Notes"
+      },
+      "metadata": {
+        "createdAt": "Created: {date}",
+        "updatedAt": "Last updated: {date}"
+      },
+      "assignment": {
+        "title": "Assignment information",
+        "description": "Assigned team and users",
+        "team": "Assigned team",
+        "assignedUsers": "Assigned users",
+        "noUsers": "No assigned users"
+      },
+      "seat": {
+        "title": "Seat Allocation",
+        "badge": "Per Seat",
+        "summary": {
+          "assigned": "Assigned",
+          "unassigned": "Unassigned",
+          "inactive": "Inactive (30d+)"
+        },
+        "table": {
+          "user": "User",
+          "email": "Email",
+          "lastUsedAt": "Last Used",
+          "assignedAt": "Assigned On",
+          "actions": "Actions",
+          "never": "Never used",
+          "inactive": "Inactive"
+        },
+        "addUser": "Add User",
+        "addUserTitle": "Add Seat User",
+        "addUserDescription": "Assign a user to this subscription",
+        "searchUsers": "Search users...",
+        "noUsersFound": "No users found",
+        "removeUser": "Remove",
+        "removeConfirm": "Remove this user's seat assignment?",
+        "assignSuccess": "User assigned successfully",
+        "removeSuccess": "User removed successfully",
+        "noUsers": "No users assigned",
+        "usage": "In use",
+        "remaining": "{count} seats remaining",
+        "loading": "Loading seat info...",
+        "flatRateTitle": "User Assignment",
+        "flatRateBadge": "Flat Rate",
+        "flatRateDescription": "Assign users to this subscription"
+      }
+    },
+    "calendar": {
+      "title": "Renewal calendar",
+      "today": "Today",
+      "prev": "Previous",
+      "next": "Next",
+      "monthYear": "{month} {year}",
+      "description": "View subscription renewal schedules on the calendar",
+      "metaTitle": "Renewal calendar | SaaS Management Platform",
+      "metaDescription": "View subscription renewal schedules on the calendar",
+      "selectDateHint": "Select a date to view\nscheduled subscription renewals.",
+      "weekdays": {
+        "sun": "Sun",
+        "mon": "Mon",
+        "tue": "Tue",
+        "wed": "Wed",
+        "thu": "Thu",
+        "fri": "Fri",
+        "sat": "Sat"
+      },
+      "months": {
+        "1": "January",
+        "2": "February",
+        "3": "March",
+        "4": "April",
+        "5": "May",
+        "6": "June",
+        "7": "July",
+        "8": "August",
+        "9": "September",
+        "10": "October",
+        "11": "November",
+        "12": "December"
+      },
+      "renewalCount": "{count}"
+    },
+    "notifications": {
+      "title": "Notification settings",
+      "description": "Configure subscription renewal alerts. Enabled alerts will be sent to administrator email before the specified date.",
+      "alert30": {
+        "label": "30 days before alert",
+        "description": "Receive email alert 30 days before renewal"
+      },
+      "alert60": {
+        "label": "60 days before alert",
+        "description": "Receive email alert 60 days before renewal"
+      },
+      "alert90": {
+        "label": "90 days before alert",
+        "description": "Receive email alert 90 days before renewal"
+      }
+    },
+    "renewalDay": {
+      "empty": "No subscriptions scheduled for renewal on this date.",
+      "summary": "{count} renewals · {amount}",
+      "table": {
+        "app": "App",
+        "plan": "Plan",
+        "amount": "Amount",
+        "status": "Status"
+      }
+    }
+  },
+  "apps": {
+    "new": {
+      "pageTitle": "Register App",
+      "pageDescription": "Start managing by registering a new SaaS app"
+    },
+    "page": {
+      "title": "App management",
+      "description": "Manage SaaS apps used in your organization",
+      "metaTitle": "App management | SaaS Management Platform",
+      "metaDescription": "Manage SaaS apps used in your organization"
+    },
+    "kpi": {
+      "total": "Total apps",
+      "active": "Active apps",
+      "inactive": "Inactive apps",
+      "review": "Pending review"
+    },
+    "actions": {
+      "new": "Add app",
+      "edit": "Edit",
+      "delete": "Delete",
+      "cancel": "Cancel",
+      "save": "Save",
+      "register": "Register",
+      "deleting": "Deleting...",
+      "loading": "Loading...",
+      "back": "Back to list"
+    },
+    "list": {
+      "columns": {
+        "logo": "",
+        "name": "App name",
+        "category": "Category",
+        "status": "Status",
+        "subscriptionCount": "Subscriptions",
+        "userAccessCount": "Users",
+        "createdAt": "Created"
+      },
+      "searchPlaceholder": "Search by app name or category...",
+      "empty": "No apps registered",
+      "emptyAction": "Register first app"
+    },
+    "status": {
+      "active": "In Use",
+      "inactive": "Disabled",
+      "pendingReview": "Pending review",
+      "blocked": "Blocked"
+    },
+    "filters": {
+      "status": {
+        "label": "Status",
+        "all": "All",
+        "active": "In Use",
+        "inactive": "Disabled",
+        "pendingReview": "Pending review"
+      },
+      "category": {
+        "label": "Category"
+      }
+    },
+    "delete": {
+      "title": "Delete app?",
+      "description": "All data related to \"{appName}\" will be deleted. This action cannot be undone.",
+      "confirm": "Delete",
+      "cancelled": "Cancel",
+      "error": "Failed to delete app",
+      "errorUnknown": "An unknown error occurred while deleting app",
+      "success": "\"{appName}\" app has been deleted",
+      "noPermission": "Only administrators can delete apps",
+      "noDeletePermission": "No delete permission"
+    },
+    "form": {
+      "create": {
+        "title": "Basic information",
+        "description": "Enter basic app information",
+        "quickInput": "Quick input:",
+        "templateTabAll": "All",
+        "templateTabCollaboration": "Collaboration",
+        "templateTabDesign": "Design",
+        "templateTabAi": "AI",
+        "templateEmpty": "No templates in this category.",
+        "actions": {
+          "register": "Register App"
+        }
+      },
+      "edit": {
+        "title": "Edit app",
+        "description": "Update app information"
+      },
+      "fields": {
+        "name": "App name *",
+        "namePlaceholder": "e.g. Slack, Notion, Figma",
+        "status": "Status",
+        "statusPlaceholder": "Select status",
+        "category": "Category",
+        "categoryPlaceholder": "Select or enter category",
+        "categorySearch": "Search or enter category...",
+        "categoryDirectInput": "Enter \"{value}\" directly (press Enter)",
+        "categoryEmptyHint": "Search or enter a category",
+        "categoryHelper": "Select from dropdown or enter directly (press Enter to save)",
+        "categoryOptions": {
+          "collaboration": "Collaboration",
+          "design": "Design",
+          "ai": "AI",
+          "productivity": "Productivity",
+          "development": "Development",
+          "marketing": "Marketing",
+          "analytics": "Analytics",
+          "security": "Security",
+          "finance": "Finance",
+          "hr": "HR"
+        },
+        "website": "Website",
+        "websitePlaceholder": "https://example.com",
+        "description": "Description",
+        "descriptionPlaceholder": "Enter additional information about the app",
+        "tags": "Tags",
+        "tagsPlaceholder": "Comma separated (e.g. collaboration, communication, team)",
+        "tagsHint": "Enter tags separated by commas",
+        "logo": "App logo",
+        "logoDescription": "Upload a logo image to identify the app",
+        "logoUrl": "Logo URL",
+        "logoUrlPlaceholder": "https://example.com/logo.png",
+        "logoUploadPlaceholder": "Drag and drop or click to upload logo image",
+        "logoUrlInputLabel": "Or enter URL directly:",
+        "assignedTeam": "Assigned team",
+        "assignedTeamPlaceholder": "Select team (optional)",
+        "assignedTeamSearch": "Search team...",
+        "assignedTeamEmpty": "No teams found",
+        "assignedTeamHelper": "Select teams using this app (multiple selection)",
+        "assignedTeamNoTeam": "You are not assigned to a team. Please contact administrator.",
+        "assignedTeamNoTeams": "No teams registered. Create a team in settings first.",
+        "assignedTeamMultiple": " and {count} more",
+        "owner": "Owner",
+        "ownerComingSoon": "Owner feature coming soon"
+      },
+      "error": {
+        "request": "An error occurred during the request"
+      },
+      "schema": {
+        "nameMin": "App name must be at least 2 characters",
+        "nameMax": "App name must be 100 characters or less",
+        "urlInvalid": "Please enter a valid URL",
+        "notesMax": "Notes must be 1000 characters or less"
+      }
+    },
+    "detail": {
+      "title": "App details",
+      "kpi": {
+        "subscriptionCount": "Subscriptions",
+        "userAccessCount": "Users",
+        "status": "Status",
+        "createdAt": "Created"
+      },
+      "info": {
+        "registrationMethod": "Registration method",
+        "lastModified": "Last modified",
+        "manual": "Manual",
+        "discovered": "SSO discovered"
+      },
+      "notes": {
+        "title": "Notes",
+        "description": "Additional information about the app",
+        "empty": "No notes"
+      },
+      "risk": {
+        "title": "Risk assessment",
+        "description": "Security and risk score of the app",
+        "low": "Low risk",
+        "medium": "Medium risk",
+        "high": "High risk",
+        "scoreRange": "Score range: 0-10"
+      },
+      "owner": {
+        "title": "Owner",
+        "empty": "No owner assigned"
+      },
+      "assignedTeam": {
+        "title": "Assigned teams",
+        "empty": "No teams assigned"
+      },
+      "category": {
+        "title": "Category",
+        "uncategorized": "Uncategorized"
+      },
+      "dates": {
+        "title": "Date information",
+        "createdAt": "Created",
+        "updatedAt": "Modified",
+        "discoveredAt": "Discovered"
+      },
+      "tags": {
+        "title": "Tags"
+      },
+      "notFound": {
+        "title": "App not found.",
+        "description": "View and manage app details"
+      }
+    }
+  },
+  "integrations": {
+    "page": {
+      "title": "Integration management",
+      "description": "Automatically discover SaaS apps and users through SSO/IdP integrations",
+      "metaTitle": "Integration management | SaaS Management Platform",
+      "metaDescription": "Automatically discover SaaS apps and users through SSO/IdP integrations"
+    },
+    "kpi": {
+      "total": "Total integrations",
+      "active": "Active integrations",
+      "pending": "Pending",
+      "error": "Error"
+    },
+    "actions": {
+      "new": "Add integration",
+      "edit": "Edit",
+      "delete": "Delete",
+      "cancel": "Cancel",
+      "save": "Save",
+      "create": "Create",
+      "deleting": "Deleting...",
+      "saving": "Saving...",
+      "syncing": "Syncing...",
+      "sync": "Sync",
+      "settings": "Settings",
+      "back": "Back to list",
+      "loading": "Loading integration...",
+      "notFound": "Integration not found.",
+      "editStatus": "Edit integration status",
+      "editStatusDescription": "Update integration status",
+      "editInfo": "Loading integration info..."
+    },
+    "list": {
+      "columns": {
+        "type": "Integration type",
+        "status": "Status",
+        "lastSyncAt": "Last sync",
+        "createdAt": "Created"
+      },
+      "empty": "No integrations",
+      "emptyDescription": "Add SSO/IdP integration to automatically discover SaaS apps and users",
+      "searchPlaceholder": "Search by domain or keyword..."
+    },
+    "status": {
+      "active": "Active",
+      "pending": "Pending",
+      "error": "Error",
+      "disconnected": "Disconnected"
+    },
+    "type": {
+      "googleWorkspace": "Google Workspace",
+      "microsoftEntra": "Microsoft Entra ID",
+      "okta": "Okta",
+      "hrSystem": "HR System",
+      "recommended": "Recommended",
+      "comingSoon": "(Coming soon)"
+    },
+    "filters": {
+      "status": {
+        "label": "Status",
+        "all": "All",
+        "active": "Active",
+        "pending": "Pending",
+        "error": "Error",
+        "disconnected": "Disconnected"
+      },
+      "type": {
+        "label": "Integration type"
+      }
+    },
+    "delete": {
+      "title": "Delete integration",
+      "description": "Are you sure you want to delete {typeName} integration? This action cannot be undone.",
+      "confirm": "Delete",
+      "cancelled": "Cancel",
+      "error": "Failed to delete integration",
+      "errorUnknown": "An unknown error occurred while deleting integration",
+      "success": "Integration has been deleted",
+      "noPermission": "Only administrators can delete integrations",
+      "noDeletePermission": "No delete permission"
+    },
+    "sync": {
+      "title": "Sync",
+      "syncing": "Syncing...",
+      "success": "Sync started",
+      "error": "Sync failed",
+      "errorUnknown": "An unknown error occurred during sync",
+      "noPermission": "Only administrators can run sync",
+      "notSupported": "This integration type does not support sync",
+      "errorLog": "Sync error:"
+    },
+    "form": {
+      "create": {
+        "title": "Add integration",
+        "description": "Enter IdP/SSO integration information to create",
+        "descriptionDialog": "Automatically sync users and apps through IdP/SSO integration",
+        "typePlaceholder": "Select integration type",
+        "domainLabel": "Domain",
+        "domainPlaceholder": "example.com",
+        "domainHint": "Entering your company domain makes it easier to identify integrations",
+        "domainOptional": "Domain (optional)",
+        "adminEmailLabel": "Admin email",
+        "adminEmailPlaceholder": "admin@yourcompany.com",
+        "adminEmailTooltip": "Google Workspace admin account. Service account will call APIs on behalf of this account.",
+        "serviceAccountEmailLabel": "Service account email",
+        "serviceAccountEmailPlaceholder": "service@project-id.iam.gserviceaccount.com",
+        "serviceAccountEmailTooltip": "Email of the service account created in Google Cloud Console. This is the \"client_email\" value in the JSON key file.",
+        "privateKeyLabel": "Service account private key",
+        "privateKeyPlaceholder": "-----BEGIN PRIVATE KEY-----",
+        "privateKeyTooltip": "This is the \"private_key\" value in the JSON key file. It should start with '-----BEGIN PRIVATE KEY-----'. It will be stored securely encrypted.",
+        "privateKeyHint": "Copy and paste the \"private_key\" value from the JSON key file"
+      },
+      "editStatus": {
+        "title": "Change status",
+        "description": "Manage integration status",
+        "statusPlaceholder": "Select status"
+      },
+      "schema": {
+        "typeRequired": "Please select integration type",
+        "adminEmailRequired": "Admin email is required for Google Workspace integration",
+        "adminEmailInvalid": "Invalid email format",
+        "serviceAccountEmailRequired": "Service account email is required for Google Workspace integration",
+        "serviceAccountEmailInvalid": "Invalid email format",
+        "privateKeyRequired": "Private key is required for Google Workspace integration",
+        "privateKeyInvalid": "Invalid private key format. Must start with '-----BEGIN PRIVATE KEY-----'"
+      },
+      "error": {
+        "request": "An error occurred during the request",
+        "createFailed": "Failed to create integration"
+      }
+    },
+    "detail": {
+      "title": "{typeName} integration",
+      "description": "Manage integration status and sync settings",
+      "lastSync": "Last sync",
+      "totalSyncCount": "Total sync count",
+      "lastSyncResult": "Last sync result",
+      "itemsFound": "Found",
+      "itemsCreated": "Created",
+      "itemsUpdated": "Updated",
+      "error": "Error"
+    },
+    "settings": {
+      "title": "Sync settings",
+      "autoSync": {
+        "label": "Auto sync",
+        "description": "Automatically sync at the set interval",
+        "ariaLabel": "Auto sync"
+      },
+      "syncInterval": {
+        "label": "Sync interval",
+        "placeholder": "Select interval",
+        "hourly": "Hourly",
+        "daily": "Daily",
+        "weekly": "Weekly"
+      },
+      "syncUsers": {
+        "label": "Sync users",
+        "description": "Sync user information from IdP",
+        "ariaLabel": "Sync users"
+      },
+      "syncApps": {
+        "label": "Sync apps",
+        "description": "Sync app access permissions from IdP",
+        "ariaLabel": "Sync apps"
+      }
+    },
+    "syncLogs": {
+      "title": "Sync logs",
+      "loading": "Loading sync logs...",
+      "empty": "No sync logs",
+      "table": {
+        "startedAt": "Started",
+        "status": "Status",
+        "itemsFound": "Found",
+        "itemsCreated": "Created",
+        "itemsUpdated": "Updated",
+        "duration": "Duration"
+      },
+      "status": {
+        "running": "Running",
+        "success": "Success",
+        "partial": "Partial success",
+        "failed": "Failed"
+      },
+      "duration": {
+        "inProgress": "In progress",
+        "format": "{minutes}m {seconds}s",
+        "seconds": "{seconds}s"
+      }
+    },
+    "googleWorkspace": {
+      "setupTitle": "Google Workspace integration prerequisites",
+      "setupStep1": "Create service account and generate JSON key in Google Cloud Console",
+      "setupStep2": "Enable \"Domain-Wide Delegation\" for the service account",
+      "setupStep3": "Approve API scopes with Client ID in Google Admin Console",
+      "setupGuide": "Detailed setup guide"
+    }
+  },
+  "reports": {
+    "page": {
+      "title": "Reports",
+      "description": "View SaaS usage, cost analysis, renewal schedules, and more",
+      "metaTitle": "Reports | SaaS Management Platform",
+      "metaDescription": "View SaaS usage, cost analysis, renewal schedules, and more"
+    },
+    "availableCount": "{count} reports available",
+    "dataIntegration": {
+      "title": "Data integration in progress",
+      "description": "Current reports display sample data. Real-time data will be shown once SSO/IdP integration is complete."
+    },
+    "comingSoon": {
+      "title": "Coming soon",
+      "badge": "Coming soon"
+    },
+    "usage": {
+      "stats": {
+        "activeUsers": {
+          "title": "Active users",
+          "description": "Users with app access records in the period"
+        },
+        "totalApps": {
+          "title": "Total apps",
+          "description": "All registered apps"
+        },
+        "unusedApps": {
+          "title": "Unused apps",
+          "description": "Unused for 30 days or more"
+        },
+        "averageUsageRate": {
+          "title": "Average usage rate",
+          "description": "Average usage rate per app"
+        }
+      },
+      "unusedApps": {
+        "title": "Unused apps",
+        "empty": "No unused apps for 30 days or more.",
+        "estimatedWaste": "Estimated waste: ₩{amount}/month",
+        "table": {
+          "appName": "App name",
+          "lastUsedAt": "Last used",
+          "licenseCount": "Licenses"
+        },
+        "lastUsed": {
+          "none": "None",
+          "count": "{count}"
+        }
+      },
+      "activeUsersChart": {
+        "title": "Active users trend",
+        "empty": "No data for this period.",
+        "tooltipLabel": "Active users",
+        "tooltipValue": "{count} users"
+      },
+      "appUsageChart": {
+        "title": "App usage rate (Top 10)",
+        "empty": "No apps registered.",
+        "tooltip": {
+          "usageRate": "Usage rate",
+          "userCount": "Users",
+          "userCountValue": "{count} users",
+          "usageRateValue": "{rate}%"
+        }
+      },
+      "page": {
+        "title": "Usage Report",
+        "description": "Analyze SaaS app usage",
+        "metaTitle": "Usage Report | SaaS Management Platform",
+        "metaDescription": "Analyze SaaS app usage"
+      },
+      "filters": {
+        "periodSetting": "Period",
+        "export": "Export",
+        "exportCSV": "Export as CSV",
+        "exportExcel": "Export as Excel",
+        "exportPDF": "Export as PDF",
+        "periods": {
+          "monthly": "Last 30 days",
+          "quarterly": "Last 90 days",
+          "yearly": "Last 1 year"
+        }
+      },
+      "export": {
+        "common": {
+          "item": "Item",
+          "value": "Value",
+          "date": "Date",
+          "appName": "App name",
+          "usageRate": "Usage rate",
+          "userCount": "Users",
+          "activeUserCount": "Active users",
+          "lastUsed": "Last used",
+          "licenseCount": "Licenses"
+        },
+        "summary": {
+          "totalActiveUsers": "Total active users",
+          "totalApps": "Total apps",
+          "unusedAppsCount": "Unused apps",
+          "averageUsageRate": "Average usage rate",
+          "sheetName": "Summary",
+          "title": "Usage Report - Summary"
+        },
+        "activeUsersTrend": {
+          "sheetName": "Active Users Trend",
+          "title": "Usage Report - Active Users Trend"
+        },
+        "appUsage": {
+          "sheetName": "App Usage",
+          "title": "Usage Report - App Usage"
+        },
+        "unusedApps": {
+          "sheetName": "Unused Apps",
+          "title": "Usage Report - Unused Apps"
+        },
+        "pdf": {
+          "title": "Usage Report",
+          "subtitle": "Generated: {date}",
+          "sectionSummary": "Summary",
+          "sectionActiveUsersTrend": "Active Users Trend",
+          "sectionAppUsage": "App Usage",
+          "sectionUnusedApps": "Unused Apps"
+        }
+      },
+      "userCost": {
+        "title": "User Cost Analysis",
+        "description": "PER_SEAT subscription cost breakdown by user",
+        "tabUsers": "By User",
+        "tabTeams": "By Team",
+        "usersTitle": "User SaaS Cost",
+        "usersDescription": "Monthly cost per user based on PER_SEAT subscriptions",
+        "colUser": "User",
+        "colTeam": "Team",
+        "colMonthlyCost": "Monthly Cost",
+        "colAssignedApps": "Assigned Apps",
+        "colActiveApps": "Active Apps",
+        "colApp": "App",
+        "colPerSeatPrice": "Seat Price",
+        "colStatus": "Status",
+        "statusActive": "Active",
+        "statusInactive": "Inactive",
+        "noUsers": "No users assigned to PER_SEAT subscriptions",
+        "teamsTitle": "Team Cost Comparison",
+        "teamsDescription": "Cost comparison by team for PER_SEAT subscriptions",
+        "colTeamName": "Team",
+        "colMembers": "Members",
+        "colTotalCost": "Total Cost",
+        "colCostPerMember": "Per Member",
+        "colActiveRate": "Active Rate",
+        "noTeams": "No team data available"
+      }
+    },
+    "audit": {
+      "page": {
+        "title": "Audit Log",
+        "description": "View system activity history",
+        "metaTitle": "Audit Log | SaaS Management Platform",
+        "metaDescription": "View and search system activity logs"
+      },
+      "export": {
+        "button": "Export",
+        "exporting": "Exporting...",
+        "csvLabel": "Export as CSV",
+        "excelLabel": "Export as Excel",
+        "pdfLabel": "Export as PDF",
+        "columns": {
+          "time": "Time",
+          "action": "Action",
+          "entityType": "Entity Type",
+          "entityId": "Entity ID",
+          "userName": "User",
+          "userEmail": "Email",
+          "teamName": "Team",
+          "ipAddress": "IP",
+          "changes": "Changes",
+          "metadata": "Metadata"
+        },
+        "excel": {
+          "sheetName": "Audit Log",
+          "title": "Audit Log Report"
+        },
+        "pdf": {
+          "title": "Audit Log Report",
+          "summaryTitle": "Audit Log Summary",
+          "totalLogs": "Total Logs",
+          "logsCount": "{count} logs",
+          "generatedDate": "Generated Date",
+          "actionDistribution": "Action Distribution",
+          "detailTitle": "Audit Log Details",
+          "subtitle": "Generated: {date}",
+          "tableHeaders": {
+            "time": "Time",
+            "action": "Action",
+            "user": "User",
+            "team": "Team",
+            "entity": "Entity"
+          }
+        }
+      },
+      "columns": {
+        "createdAt": "Time",
+        "user": "User",
+        "action": "Action",
+        "entity": "Entity",
+        "ipAddress": "IP address",
+        "searchPlaceholder": "Search by user, action, entity...",
+        "period": "Period",
+        "startDate": "Start date",
+        "endDate": "End date",
+        "exportCsv": "Export CSV"
+      },
+      "actions": {
+        "create": "Create",
+        "update": "Update",
+        "delete": "Delete",
+        "login": "Login",
+        "logout": "Logout",
+        "sync": "Sync",
+        "export": "Export",
+        "import": "Import"
+      },
+      "entityTypes": {
+        "app": "App",
+        "subscription": "Subscription",
+        "user": "User",
+        "integration": "Integration",
+        "organization": "Organization",
+        "payment": "Payment"
+      },
+      "empty": {
+        "title": "No audit logs",
+        "description": "No logs match the criteria or no activity has been recorded yet"
+      },
+      "detail": {
+        "title": "Audit log details",
+        "fields": {
+          "time": "Time",
+          "user": "User",
+          "entityType": "Entity type",
+          "entityName": "Entity name",
+          "entityId": "Entity ID",
+          "ipAddress": "IP address",
+          "userAgent": "User Agent",
+          "changes": "Changes",
+          "metadata": "Metadata",
+          "logId": "Log ID"
+        }
+      }
+    },
+    "cost": {
+      "page": {
+        "title": "Cost Analysis Report",
+        "description": "Analyze SaaS subscription cost status and trends",
+        "metaTitle": "Cost Analysis Report | SaaS Management Platform",
+        "metaDescription": "SaaS subscription cost analysis report"
+      },
+      "stats": {
+        "totalCost": "This Month's SaaS Cost",
+        "monthlyAverage": "Monthly SaaS Average",
+        "transactionCount": "Transactions",
+        "anomalyDetection": "Anomaly Detection",
+        "vsLastMonth": "{value} vs last month",
+        "last30Days": "Based on all data",
+        "thisPeriod": "This period",
+        "anomalyCount": "{count}",
+        "anomalyThreshold": "50%+ increase vs last month"
+      },
+      "trend": {
+        "title": "Monthly SaaS Subscription Cost Trend",
+        "description": "SaaS subscription cost changes over time",
+        "startMonth": "Start month",
+        "endMonth": "End month",
+        "noData": "No data for the selected period"
+      },
+      "distribution": {
+        "title": "Cost Distribution by App",
+        "description": "Top 5 apps by cost",
+        "percentage": "{value}% share",
+        "noData": "No data available"
+      },
+      "anomaly": {
+        "title": "Cost Anomaly Detection",
+        "description": "Apps with 50%+ increase vs last month",
+        "noAnomalies": "No cost anomalies detected",
+        "count": "{count}"
+      },
+      "seatAnalysis": {
+        "wasteTitle": "Seat Waste Analysis",
+        "wasteDescription": "Identify unused seats in PER_SEAT subscriptions",
+        "monthlyWaste": "Monthly Waste",
+        "annualWaste": "Annual Waste",
+        "overallUtilization": "Overall Utilization",
+        "appWasteTable": "Seat Waste by App",
+        "appWasteCount": "{count} PER_SEAT subscriptions",
+        "colApp": "App",
+        "colTotalSeats": "Total Seats",
+        "colAssigned": "Assigned",
+        "colActive": "Active (30d)",
+        "colWasted": "Wasted",
+        "colMonthlyWaste": "Monthly Waste",
+        "colUtilization": "Utilization",
+        "noData": "No PER_SEAT subscriptions found for analysis",
+        "optimizationTitle": "Seat Optimization Suggestions",
+        "optimizationDescription": "Recommended seat count based on active users",
+        "monthlySavings": "Monthly Savings Possible",
+        "annualSavings": "Annual Savings Possible",
+        "optimizableApps": "Optimizable Apps",
+        "optimizableAppsCount": "{count}",
+        "colCurrentSeats": "Current Seats",
+        "colActiveUsers": "Active Users",
+        "colRecommended": "Recommended",
+        "colExcess": "Excess",
+        "colMonthlySaving": "Monthly Saving",
+        "colAnnualSaving": "Annual Saving",
+        "noOptimization": "No optimization needed",
+        "simulate": "Simulate"
+      },
+      "export": {
+        "button": "Export",
+        "exporting": "Exporting...",
+        "csvLabel": "Export as CSV",
+        "excelLabel": "Export as Excel",
+        "pdfLabel": "Export as PDF",
+        "summary": {
+          "label": "Item",
+          "value": "Value",
+          "totalCost": "Total Cost",
+          "monthlyAverage": "Monthly Average",
+          "vsLastMonth": "vs Last Month",
+          "transactionCount": "Transactions",
+          "transactionCountValue": "{count}"
+        },
+        "trend": {
+          "month": "Month",
+          "cost": "Cost",
+          "transactionCount": "Transactions"
+        },
+        "app": {
+          "appName": "App Name",
+          "cost": "Cost",
+          "percentage": "Share (%)",
+          "transactionCount": "Transactions"
+        },
+        "anomaly": {
+          "appName": "App Name",
+          "previousCost": "Previous Month",
+          "currentCost": "Current Month",
+          "changeRate": "Change Rate (%)",
+          "severity": "Severity"
+        },
+        "excel": {
+          "summary": "Summary",
+          "summaryTitle": "Cost Analysis Report - Summary",
+          "trendSheet": "Monthly Cost Trend",
+          "trendTitle": "Cost Analysis Report - Monthly Trend",
+          "appSheet": "Cost by App",
+          "appTitle": "Cost Analysis Report - Cost by App",
+          "anomalySheet": "Cost Anomalies",
+          "anomalyTitle": "Cost Analysis Report - Anomalies"
+        },
+        "pdf": {
+          "title": "Cost Analysis Report",
+          "keyMetrics": "Key Metrics",
+          "monthlyAverage": "Monthly Avg",
+          "trendTitle": "Monthly Cost Trend",
+          "trendHeaders": {
+            "month": "Month",
+            "cost": "Cost",
+            "transactionCount": "Transactions"
+          },
+          "distributionTitle": "Cost Distribution by App",
+          "distributionHeaders": {
+            "appName": "App Name",
+            "cost": "Cost",
+            "percentage": "Share"
+          },
+          "anomalyTitle": "Cost Anomaly Detection",
+          "anomalyHeaders": {
+            "appName": "App Name",
+            "previousMonth": "Previous",
+            "thisMonth": "Current",
+            "changeRate": "Change Rate"
+          }
+        }
+      }
+    },
+    "renewal": {
+      "page": {
+        "title": "Subscription Renewal Report",
+        "description": "Check upcoming subscription renewals for the next 30 days",
+        "metaTitle": "Subscription Renewal Report | SaaS Management Platform",
+        "metaDescription": "SaaS subscription renewal schedule report"
+      },
+      "daysLeft": "{days} days left",
+      "count": "{count}",
+      "stats": {
+        "totalCount": "Total Renewals",
+        "totalCountDesc": "Scope: 30 days",
+        "totalCost": "Estimated Renewal Cost",
+        "totalCostDesc": "Total renewal amount",
+        "within7Days": "Within 7 Days",
+        "within7DaysDesc": "Urgent review required",
+        "within30Days": "Within 30 Days",
+        "within30DaysDesc": "Pre-review recommended"
+      },
+      "sections": {
+        "within7Days": "Renewals Within 7 Days",
+        "within30Days": "Renewals in 8-30 Days",
+        "within90Days": "Renewals in 31-90 Days",
+        "empty": {
+          "within7Days": "No renewals scheduled within 7 days",
+          "within30Days": "No renewals scheduled within 8-30 days",
+          "within90Days": "No renewals scheduled within 31-90 days"
+        }
+      },
+      "calendar": {
+        "title": "Renewal Calendar",
+        "today": "Today",
+        "prev": "Prev",
+        "next": "Next",
+        "yearMonth": "{month} {year}",
+        "weekdays": {
+          "sun": "Sun",
+          "mon": "Mon",
+          "tue": "Tue",
+          "wed": "Wed",
+          "thu": "Thu",
+          "fri": "Fri",
+          "sat": "Sat"
+        },
+        "months": {
+          "1": "Jan",
+          "2": "Feb",
+          "3": "Mar",
+          "4": "Apr",
+          "5": "May",
+          "6": "Jun",
+          "7": "Jul",
+          "8": "Aug",
+          "9": "Sep",
+          "10": "Oct",
+          "11": "Nov",
+          "12": "Dec"
+        },
+        "legend": {
+          "urgent": "7 days or less (Urgent)",
+          "warning": "Within 14 days",
+          "normal": "30+ days"
+        }
+      },
+      "dayPanel": {
+        "title": "Daily Details",
+        "selectDate": "Select a date from the calendar",
+        "selectDateHint": "Click a date on the calendar\nto view renewal details for that day",
+        "renewalCount": "{count} renewals scheduled",
+        "noRenewal": "No renewals scheduled",
+        "totalCost": "Total Estimated Cost",
+        "emptyDate": "No subscriptions scheduled for renewal on the selected date"
+      },
+      "export": {
+        "button": "Export",
+        "exporting": "Exporting...",
+        "csv": "Export as CSV",
+        "columns": {
+          "appName": "App Name",
+          "team": "Team",
+          "assignedUsers": "Assigned Users",
+          "renewalDate": "Renewal Date",
+          "amount": "Amount",
+          "daysLeft": "Days Left",
+          "dDay": "D-Day"
+        },
+        "summary": {
+          "label": "Item",
+          "value": "Value",
+          "totalCount": "Total Renewals",
+          "totalCost": "Estimated Renewal Cost",
+          "within7Days": "Within 7 Days",
+          "within30Days": "Within 30 Days"
+        },
+        "excel": {
+          "label": "Export as Excel",
+          "summary": "Summary",
+          "summaryTitle": "Subscription Renewal Report - Summary",
+          "within7DaysSheet": "Within 7 Days",
+          "within7DaysTitle": "Subscription Renewal Report - Within 7 Days",
+          "within30DaysSheet": "8-30 Days",
+          "within30DaysTitle": "Subscription Renewal Report - 8-30 Days",
+          "within90DaysSheet": "31-90 Days",
+          "within90DaysTitle": "Subscription Renewal Report - 31-90 Days"
+        },
+        "pdf": {
+          "label": "Export as PDF",
+          "title": "Subscription Renewal Report",
+          "summary": "Renewal Summary",
+          "chartTitle": "Renewal Distribution by Period",
+          "chartLabels": {
+            "within7Days": "Within 7 Days",
+            "within30Days": "Within 30 Days",
+            "within90Days": "Within 90 Days"
+          },
+          "within7DaysTitle": "Renewals Within 7 Days (Urgent)",
+          "within30DaysTitle": "Renewals in 8-30 Days",
+          "within90DaysTitle": "Renewals in 31-90 Days"
+        }
+      }
+    },
+    "browsingUsage": {
+      "page": {
+        "title": "Browsing Usage Report",
+        "description": "View user web browsing activity",
+        "metaTitle": "Browsing Usage Report | SaaS Management Platform",
+        "metaDescription": "View user web browsing activity report"
+      },
+      "filters": {
+        "title": "Filters",
+        "description": "Filter data by period and search terms",
+        "period": "Period",
+        "periodPlaceholder": "Select period",
+        "startDate": "Start date",
+        "endDate": "End date",
+        "customPeriod": "Custom period",
+        "apply": "Apply",
+        "search": "Search",
+        "searchPlaceholder": "Search URL or user...",
+        "searchType": "Search Type",
+        "searchTypeUrl": "URL",
+        "searchTypeUser": "User",
+        "searchPlaceholderUrl": "Search URL...",
+        "searchPlaceholderUser": "Name or email...",
+        "export": "Export"
+      },
+      "presets": {
+        "30d": "Last 30 days",
+        "90d": "Last 90 days",
+        "1y": "Last 1 year"
+      },
+      "table": {
+        "title": "Browsing Activity",
+        "totalResults": "{total} results found",
+        "ipAddress": "IP Address",
+        "user": "User",
+        "url": "URL",
+        "whitelist": "Whitelist",
+        "blacklist": "Blacklist",
+        "visitedAt": "Visited At",
+        "visitCount": "Visit Count",
+        "yes": "O",
+        "no": "-",
+        "empty": "No data available"
+      }
+    },
+    "blockEvents": {
+      "page": {
+        "title": "Block Events Report",
+        "description": "View access records blocked by blacklist",
+        "metaTitle": "Block Events Report | SaaS Management Platform",
+        "metaDescription": "View blocked web access activity report"
+      },
+      "stats": {
+        "totalBlocks": "Total Blocks",
+        "blockedDomains": "Blocked Domains",
+        "uniqueIPs": "Unique IPs"
+      },
+      "topDomains": {
+        "title": "Most Blocked Domains",
+        "countSuffix": "({count} times)"
+      },
+      "filters": {
+        "title": "Filters",
+        "description": "Filter data by period and search terms",
+        "period": "Period",
+        "periodPlaceholder": "Select period",
+        "customPeriod": "Custom period",
+        "startDate": "Start date",
+        "endDate": "End date",
+        "apply": "Apply",
+        "search": "Search",
+        "searchPlaceholder": "Search URL or user...",
+        "export": "Export"
+      },
+      "table": {
+        "title": "Block Events",
+        "totalRecords": "{total} block records found",
+        "ipAddress": "IP Address",
+        "user": "User",
+        "url": "URL",
+        "blockReason": "Block Reason",
+        "blockedAt": "Blocked At",
+        "empty": "No data available"
+      }
+    },
+    "registeredAppUsage": {
+      "page": {
+        "title": "Registered App Usage",
+        "description": "View user access records for registered apps",
+        "metaTitle": "Registered App Usage | SaaS Management Platform",
+        "metaDescription": "View user access activity for registered apps"
+      },
+      "stats": {
+        "totalVisits": "Total Visits",
+        "totalVisitsDesc": "Total visits during the selected period",
+        "activeUsers": "Active Users",
+        "activeUsersDesc": "Users who accessed registered apps",
+        "usedApps": "Apps Used",
+        "usedAppsDesc": "Number of apps with access activity",
+        "totalDuration": "Total Duration",
+        "totalDurationDesc": "Total time spent across all apps"
+      },
+      "filters": {
+        "title": "Filters",
+        "period": "Period",
+        "periodPlaceholder": "Select period",
+        "startDate": "Start date",
+        "endDate": "End date",
+        "customPeriod": "Custom",
+        "search": "Search",
+        "searchPlaceholder": "Search URL or user",
+        "apply": "Apply",
+        "export": "Export"
+      },
+      "presets": {
+        "today": "Today",
+        "7d": "Last 7 days",
+        "30d": "Last 30 days",
+        "90d": "Last 90 days"
+      },
+      "table": {
+        "appName": "App Name",
+        "url": "Access URL",
+        "ipAddress": "IP Address",
+        "visitedAt": "Access Time",
+        "duration": "Duration",
+        "user": "User",
+        "empty": "No data found."
+      },
+      "pagination": {
+        "totalItems": "Showing {start}-{end} of {total}",
+        "previous": "Previous",
+        "next": "Next",
+        "pageOf": "{page} / {totalPages}"
+      },
+      "format": {
+        "hours": "h",
+        "minutes": "m"
+      }
+    },
+    "users": {
+      "page": {
+        "title": "User Management",
+        "description": "View and manage your organization's users",
+        "inviteUser": "Invite User"
+      },
+      "kpi": {
+        "total": "Total Users",
+        "active": "Active Users",
+        "inactive": "Inactive",
+        "terminated": "Terminated"
+      },
+      "table": {
+        "searchPlaceholder": "Search name, email, department...",
+        "loading": "Loading...",
+        "emptyMessage": "No users registered",
+        "columns": {
+          "user": "User",
+          "role": "Role",
+          "status": "Status",
+          "department": "Department",
+          "appAccessCount": "Assigned Apps",
+          "lastLoginAt": "Last Login"
+        }
+      },
+      "status": {
+        "active": "Active",
+        "inactive": "Inactive",
+        "terminated": "Terminated"
+      },
+      "role": {
+        "admin": "Admin",
+        "member": "Member",
+        "viewer": "Viewer"
+      },
+      "filter": {
+        "status": "Status",
+        "role": "Role"
+      },
+      "detail": {
+        "loading": "Loading user information...",
+        "notFound": "User not found.",
+        "backToList": "Back to List",
+        "description": "Department: {department} · {count} assigned apps",
+        "accountInfo": "Account Information",
+        "statusRole": "Status/Role",
+        "subscriptions": "Subscriptions/Renewals",
+        "connectedApps": "Connected Apps (Recently Used)",
+        "email": "Email",
+        "department": "Department",
+        "appAccessCount": "Assigned Apps",
+        "lastLogin": "Last Login",
+        "createdAt": "Account Created",
+        "role": "Role",
+        "status": "Status",
+        "totalSubscriptions": "Total Subscriptions",
+        "monthlyCost": "Monthly Cost",
+        "renewingSoon": "Renewing in 30 days",
+        "noSubscriptions": "No subscription information assigned to this user. Assign an owner in the subscriptions page to see a summary.",
+        "viewSubscriptions": "View Subscriptions",
+        "noApps": "No connected apps.",
+        "source": "Source",
+        "permission": "Permission",
+        "unknown": "Unknown",
+        "lastUsed": "Last Used",
+        "noRecentUse": "No recent use"
+      },
+      "terminated": {
+        "page": {
+          "title": "Offboarded Users",
+          "description": "Manage unrevoked app access for terminated users"
+        },
+        "loading": "Loading terminated users...",
+        "empty": "No terminated users with unrevoked access",
+        "appCount": "apps",
+        "terminatedDate": "Terminated Date",
+        "revokeAll": "Revoke All",
+        "revokeAllTitle": "Revoke All Access",
+        "revokeAllDescription": "Are you sure you want to revoke all app access ({count} apps) for {name}? This action cannot be undone.",
+        "revoke": "Revoke",
+        "processing": "Processing...",
+        "cancel": "Cancel",
+        "lastUsed": "Last Used",
+        "subscriptionSection": "Subscription Assignments",
+        "subscriptionBillingCycle": "Billing: {cycle}",
+        "subscriptionAssignedAt": "Assigned: {date}",
+        "billingType": {
+          "FLAT_RATE": "Flat Rate",
+          "PER_SEAT": "Per Seat"
+        }
+      }
+    },
+    "teams": {
+      "page": {
+        "title": "Team Management",
+        "description": "Google Workspace Organizational Unit based team structure"
+      },
+      "stats": {
+        "totalTeams": "Total Teams",
+        "teamsWithMembers": "Teams with Members",
+        "avgMembersPerTeam": "Avg Members per Team",
+        "maxDepth": "Max Depth"
+      },
+      "tree": {
+        "title": "Team Structure",
+        "addTeam": "Add Team",
+        "expandAll": "Expand All",
+        "collapseAll": "Collapse All",
+        "searchPlaceholder": "Search teams...",
+        "empty": "No teams. Please run Google Workspace sync.",
+        "noSearchResults": "No search results",
+        "edit": "Edit",
+        "delete": "Delete",
+        "noMembers": "No members"
+      },
+      "create": {
+        "title": "Create New Team",
+        "description": "Description",
+        "teamName": "Team Name",
+        "parentTeam": "Parent Team",
+        "memberAssignment": "Member Assignment",
+        "namePlaceholder": "e.g., Development Team, Marketing Team",
+        "descriptionPlaceholder": "Brief description of the team",
+        "parentTeamPlaceholder": "Select parent team (optional)",
+        "noParent": "None (Top-level team)",
+        "memberSearchPlaceholder": "Search by name or email...",
+        "selectedMembers": "selected",
+        "noSearchResults": "No search results",
+        "noAvailableMembers": "No available members",
+        "noName": "No name",
+        "cancel": "Cancel",
+        "create": "Create Team",
+        "creating": "Creating...",
+        "nameRequired": "Please enter team name",
+        "success": "Team created successfully",
+        "error": "Failed to create team"
+      },
+      "edit": {
+        "title": "Edit Team",
+        "description": "Description",
+        "linkedTeamNote": "Teams synced from Google Workspace cannot have their names changed.",
+        "teamName": "Team Name",
+        "parentTeam": "Parent Team",
+        "memberAssignment": "Member Assignment",
+        "namePlaceholder": "e.g., Development Team, Marketing Team",
+        "descriptionPlaceholder": "Brief description of the team",
+        "parentTeamPlaceholder": "Select parent team (optional)",
+        "noParent": "None (Top-level team)",
+        "linkedTeamNameNote": "Linked team names cannot be edited.",
+        "memberSearchPlaceholder": "Search by name or email...",
+        "selectedMembers": "selected",
+        "noSearchResults": "No search results",
+        "noAvailableMembers": "No available members",
+        "noName": "No name",
+        "movingFrom": "Moving from",
+        "current": "Current:",
+        "cancel": "Cancel",
+        "save": "Save",
+        "saving": "Saving...",
+        "nameRequired": "Please enter team name",
+        "success": "Team updated successfully",
+        "error": "Failed to update team"
+      },
+      "delete": {
+        "title": "Delete Team",
+        "confirm": "Are you sure you want to delete \"{name}\"?",
+        "irreversible": "This action cannot be undone.",
+        "impact": "Impact of deletion:",
+        "membersImpact": "{count} members will be set to no team",
+        "appsImpact": "Team information will be removed from {count} assigned apps",
+        "subscriptionsImpact": "Team information will be removed from {count} assigned subscriptions",
+        "cardsImpact": "Team information will be removed from {count} corporate cards",
+        "childTeamsImpact": "{count} child teams will be moved to top level",
+        "noImpact": "No data is connected to this team.",
+        "cancel": "Cancel",
+        "delete": "Delete",
+        "deleting": "Deleting...",
+        "success": "Team deleted successfully",
+        "error": "Failed to delete team"
+      }
+    },
+    "tasks": {
+      "page": {
+        "title": "Task Management",
+        "description": "Track and manage SaaS-related tasks"
+      },
+      "kpi": {
+        "total": "Total Tasks",
+        "todo": "To Do",
+        "inProgress": "In Progress",
+        "urgent": "Urgent"
+      },
+      "actions": {
+        "add": "Add Task"
+      },
+      "filter": {
+        "status": "Status",
+        "priority": "Priority",
+        "allStatuses": "All Statuses",
+        "allPriorities": "All Priorities",
+        "reset": "Reset Filters",
+        "count": "{count} tasks"
+      },
+      "status": {
+        "todo": "To Do",
+        "inProgress": "In Progress",
+        "inReview": "In Review",
+        "done": "Done",
+        "cancelled": "Cancelled"
+      },
+      "priority": {
+        "urgent": "Urgent",
+        "high": "High",
+        "medium": "Medium",
+        "low": "Low"
+      },
+      "table": {
+        "empty": "No tasks registered",
+        "selected": "{count} selected",
+        "columns": {
+          "title": "Title",
+          "status": "Status",
+          "priority": "Priority",
+          "assignee": "Assignee",
+          "dueDate": "Due Date"
+        },
+        "actions": {
+          "menuOpen": "Open menu",
+          "edit": "Edit",
+          "delete": "Delete"
+        },
+        "pagination": {
+          "rowsSelected": "{selected} of {total} row(s) selected.",
+          "itemsRange": "{start}-{end} of {total} items",
+          "rowsPerPage": "Rows per page",
+          "page": "Page {current} of {total}"
+        }
+      }
+    },
+    "kanban": {
+      "page": {
+        "title": "Kanban Board",
+        "description": "Visually manage tasks with a Kanban board"
+      },
+      "header": {
+        "title": "Kanban Board",
+        "addAssignee": "Add Assignee"
+      },
+      "views": {
+        "board": "Board",
+        "list": "List",
+        "table": "Table"
+      },
+      "search": {
+        "placeholder": "Search tasks..."
+      },
+      "actions": {
+        "filters": "Filters",
+        "addBoard": "Add Board"
+      },
+      "column": {
+        "empty": "No tasks"
+      },
+      "list": {
+        "noDueDate": "No due date"
+      }
+    },
+    "import": {
+      "page": {
+        "title": "Data Import",
+        "description": "Upload CSV files to bulk register apps and subscription information."
+      },
+      "form": {
+        "title": "CSV Bulk Import",
+        "description": "Upload a CSV file to bulk register apps, subscriptions, or users.",
+        "importType": "Import Type",
+        "importTypeApps": "Import Apps",
+        "importTypeSubscriptions": "Import Subscriptions",
+        "importTypeUsers": "Import Users",
+        "downloadTemplate": "Download Template",
+        "templateDescription": "Download the template file and enter data according to the format.",
+        "uploadArea": {
+          "dragOrClick": "Drag and drop a CSV file here or click to select",
+          "csvOnly": "Only .csv files are supported"
+        },
+        "recordsDetected": "{count} records detected",
+        "upload": "Upload and Import",
+        "processing": "Processing...",
+        "result": {
+          "success": "Success",
+          "error": "Error",
+          "itemsCreated": "{count} items registered.",
+          "validationErrors": "Validation Errors:",
+          "moreErrors": "... and {count} more errors"
+        },
+        "fields": {
+          "apps": "App Fields",
+          "subscriptions": "Subscription Fields",
+          "users": "User Fields",
+          "appsTitle": "App CSV Fields:",
+          "appsName": "name (required): App name",
+          "appsCategory": "category (required): COLLABORATION, PRODUCTIVITY, DEVELOPMENT, DESIGN, MARKETING, SALES, HR, FINANCE, ANALYTICS, SECURITY, IT_INFRA, COMMUNICATION, OTHER",
+          "appsVendor": "vendor: Vendor name",
+          "appsDescription": "description: App description",
+          "appsWebsite": "website: Website URL",
+          "subscriptionsTitle": "Subscription CSV Fields:",
+          "subscriptionsAppName": "appName (required): App name (must be an already registered app)",
+          "subscriptionsPlanName": "planName (required): Plan name",
+          "subscriptionsBillingCycle": "billingCycle (required): MONTHLY, QUARTERLY, YEARLY",
+          "subscriptionsPrice": "price: Price (number)",
+          "subscriptionsRenewalDate": "renewalDate: Renewal date (YYYY-MM-DD)",
+          "subscriptionsSeats": "seats: Number of licenses",
+          "usersTitle": "User CSV Fields:",
+          "usersEmail": "email (required): Email address",
+          "usersRole": "role (required): ADMIN, MEMBER, VIEWER",
+          "usersName": "name: User name",
+          "usersDepartment": "department: Department name",
+          "usersJobTitle": "jobTitle: Job title/position",
+          "usersEmployeeId": "employeeId: Employee ID"
+        }
+      },
+      "progress": {
+        "title": "Processing CSV",
+        "totalRecords": "Processing {total} records in total...",
+        "processed": "Processed: {processed} / {total} ({percent}%)",
+        "errors": "{count} error(s)",
+        "complete": "Processing Complete",
+        "close": "Close"
+      }
+    },
+    "export": {
+      "button": "Export",
+      "exporting": "Exporting...",
+      "csvLabel": "Export as CSV",
+      "excelLabel": "Export as Excel",
+      "pdfLabel": "Export as PDF"
+    }
+  },
+  "teamMembers": {
+    "page": {
+      "title": "Team Management",
+      "description": "Manage team members and invitations",
+      "adminOnly": "Only administrators can manage team members."
+    },
+    "memberList": {
+      "title": "Team Members",
+      "description": "Members currently registered in the organization.",
+      "empty": "No members found."
+    },
+    "inviteForm": {
+      "buttonLabel": "Invite Member",
+      "title": "Invite Member",
+      "description": "Invite a new team member by email.",
+      "email": "Email",
+      "emailPlaceholder": "example@company.com",
+      "role": "Role",
+      "rolePlaceholder": "Select role",
+      "teamAssignment": "Team Assignment (Optional)",
+      "teamPlaceholder": "Select team...",
+      "cancel": "Cancel",
+      "submit": "Send Invitation",
+      "inviting": "Inviting...",
+      "roleDescriptions": {
+        "admin": "Can access all features.",
+        "member": "Can access most features.",
+        "viewer": "Read-only access only."
+      },
+      "error": "Failed to create invitation",
+      "roles": {
+        "admin": "Admin",
+        "member": "Member",
+        "viewer": "Viewer"
+      }
+    },
+    "memberCard": {
+      "me": "(Me)",
+      "current": "(Current)",
+      "changeRole": "Change Role",
+      "removeFromTeam": "Remove from Team",
+      "removeConfirm": "Are you sure you want to remove {name} from the team?",
+      "roles": {
+        "admin": "Admin",
+        "member": "Member",
+        "viewer": "Viewer"
+      },
+      "status": {
+        "active": "Active",
+        "inactive": "Inactive",
+        "terminated": "Terminated"
+      },
+      "transferAdmin": "Transfer Admin",
+      "offboardUser": "Offboard User"
+    },
+    "invitationList": {
+      "empty": "No pending invitations.",
+      "table": {
+        "email": "Email",
+        "role": "Role",
+        "status": "Status",
+        "inviter": "Inviter",
+        "invitedAt": "Invited At"
+      },
+      "roles": {
+        "admin": "Admin",
+        "member": "Member",
+        "viewer": "Viewer"
+      },
+      "status": {
+        "pending": "Pending",
+        "accepted": "Accepted",
+        "expired": "Expired",
+        "cancelled": "Cancelled"
+      },
+      "actions": {
+        "resend": "Resend",
+        "cancel": "Cancel"
+      }
+    }
+  },
+  "payments": {
+    "page": {
+      "title": "Payment Records",
+      "description": "Import card payment records and match them with SaaS apps to manage costs.",
+      "tabs": {
+        "records": "Payment Records",
+        "upload": "Upload Payment Records"
+      }
+    },
+    "table": {
+      "searchPlaceholder": "Search merchant name...",
+      "matchStatus": "Match Status:",
+      "all": "All",
+      "emptyMessage": "No payment records",
+      "previous": "Previous",
+      "next": "Next",
+      "of": "of",
+      "th": "th",
+      "columns": {
+        "source": "Source",
+        "transactionDate": "Transaction Date",
+        "merchantName": "Merchant Name",
+        "amount": "Amount",
+        "matchStatus": "Match Status",
+        "matchedApp": "Matched App",
+        "linkedSubscription": "Linked Subscription"
+      },
+      "source": {
+        "card": "Card",
+        "csv": "CSV"
+      },
+      "cardLast4": "Card: ****",
+      "selectAll": "Select All",
+      "select": "Select",
+      "appSelect": "Select App",
+      "subscriptionLink": "Link Subscription",
+      "unmatched": "Unmatched",
+      "unlinked": "Not Linked",
+      "registerNewApp": "Register new app",
+      "registerNewSubscription": "Register new subscription",
+      "unmatch": "Unmatch"
+    },
+    "status": {
+      "pending": "Pending",
+      "autoMatched": "Auto Matched",
+      "manual": "Manual",
+      "unmatched": "Unmatched"
+    },
+    "messages": {
+      "matchUpdated": "App match updated",
+      "matchRemoved": "Match removed",
+      "matchUpdateFailed": "Failed to update match",
+      "subscriptionLinked": "Subscription linked",
+      "subscriptionLinkFailed": "Failed to link subscription",
+      "appCreated": "App registered successfully",
+      "subscriptionCreated": "Subscription registered successfully"
+    },
+    "rowActions": {
+      "label": "Actions",
+      "registerApp": "Register App",
+      "registerSubscription": "Register Subscription"
+    },
+    "dialog": {
+      "registerApp": "Register App",
+      "registerAppDescription": "Register a new app from payment record.",
+      "registerSubscription": "Register Subscription",
+      "registerSubscriptionDescription": "Register a new subscription from payment record.",
+      "cancel": "Cancel",
+      "submit": "Register"
+    },
+    "upload": {
+      "cardTemplate": "Card Template",
+      "erpTemplate": "ERP Template",
+      "supportedFormats": "Supported CSV Formats:",
+      "cardFormat": "Card Format:",
+      "cardFormatDesc": "Payment Date, Merchant Name, Payment Amount, Card Number, Approval Number",
+      "erpFormat": "ERP Format:",
+      "erpFormatDesc": "Transaction Date, Vendor Name, Withdrawal Amount, Account, Notes",
+      "dragDrop": "Drag and drop CSV file here or click to select",
+      "fileTypeHint": "Only .csv files are supported (UTF-8 encoding recommended)",
+      "assignment": {
+        "title": "Payment Record Assignment",
+        "description": "You can assign imported payment records to teams or users",
+        "none": "Unassigned (assign later)",
+        "team": "Assign to Team",
+        "user": "Assign to User",
+        "teamSelect": "Select Team",
+        "userSelect": "Select User",
+        "teamPlaceholder": "Select a team",
+        "userPlaceholder": "Select a user",
+        "noTeams": "No teams registered",
+        "noUsers": "No users registered",
+        "selectTeam": "Please select a team",
+        "selectUser": "Please select a user"
+      },
+      "upload": "Upload and Import",
+      "processing": "Processing...",
+      "success": "Success",
+      "error": "Error",
+      "imported": "Imported:",
+      "autoMatched": "Auto Matched:",
+      "pendingMatch": "Pending Match:",
+      "duplicates": "Duplicates Excluded:",
+      "parseErrors": "Parse Errors:",
+      "moreErrors": "more errors",
+      "templateNames": {
+        "card": "card_payment_template.csv",
+        "erp": "erp_transaction_template.csv"
+      },
+      "resultModal": {
+        "title": "Upload Complete",
+        "summary": "Total {imported} records imported, {duplicates} duplicates excluded.",
+        "autoMatched": "Auto Matched",
+        "unmatched": "Unmatched",
+        "cta": "View Subscriptions"
+      }
+    }
+  },
+  "cards": {
+    "page": {
+      "title": "Corporate Cards",
+      "description": "Register corporate cards and automatically collect payment history."
+    },
+    "register": {
+      "title": "Register Card",
+      "dialogTitle": "Register Corporate Card",
+      "dialogDescription": "Register a corporate card to automatically collect payment history",
+      "cardCompany": "Card Company",
+      "cardCompanyPlaceholder": "Select card company",
+      "cardNumber": "Card Number",
+      "cardNumberPlaceholder": "0000 0000 0000 0000",
+      "cardNickname": "Card Nickname",
+      "cardNicknamePlaceholder": "e.g., Corporate Card #1",
+      "businessNumber": "Business Number",
+      "businessNumberPlaceholder": "000-00-00000",
+      "assignment": "Card Assignment (Optional)",
+      "assignmentNone": "Unassigned",
+      "assignmentTeam": "Team Shared",
+      "assignmentUser": "Personal",
+      "assignTeam": "Assign to Team",
+      "assignTeamPlaceholder": "Select team",
+      "assignUser": "Assign to User",
+      "assignUserPlaceholder": "Select user",
+      "authMethod": "Authentication Method",
+      "authMethodId": "ID Login",
+      "authMethodCert": "Digital Certificate",
+      "loginId": "Card Company Login ID",
+      "loginIdPlaceholder": "Card company website login ID",
+      "loginPassword": "Card Company Login Password",
+      "loginPasswordPlaceholder": "Card company website login password",
+      "cert": "Digital Certificate (Base64)",
+      "certPlaceholder": "Base64 encoded signCert.der file",
+      "privateKey": "Private Key (Base64)",
+      "privateKeyPlaceholder": "Base64 encoded signPri.key file",
+      "certPassword": "Certificate Password",
+      "certPasswordPlaceholder": "Certificate password",
+      "cancel": "Cancel",
+      "register": "Register",
+      "registering": "Registering...",
+      "success": "Card registered successfully",
+      "error": "Failed to register card"
+    },
+    "list": {
+      "title": "Registered Cards",
+      "description": "List of registered corporate cards.",
+      "descriptionWithSync": "List of registered corporate cards. Click the sync button to fetch the latest payment history.",
+      "empty": "No cards registered",
+      "emptyDescription": "Register a card to automatically collect payment history",
+      "columns": {
+        "cardCompany": "Card Company",
+        "cardNumber": "Card Number",
+        "nickname": "Nickname",
+        "assignment": "Assignment",
+        "sync": "Sync",
+        "saasClassification": "SaaS Classification",
+        "lastSync": "Last Sync",
+        "actions": "Actions"
+      },
+      "syncStatus": {
+        "error": "Error",
+        "synced": "{count} items",
+        "pending": "Pending"
+      },
+      "assignment": {
+        "none": "Unassigned"
+      },
+      "viewDetails": "View Transactions",
+      "details": "Details",
+      "delete": {
+        "title": "Delete card?",
+        "description": "This action cannot be undone. All transaction history linked to this card will also be deleted.",
+        "cancel": "Cancel",
+        "confirm": "Delete"
+      },
+      "sync": {
+        "success": "Sync completed: {created} added, {updated} updated",
+        "error": "Sync failed",
+        "errorGeneric": "An error occurred during sync"
+      },
+      "deleteSuccess": "Card deleted successfully",
+      "deleteError": "Failed to delete card",
+      "deleteErrorGeneric": "An error occurred during deletion"
+    },
+    "sync": {
+      "button": "Sync",
+      "title": "Card Sync",
+      "description": "Sync payment history for {cardName}.",
+      "period": "Sync Period",
+      "startDate": "Start Date",
+      "endDate": "End Date",
+      "firstSyncNote": "First sync will fetch the last 6 months of data. Period changes are available after sync completion.",
+      "cancel": "Cancel",
+      "start": "Start Sync",
+      "cardName": "Card"
+    },
+    "detail": {
+      "notFound": "Card not found",
+      "title": "Corporate Card Management",
+      "description": "View card transaction history and manage app matching",
+      "back": "Back",
+      "cardInfo": "Card Information",
+      "cardInfoDescription": "Corporate card detailed information",
+      "cardCompany": "Card Company",
+      "cardNumber": "Card Number",
+      "loginMethod": "Login Method",
+      "loginMethodId": "ID Login",
+      "loginMethodCert": "Digital Certificate",
+      "lastSync": "Last Sync",
+      "notSynced": "Not synced",
+      "lastError": "Last Error:",
+      "transactions": "Transactions",
+      "transactionsDescription": "Card payment history. Total {total} (SaaS {saas} / Unmatched {unmatched} / Non-SaaS {nonSaas})",
+      "syncStatus": {
+        "error": "Error",
+        "synced": "Synced",
+        "pending": "Pending"
+      }
+    },
+    "transactions": {
+      "tabs": {
+        "saas": "SaaS",
+        "unmatched": "Unmatched",
+        "nonSaas": "Non-SaaS",
+        "all": "All"
+      },
+      "search": {
+        "placeholder": "Search store..."
+      },
+      "empty": {
+        "title": "No transactions",
+        "description": "Click the sync button to fetch payment history"
+      },
+      "columns": {
+        "dateTime": "Date & Time",
+        "store": "Store",
+        "amount": "Amount",
+        "type": "Type",
+        "matchedApp": "Matched App",
+        "actions": "Actions"
+      },
+      "type": {
+        "approval": "Approval",
+        "purchase": "Purchase"
+      },
+      "appSelect": {
+        "placeholder": "Select App",
+        "none": "Unmatched"
+      },
+      "unmatch": "Unmatch",
+      "pagination": {
+        "range": "{start}-{end} of {total}",
+        "page": "{current} / {total}"
+      },
+      "match": {
+        "success": "App matching updated",
+        "unmatchSuccess": "Matching removed",
+        "error": "Failed to update matching"
+      }
+    },
+    "info": {
+      "title": "Card Registration Guide",
+      "description": "When you register a corporate card, payment history will be automatically collected every day at 3 AM. Card login information is encrypted and stored securely."
+    }
+  },
+  "extensions": {
+    "onboarding": {
+      "page": {
+        "title": "Onboarding Monitor",
+        "description": "Track Extension onboarding progress for all active users."
+      },
+      "stats": {
+        "total": "Total Active Users",
+        "completed": "Onboarding Completed",
+        "pending": "Onboarding Pending"
+      },
+      "filter": {
+        "all": "All",
+        "completed": "Completed",
+        "pending": "Pending"
+      },
+      "table": {
+        "title": "User Onboarding Status",
+        "description": "Onboarding status of all active users",
+        "empty": "No active users found.",
+        "columns": {
+          "user": "Name",
+          "email": "Email",
+          "department": "Department",
+          "status": "Onboarding Status"
+        },
+        "status": {
+          "completed": "Onboarding Completed",
+          "pending": "Pending"
+        }
+      }
+    },
+    "common": {
+      "add": "Add",
+      "edit": "Edit",
+      "delete": "Delete",
+      "cancel": "Cancel",
+      "save": "Save",
+      "saving": "Saving...",
+      "search": "Search",
+      "register": "Register",
+      "registering": "Registering...",
+      "block": "Block",
+      "dismiss": "Dismiss",
+      "enabled": "Enabled",
+      "disabled": "Disabled",
+      "active": "Active",
+      "inactive": "Inactive",
+      "status": "Status",
+      "name": "Name",
+      "pattern": "Pattern",
+      "source": "Source",
+      "actions": "Actions",
+      "domainPattern": "Domain pattern",
+      "reason": "Reason",
+      "activated": "Activated.",
+      "deactivated": "Deactivated.",
+      "updated": "Updated.",
+      "added": "Added.",
+      "deleted": "Deleted.",
+      "updateFailed": "Update failed",
+      "addFailed": "Add failed",
+      "deleteFailed": "Delete failed",
+      "statusChangeFailed": "Status change failed",
+      "scanFailed": "Scan failed",
+      "registerFailed": "Registration failed",
+      "processFailed": "Processing failed",
+      "noItems": "No items registered.",
+      "manualScan": "Manual scan",
+      "scanning": "Scanning...",
+      "startScan": "Start scan",
+      "confirmDelete": "Are you sure you want to delete \"{name}\"?",
+      "confirmDeleteTitle": "Confirm deletion",
+      "confirmDeleteDescription": "This action cannot be undone. Are you sure?",
+      "confirm": "Confirm",
+      "blocking": "Blocking",
+      "blockFailed": "Block failed",
+      "bulkRegisterFailed": "Bulk registration failed",
+      "bulkBlockFailed": "Bulk block failed",
+      "auto": "Auto",
+      "manual": "Manual"
+    },
+    "blockedApps": {
+      "page": {
+        "title": "Blocked Apps",
+        "description": "Manage domains to block access from extensions.",
+        "metaTitle": "Blocked Apps | SaaS Management Platform",
+        "metaDescription": "Block domain management"
+      },
+      "addButton": "Add blocked app",
+      "editTitle": "Edit blocked app",
+      "addTitle": "Add blocked app",
+      "dialogDescription": "Enter the domain pattern to block. (e.g., *.gambling.com)",
+      "patternLabel": "Domain pattern",
+      "patternHint": "Use * for wildcard patterns.",
+      "nameLabel": "App/site name",
+      "namePlaceholder": "Name of app or site to block",
+      "reasonLabel": "Block reason",
+      "reasonPlaceholder": "Enter the reason for blocking (optional)",
+      "emptyTitle": "No blocked apps.",
+      "emptyDescription": "Add domains to block to restrict user access.",
+      "tableHeaders": {
+        "name": "App/site name",
+        "pattern": "Domain pattern",
+        "reason": "Block reason",
+        "status": "Status",
+        "blockActive": "Block active"
+      },
+      "statusBlocking": "Blocking",
+      "statusInactive": "Inactive"
+    },
+    "whitelist": {
+      "editTitle": "Edit whitelist",
+      "addTitle": "Add whitelist",
+      "dialogDescription": "Enter the domain pattern to allow. (e.g., *.slack.com)",
+      "patternLabel": "Domain pattern",
+      "nameLabel": "Name",
+      "tableHeaders": {
+        "name": "Name",
+        "pattern": "Pattern",
+        "source": "Source",
+        "status": "Status",
+        "enabled": "Enabled"
+      }
+    },
+    "blacklist": {
+      "editTitle": "Edit blacklist",
+      "addTitle": "Add blacklist",
+      "dialogDescription": "Enter the domain pattern to block. (e.g., *.gambling.com)",
+      "patternLabel": "Domain pattern",
+      "nameLabel": "Name",
+      "namePlaceholder": "Blocked site name",
+      "reasonLabel": "Block reason",
+      "reasonPlaceholder": "Enter the reason for blocking",
+      "tableHeaders": {
+        "name": "Name",
+        "pattern": "Pattern",
+        "reason": "Block reason",
+        "status": "Status",
+        "enabled": "Enabled"
+      }
+    },
+    "recommendedApps": {
+      "unscannedTitle": "Unscanned domains found",
+      "unscannedDescription": "{count} new domains are waiting to be scanned.",
+      "unscannedHint": "Running a scan will let AI analyze if they are SaaS.",
+      "searchPlaceholder": "Search by domain or service name...",
+      "appRegistered": "App registered",
+      "dismissed": "Dismissed",
+      "confirmDismiss": "Remove \"{domain}\" from recommendations?",
+      "confirmDismissTitle": "Confirm removal",
+      "confirmDismissDescription": "Remove this domain from the recommendation list?",
+      "emptyTitle": "No recommended apps.",
+      "emptyDescription": "AI will automatically identify SaaS when access logs accumulate.",
+      "progressHint": "AI analysis in progress...",
+      "tableHeaders": {
+        "domain": "Domain",
+        "serviceName": "Service name",
+        "category": "Category",
+        "confidence": "Confidence",
+        "visitCount": "Visits",
+        "uniqueUsers": "Users",
+        "lastSeen": "Last seen",
+        "actions": "Actions"
+      }
+    },
+    "registeredApps": {
+      "pageTitle": "Registered Apps",
+      "pageDescription": "Manage URL patterns of apps registered in subscription management. The extension tracks access to these domains.",
+      "metaTitle": "Registered Apps | SaaS Management Platform",
+      "metaDescription": "Manage whitelisted app URLs from subscriptions",
+      "searchPlaceholder": "Search by app name or URL...",
+      "syncButton": "Sync apps",
+      "manualAddButton": "Add manually",
+      "addDialogTitle": "Add manual app",
+      "addDialogDescription": "Register an app not in subscription management.",
+      "appNameLabel": "App name",
+      "appNamePlaceholder": "e.g., Slack",
+      "patternLabel": "Domain pattern",
+      "patternPlaceholder": "e.g., *.slack.com",
+      "patternHint": "Use * for wildcard patterns.",
+      "adding": "Adding...",
+      "syncComplete": "Sync complete",
+      "syncFailed": "Sync failed",
+      "confirmDelete": "Delete whitelist pattern for \"{name}\"?",
+      "confirmDeleteTitle": "Confirm pattern deletion",
+      "confirmDeleteDescription": "Delete the whitelist pattern for this app?",
+      "emptyTitle": "No registered apps.",
+      "emptyDescription": "Register apps from subscription management or click the \"Sync apps\" button.",
+      "tableHeaders": {
+        "logo": "",
+        "appName": "App name",
+        "urlPattern": "URL pattern",
+        "category": "Category",
+        "source": "Source",
+        "enabled": "Enabled"
+      }
+    },
+    "builds": {
+      "page": {
+        "metaTitle": "Download | SaaS Management Platform",
+        "metaDescription": "Extension build management",
+        "title": "Download",
+        "description": "Manage and download extension builds."
+      },
+      "newBuild": "New build",
+      "emptyTitle": "No build history.",
+      "buildStarted": "Build started.",
+      "buildStartFailed": "Failed to start build",
+      "buildInfoFailed": "Failed to load build information.",
+      "retryStarted": "Build retry started.",
+      "retryFailed": "Retry failed",
+      "confirmDelete": "Delete this build?",
+      "confirmDeleteTitle": "Confirm build deletion",
+      "confirmDeleteDescription": "Delete this build? This action cannot be undone.",
+      "buildDeleted": "Build deleted.",
+      "checksumCopied": "Checksum copied.",
+      "viewDetail": "View detail",
+      "retry": "Retry",
+      "download": "Download",
+      "close": "Close",
+      "triggerDialogTitle": "Start new build",
+      "triggerDialogDescription": "Select the platform to build.",
+      "platformLabel": "Platform",
+      "platformPlaceholder": "Select platform",
+      "starting": "Starting...",
+      "startBuild": "Start build",
+      "detailTitle": "Build detail",
+      "statusLabel": "Status:",
+      "fileSizeLabel": "File size:",
+      "checksum": "Checksum (SHA-256)",
+      "errorMessage": "Error message",
+      "buildLog": "Build log",
+      "tableHeaders": {
+        "version": "Version",
+        "status": "Status",
+        "fileSize": "File size",
+        "createdAt": "Created"
+      },
+      "status": {
+        "pending": "Pending",
+        "building": "Building",
+        "completed": "Completed",
+        "failed": "Failed"
+      }
+    },
+    "deploySettings": {
+      "title": "Deploy Settings",
+      "description": "Configure extension deployment method. The installation guide shown to users will change based on this setting.",
+      "auto": {
+        "label": "Auto Deploy (GWS/AD)",
+        "description": "Extension is automatically installed on user browsers via Google Workspace or Active Directory."
+      },
+      "webstore": {
+        "label": "Chrome Web Store",
+        "description": "Users install the extension directly from the Chrome Web Store.",
+        "urlLabel": "Web Store URL",
+        "urlPlaceholder": "https://chromewebstore.google.com/detail/..."
+      },
+      "save": "Save",
+      "saving": "Saving...",
+      "saveSuccess": "Deploy settings saved.",
+      "saveFailed": "Failed to save deploy settings."
+    },
+    "extensionGuide": {
+      "title": "Extension Installation Guide",
+      "description": "Please install the extension required for your work.",
+      "skipButton": "Skip for now",
+      "doneButton": "Installation Complete",
+      "auto": {
+        "title": "Extension will be installed automatically",
+        "description": "Your administrator has configured auto deployment. The extension will be installed automatically on your browser.",
+        "step1": "Restart your browser and the extension will be installed automatically.",
+        "step2": "After installation, click the extension icon and verify with your company email.",
+        "step3": "Once verified, the extension will start working automatically."
+      },
+      "webstore": {
+        "title": "Install from Chrome Web Store",
+        "description": "Install the extension from the Chrome Web Store using the link below.",
+        "installButton": "Install from Web Store",
+        "step1": "Click the button below to go to the Chrome Web Store.",
+        "step2": "Click 'Add to Chrome' to install the extension.",
+        "step3": "After installation, click the extension icon and verify with your company email."
+      },
+      "manual": {
+        "title": "Install Extension Manually",
+        "description": "Download the build file and install it manually.",
+        "downloadButton": "Download Latest Build",
+        "noBuilds": "No build files available yet. Please contact your administrator.",
+        "step1": "Click the button below to download the extension ZIP file.",
+        "step2": "Extract the downloaded file.",
+        "step3": "Type chrome://extensions in the Chrome address bar.",
+        "step4": "Enable 'Developer mode' in the top right corner.",
+        "step5": "Click 'Load unpacked' and select the extracted folder.",
+        "step6": "Click the extension icon and verify with your company email."
+      }
+    },
+    "installBanner": {
+      "title": "Extension not yet installed",
+      "description": "Please install the extension for accurate SaaS usage tracking.",
+      "auto": {
+        "message": "The extension will be installed automatically soon. Try restarting your browser."
+      },
+      "webstore": {
+        "message": "Install the extension from the Chrome Web Store.",
+        "action": "Install from Web Store"
+      },
+      "manual": {
+        "message": "Check the extension installation guide.",
+        "action": "View Installation Guide"
+      },
+      "dismiss": "Dismiss"
+    },
+    "reviewApps": {
+      "page": {
+        "title": "Review Apps",
+        "description": "Review suspicious malicious URLs and unregistered SaaS apps identified by AI, then register or block them."
+      },
+      "stats": {
+        "totalPending": "Total pending review",
+        "malicious": "Suspected malicious",
+        "saasRecommended": "SaaS"
+      },
+      "unscannedTitle": "Unscanned domains found",
+      "unscannedDescription": "{count} new domains are waiting to be scanned.",
+      "unscannedHint": "Running a scan will analyze SaaS status and check for malicious URLs.",
+      "progressHint": "AI analysis + malicious URL check in progress...",
+      "searchPlaceholder": "Search by domain or service name...",
+      "filterPlaceholder": "Type filter",
+      "filterAll": "All",
+      "filterMalicious": "Suspected malicious",
+      "filterSaas": "SaaS verification needed",
+      "scanSchedule": {
+        "title": "Auto Scan Schedule",
+        "totalScanned": "Total Scanned URLs",
+        "pending": "Pending URLs",
+        "nextScan": "Next Schedule",
+        "lastScan": "Last Scan"
+      },
+      "bulkRegister": "Bulk register ({count})",
+      "bulkBlock": "Bulk block ({count})",
+      "bulkBlockReasonPrompt": "Enter block reason (optional):",
+      "bulkBlockReasonTitle": "Bulk block reason",
+      "bulkBlockReasonDescription": "Block {count} selected domains. Please enter a reason.",
+      "appRegistered": "App registered",
+      "blocked": "Blocked",
+      "dismissed": "Dismissed",
+      "confirmDismiss": "Remove \"{domain}\" from review list?",
+      "confirmDismissTitle": "Confirm removal",
+      "confirmDismissDescription": "Remove this domain from the review list?",
+      "emptyTitle": "No apps pending review.",
+      "emptyDescription": "AI will automatically analyze when access logs accumulate.",
+      "typeBadge": {
+        "malicious": "Suspected malicious",
+        "saas": "SaaS"
+      },
+      "confidence": "Confidence {value}",
+      "blockModal": {
+        "title": "Block domain",
+        "description": "Block {domain}. Please enter a reason.",
+        "reasonLabel": "Block reason",
+        "reasonPlaceholder": "Enter the reason for blocking (optional)",
+        "maliciousWarning": "This domain is suspected to be malicious: {reason}"
+      },
+      "tableHeaders": {
+        "select": "",
+        "domain": "Domain",
+        "type": "Type",
+        "reason": "Reason",
+        "visitCount": "Visits",
+        "uniqueUsers": "Users",
+        "lastSeen": "Last seen",
+        "actions": "Actions"
+      }
+    },
+    "usage": {
+      "page": {
+        "metaTitle": "Usage | SaaS Management Platform",
+        "metaDescription": "Analyze SaaS usage by domain",
+        "title": "Usage",
+        "description": "Analyze SaaS usage by domain."
+      },
+      "period": {
+        "today": "Today",
+        "week": "Weekly",
+        "month": "Monthly"
+      },
+      "cards": {
+        "totalLogins": "Total Logins",
+        "uniqueDevices": "Unique Devices"
+      },
+      "domain": {
+        "title": "Logins by Domain",
+        "emptyState": "No login data available.",
+        "emptyDescription": "Register domains in the Whitelist and log in through the Extension."
+      },
+      "table": {
+        "domain": "Domain",
+        "loginCount": "Logins",
+        "deviceCount": "Devices",
+        "detail": "Detail",
+        "time": "Time",
+        "username": "Username",
+        "deviceId": "Device ID",
+        "authType": "Auth Type"
+      },
+      "dialog": {
+        "summary": "{loginCount} logins · {userCount} users",
+        "loading": "Loading...",
+        "noRecords": "No login records for this date.",
+        "noRecordsHint": "Try selecting a different date.",
+        "resultCount": "{count} logins on {date}"
+      },
+      "error": {
+        "loadFailed": "Failed to load data"
+      }
+    }
+  },
+  "filterBar": {
+    "searchPlaceholder": "Search...",
+    "allPrefix": "All {label}",
+    "activeFilters": "{count} filters applied",
+    "reset": "Reset"
+  },
+  "imageUpload": {
+    "placeholder": "Drag or click to upload an image",
+    "fileSizeError": "File size must be {maxSize}MB or less.",
+    "fileTypeError": "Only image files can be uploaded.",
+    "change": "Change",
+    "delete": "Delete",
+    "formatHint": "PNG, JPG, GIF (max {maxSize}MB)",
+    "mainImage": "Upload main image"
+  },
+  "shadowIT": {
+    "title": "Recently Discovered Shadow IT",
+    "description": "Apps discovered outside official channels",
+    "searchPlaceholder": "Search apps...",
+    "export": "Export",
+    "filterAll": "All",
+    "filterAI": "AI Only",
+    "filterOther": "Other",
+    "noShadowAI": "No Shadow AI detected",
+    "noShadowIT": "No shadow IT detected",
+    "filtered": "(filtered)",
+    "previous": "Previous",
+    "next": "Next",
+    "tableHeaders": {
+      "id": "ID",
+      "appName": "App Name",
+      "source": "Source",
+      "estCost": "Est. Cost",
+      "status": "Status"
+    },
+    "status": {
+      "reviewNeeded": "Review Needed",
+      "blocked": "Blocked",
+      "approved": "Approved",
+      "inactive": "Inactive"
+    },
+    "pagination": "{start}-{end} of {total}"
+  },
+  "saasReview": {
+    "title": "SaaS Review/Approval",
+    "description": "Review and approve new SaaS identified by LLM. Check reasoning and confidence from logs.",
+    "breadcrumbs": {
+      "settings": "Settings",
+      "saasReview": "SaaS Review"
+    },
+    "sendMetricsEmail": "Send metrics email",
+    "approveFailed": "Approval failed",
+    "rejectFailed": "Rejection failed",
+    "emailFailed": "Failed to send email",
+    "stats": {
+      "totalLogs": "Total inference logs",
+      "totalLogsDesc": "Cumulative",
+      "saasDetected": "Detected as SaaS",
+      "saasDetectedDesc": "isSaaS=true",
+      "nonSaas": "Non-SaaS",
+      "nonSaasDesc": "isSaaS=false",
+      "avgConfidence": "Average confidence",
+      "avgConfidenceDesc": "Last 50 records",
+      "successRate": "Inference success rate",
+      "successRateDesc": "rawResult existence ratio",
+      "avgTokens": "Average token usage",
+      "avgTokensDesc": "Prompt / Completion / Total",
+      "errorCodesTop": "Top error codes",
+      "errorCodesTopDesc": "Recent cumulative",
+      "noErrors": "No errors",
+      "recentFailures": "Recent failures",
+      "recentFailuresDesc": "Up to 8 records",
+      "noFailures": "No failure logs",
+      "count": "{count}"
+    },
+    "pendingApps": {
+      "title": "Pending SaaS approval",
+      "description": "Apps newly discovered by LLM. Review and approve (activate) or block.",
+      "empty": "No apps pending approval.",
+      "approve": "Approve",
+      "reject": "Block",
+      "noCatalog": "None",
+      "tableHeaders": {
+        "appName": "App name",
+        "catalog": "Catalog",
+        "createdAt": "Created",
+        "actions": "Actions"
+      }
+    },
+    "logs": {
+      "title": "Recent LLM inference logs (50)",
+      "description": "Check reasoning and confidence.",
+      "empty": "No logs.",
+      "saas": "SaaS",
+      "nonSaas": "Non-SaaS",
+      "tableHeaders": {
+        "merchantName": "Merchant name",
+        "suggestedName": "Suggested SaaS",
+        "confidence": "Confidence",
+        "result": "Result",
+        "createdAt": "Created"
+      }
+    }
+  },
+  "subscriptionSuggestions": {
+    "title": "Subscription Verification",
+    "description": "Subscription patterns discovered through corporate card and payment history analysis",
+    "registered": "{appName} subscription registered",
+    "registerFailed": "Failed to register subscription",
+    "billingCycle": {
+      "MONTHLY": "Monthly",
+      "QUARTERLY": "Quarterly",
+      "YEARLY": "Yearly",
+      "ONE_TIME": "One-time"
+    },
+    "payment": "payment",
+    "analyzed": "{count} analyzed",
+    "register": "Register",
+    "confidence": {
+      "high": "High confidence",
+      "medium": "Medium",
+      "low": "Low"
+    },
+    "source": {
+      "card": "Corporate card",
+      "csv": "CSV"
+    },
+    "unassigned": "Unassigned",
+    "userAssignment": "User assignment (optional)",
+    "selectUsers": "Select users",
+    "selectedCount": "{count} selected",
+    "searchUsers": "Search users...",
+    "noUsersFound": "No users found",
+    "seatBased": "Seat-based subscription",
+    "autoDetected": "Auto-detected",
+    "needsReview": "Needs review",
+    "totalSeats": "Total seats",
+    "totalSeatsPlaceholder": "Total seats",
+    "seatStatus": "Assigned: {assigned} / {total} Seat",
+    "seatRequiredError": "Total seats is required for seat-based subscriptions",
+    "seatExceededError": "Assigned users ({assigned}) cannot exceed total seats ({total})",
+    "seatLimitReached": "Seat limit reached",
+    "selectTeam": "Select team",
+    "registerDialog": {
+      "title": "Register Subscription",
+      "description": "Register a subscription based on discovered payment patterns",
+      "cancel": "Cancel"
+    },
+    "table": {
+      "app": "App",
+      "confidence": "Confidence",
+      "source": "Source",
+      "amount": "Amount",
+      "billingCycle": "Billing Cycle",
+      "paymentCount": "Payments",
+      "paymentCountValue": "{count}",
+      "assignment": "Assignment",
+      "empty": "No subscription suggestions found",
+      "totalItems": "{count} total items"
+    }
+  },
+  "teams": {
+    "page": {
+      "title": "Team Management",
+      "description": "Manage teams/departments synced with Google Workspace org units"
+    },
+    "stats": {
+      "totalTeams": "Total Teams",
+      "teamsWithMembers": "Teams with Members",
+      "avgMembersPerTeam": "Avg Members per Team",
+      "maxDepth": "Max Depth"
+    },
+    "tree": {
+      "title": "Team Structure",
+      "addTeam": "Add Team",
+      "expandAll": "Expand All",
+      "collapseAll": "Collapse All",
+      "searchPlaceholder": "Search teams...",
+      "noSearchResults": "No search results",
+      "empty": "No teams found. Connect Google Workspace or add teams manually.",
+      "edit": "Edit",
+      "delete": "Delete",
+      "noMembers": "No members"
+    },
+    "create": {
+      "title": "Create New Team",
+      "description": "Create a new team and assign members",
+      "teamName": "Team Name",
+      "namePlaceholder": "e.g., Development, Marketing",
+      "descriptionPlaceholder": "Enter team description",
+      "parentTeam": "Parent Team",
+      "parentTeamPlaceholder": "Select parent team",
+      "noParent": "None (top-level team)",
+      "memberAssignment": "Member Assignment",
+      "selectedMembers": "selected",
+      "memberSearchPlaceholder": "Search by name or email...",
+      "noSearchResults": "No search results",
+      "noAvailableMembers": "No available members",
+      "noName": "No name",
+      "nameRequired": "Please enter a team name",
+      "success": "Team created successfully",
+      "error": "Failed to create team",
+      "cancel": "Cancel",
+      "creating": "Creating...",
+      "create": "Create Team"
+    },
+    "edit": {
+      "title": "Edit Team",
+      "description": "Edit team information",
+      "linkedTeamNote": "Some information cannot be edited for Google Workspace linked teams",
+      "teamName": "Team Name",
+      "namePlaceholder": "Enter team name",
+      "linkedTeamNameNote": "Linked team names are managed in Google Workspace",
+      "descriptionPlaceholder": "Enter team description",
+      "parentTeam": "Parent Team",
+      "parentTeamPlaceholder": "Select parent team",
+      "noParent": "None (top-level team)",
+      "memberAssignment": "Member Assignment",
+      "selectedMembers": "selected",
+      "memberSearchPlaceholder": "Search by name or email...",
+      "noSearchResults": "No search results",
+      "noAvailableMembers": "No available members",
+      "noName": "No name",
+      "movingFrom": "moving from",
+      "current": "Current:",
+      "nameRequired": "Please enter a team name",
+      "success": "Team updated successfully",
+      "error": "Failed to update team",
+      "cancel": "Cancel",
+      "saving": "Saving...",
+      "save": "Save"
+    },
+    "delete": {
+      "title": "Delete Team",
+      "confirm": "Are you sure you want to delete {name}?",
+      "irreversible": "This action cannot be undone.",
+      "impact": "Impact of deletion:",
+      "membersImpact": "{count} members will be removed from this team",
+      "appsImpact": "{count} app connections will be removed",
+      "subscriptionsImpact": "{count} subscription connections will be removed",
+      "cardsImpact": "{count} card connections will be removed",
+      "childTeamsImpact": "{count} child teams will be deleted",
+      "noImpact": "No connected data for this team",
+      "cancel": "Cancel",
+      "deleting": "Deleting...",
+      "delete": "Delete",
+      "success": "Team deleted successfully",
+      "error": "Failed to delete team"
+    }
+  },
+  "users": {
+    "page": {
+      "title": "Users",
+      "description": "Manage all users in your organization",
+      "inviteUser": "Invite User"
+    },
+    "filter": {
+      "status": "Status",
+      "role": "Role"
+    },
+    "status": {
+      "active": "Active",
+      "inactive": "Inactive",
+      "terminated": "Terminated"
+    },
+    "role": {
+      "admin": "Admin",
+      "member": "Member",
+      "viewer": "Viewer"
+    },
+    "kpi": {
+      "total": "Total Users",
+      "active": "Active Users",
+      "inactive": "Inactive Users",
+      "terminated": "Terminated Users"
+    },
+    "table": {
+      "searchPlaceholder": "Search by name, email, department...",
+      "loading": "Loading users...",
+      "emptyMessage": "No users found",
+      "columns": {
+        "user": "User",
+        "role": "Role",
+        "status": "Status",
+        "department": "Department",
+        "appAccessCount": "Assigned Apps",
+        "lastLoginAt": "Last Login"
+      }
+    },
+    "detail": {
+      "loading": "Loading user...",
+      "notFound": "User not found",
+      "backToList": "Back to list",
+      "description": "{department} · {count} assigned apps",
+      "accountInfo": "Account Info",
+      "email": "Email",
+      "department": "Department",
+      "appAccessCount": "Assigned Apps",
+      "lastLogin": "Last Login",
+      "createdAt": "Created At",
+      "statusRole": "Status & Role",
+      "role": "Role",
+      "status": "Status",
+      "subscriptions": "Subscriptions",
+      "totalSubscriptions": "Total Subscriptions",
+      "monthlyCost": "Monthly Cost",
+      "renewingSoon": "Renewing Soon",
+      "noSubscriptions": "No subscriptions",
+      "viewSubscriptions": "View Subscriptions",
+      "connectedApps": "Connected Apps",
+      "noApps": "No connected apps",
+      "source": "Source",
+      "permission": "Permission",
+      "unknown": "Unknown",
+      "noRecentUse": "No recent use"
+    },
+    "terminated": {
+      "page": {
+        "title": "Offboarded Users",
+        "description": "Manage unrevoked app access for terminated users"
+      },
+      "loading": "Loading terminated users...",
+      "empty": "No terminated users",
+      "appCount": " app access",
+      "terminatedDate": "Terminated Date",
+      "revokeAll": "Revoke All",
+      "revokeAllTitle": "Revoke All Access",
+      "revokeAllDescription": "Revoke all {count} app access for {name}?",
+      "cancel": "Cancel",
+      "processing": "Processing...",
+      "revoke": "Revoke",
+      "lastUsed": "Last Used",
+      "subscriptionSection": "Subscription Assignments",
+      "subscriptionBillingCycle": "Billing: {cycle}",
+      "subscriptionAssignedAt": "Assigned: {date}",
+      "billingType": {
+        "FLAT_RATE": "Flat Rate",
+        "PER_SEAT": "Per Seat"
+      }
+    },
+    "offboard": {
+      "title": "Offboard User",
+      "description": "Offboard {name} from the organization. The user will be moved to Terminated status and can be managed from the Offboarded Users page.",
+      "confirm": "Offboard",
+      "cancel": "Cancel",
+      "processing": "Processing...",
+      "adminWarning": "Admins cannot be offboarded. Please transfer admin role to another member first.",
+      "relatedData": "Related Data",
+      "ownedApps": "Owned Apps",
+      "assignedCards": "Assigned Cards",
+      "assignedTransactions": "Assigned Transactions",
+      "directReports": "Direct Reports",
+      "assignedSubscriptions": "Assigned Subscriptions",
+      "reassignNote": "This data will be preserved and can be managed from the Offboarded Users page.",
+      "noRelatedData": "No related data found.",
+      "count": "{count}"
+    },
+    "permanentDelete": {
+      "title": "Permanently Delete",
+      "description": "Permanently delete {name} from the organization. All related data assignments will be cleared. This action cannot be undone.",
+      "confirm": "Delete Permanently",
+      "cancel": "Cancel",
+      "processing": "Deleting..."
+    },
+    "transferAdmin": {
+      "title": "Transfer Admin Role",
+      "description": "Transfer admin privileges to another member.",
+      "selectTarget": "Select Target",
+      "selectTargetPlaceholder": "Select a member",
+      "selectNewRole": "Your New Role",
+      "summary": "Change Summary",
+      "summaryTarget": "{name} will become Admin",
+      "summarySelf": "You will become {role}",
+      "confirm": "Transfer",
+      "cancel": "Cancel",
+      "processing": "Transferring...",
+      "noEligibleMembers": "No eligible active members available."
+    }
+  },
+  "dashboardV2Demo": {
+    "hero": {
+      "title": "Monthly Cost Savings Opportunity",
+      "perYear": "/year",
+      "vsLastMonth": "vs last month",
+      "unusedLicenses": "Unused Licenses",
+      "duplicateSubs": "Duplicate Subscriptions",
+      "overProvisioned": "Over-provisioned",
+      "seatsIdle": "{count} seats idle",
+      "apps": "{count} apps"
+    },
+    "kpi": {
+      "totalSaasCost": "Total SaaS Cost",
+      "unusedLicenses": "Unused Licenses",
+      "duplicateSubs": "Duplicate Subscriptions",
+      "optimizationProgress": "Optimization Progress",
+      "critical": "Critical",
+      "onTrack": "On track",
+      "seatsWasted": "{count} seats wasted",
+      "canBeConsolidated": "Can be consolidated",
+      "vsBudget": "vs budget: {ratio}%"
+    },
+    "chart": {
+      "title": "Cost Trend",
+      "subtitle": "SaaS spending vs budget",
+      "saasCost": "SaaS Cost",
+      "budget": "Budget",
+      "cost": "Cost",
+      "period3M": "3M",
+      "period6M": "6M",
+      "period12M": "12M"
+    },
+    "savings": {
+      "title": "Savings Opportunity Analysis",
+      "unusedSeats": "Unused Seats",
+      "duplicateApps": "Duplicate Apps",
+      "planDowngrade": "Plan Downgrade",
+      "ofTotalSavings": "{percent}% of total savings",
+      "viewDetailedAnalysis": "View Detailed Analysis"
+    },
+    "table": {
+      "title": "Top Cost Apps",
+      "subtitle": "Ranked by monthly spend",
+      "viewAll": "View All",
+      "app": "App",
+      "monthlyCost": "Monthly Cost",
+      "licenses": "Licenses",
+      "usage": "Usage",
+      "efficiency": "Efficiency"
+    },
+    "renewals": {
+      "title": "Upcoming Renewals",
+      "viewNegotiationChecklist": "View Negotiation Checklist"
+    }
+  },
+  "dashboardV2Seat": {
+    "header": {
+      "title": "Operational Efficiency & Seat Optimization",
+      "subtitle": "Advanced SaaS Management V2 - VIP Demo",
+      "last30Days": "Last 30 Days",
+      "exportReport": "Export Report",
+      "totalRealizableSavings": "Total Realizable Savings"
+    },
+    "kpi": {
+      "utilizationRate": "Seat Utilization Rate",
+      "wastedSeats": "Total Wasted Seats",
+      "costPerSeat": "Average Cost Per Seat",
+      "target": "Target: {value}% utilization across all core apps",
+      "highRisk": "{count} High Risk",
+      "potentialRecovery": "Potential Recovery",
+      "perMonth": "/mo",
+      "seatsNoActivity": "Seats with 0 activity in last 60 days",
+      "vsMarketAvg": "vs Market Avg {value}",
+      "percentileRank": "Ranked in top {value}th percentile for IT spend density"
+    },
+    "matrix": {
+      "title": "App Efficiency Matrix",
+      "subtitle": "Cost per user vs. Utilization frequency",
+      "highValue": "High Value",
+      "review": "Review",
+      "risk": "Risk",
+      "monthlyCostPerSeat": "Monthly Cost Per Seat",
+      "utilizationRate": "Utilization Rate",
+      "usage": "Usage",
+      "tooltipUtil": "{rate}% Util",
+      "tooltipCost": "{amount}/seat"
+    },
+    "department": {
+      "title": "Department Spend Analysis",
+      "subtitle": "SaaS spending by functional team",
+      "totalMonthly": "Total Monthly",
+      "monthlyTotal": "Monthly Total (₩)",
+      "countUnit": "",
+      "ofTotal": "{percent}% of total",
+      "empty": "No department spend data available",
+      "noData": "No data available",
+      "export": {
+        "department": "Department",
+        "amount": "Amount",
+        "percentage": "Percentage"
+      }
+    },
+    "actions": {
+      "title": "Optimization Action Items",
+      "subtitle": "Automated recommendations for immediate cost reduction",
+      "opportunitiesFound": "{count} Opportunities Found",
+      "estSavings": "Est. Savings",
+      "executeAction": "Execute Action",
+      "viewAllOpportunities": "View All Opportunities"
+    }
+  },
+  "dashboardV2Cost": {
+    "header": {
+      "breadcrumb": {
+        "platform": "Platform",
+        "analytics": "Analytics"
+      },
+      "title": "Dashboard V2",
+      "badge": "VIP Demo",
+      "last30Days": "Last 30 Days",
+      "exportPdf": "Export PDF"
+    },
+    "hero": {
+      "title": "Total Optimization Opportunity",
+      "perMonth": "/mo",
+      "annualPossible": "Annual {amount} possible",
+      "vsLM": "vs LM",
+      "unusedLicenses": "Unused Seats",
+      "duplicateSubs": "Duplicate Subs",
+      "overProvisioned": "Unused Subscription Cost",
+      "idleSeats": "{count} idle seats identified",
+      "overlappingTools": "{count} overlapping tools",
+      "appsDowngrade": "{count} unused found"
+    },
+    "kpi": {
+      "totalSaasCost": "Total SaaS Cost",
+      "unusedLicenses": "Unused Licenses",
+      "duplicateSubs": "Duplicate Subs",
+      "optimizationProgress": "Optimization Progress",
+      "urgent": "Urgent",
+      "wasted": "wasted",
+      "mergeable": "Mergeable",
+      "complete": "Complete",
+      "idleSeatsAcross": "{seats} idle seats across {apps} apps",
+      "savingsIfConsolidated": "Estimated {percent}% savings if consolidated"
+    },
+    "chart": {
+      "title": "SaaS Cost Trend",
+      "subtitle": "Monthly SaaS spending trend",
+      "saasCost": "SaaS Cost",
+      "budgetLimit": "BUDGET LIMIT",
+      "yAxisLabel": "Y-Axis: Monthly Millions",
+      "period3M": "3M",
+      "period6M": "6M",
+      "period1Y": "1Y"
+    },
+    "savings": {
+      "title": "Savings Opportunity Analysis",
+      "subtitle": "Distribution of potential savings",
+      "unusedSeats": "Unused Seats",
+      "duplicateApps": "Duplicate Apps",
+      "planDowngrade": "Plan Downgrade",
+      "viewDetailedAnalysis": "View Detailed Analysis"
+    },
+    "table": {
+      "title": "Top Cost Apps",
+      "subtitle": "Resource efficiency and cost distribution",
+      "searchPlaceholder": "Search apps...",
+      "rank": "Rank",
+      "appName": "App Name",
+      "monthlyCost": "Total Spend",
+      "licenses": "Seat",
+      "usageEfficiency": "Usage Efficiency",
+      "grade": "Grade",
+      "noSeatData": "N/A",
+      "showingResults": "Showing {from}-{to} of {total} applications",
+      "previous": "Previous",
+      "next": "Next"
+    },
+    "renewals": {
+      "title": "Upcoming Renewals",
+      "title30days": "Apps Requiring Renewal Within 30 Days",
+      "subtitle": "Apps requiring action within 30 days",
+      "urgent": "Urgent",
+      "moderate": "Moderate",
+      "safe": "Safe",
+      "unknown": "Unknown",
+      "viewAllNegotiationTips": "View All Negotiation Tips"
+    }
+  },
+  "dashboardV3": {
+    "table": {
+      "noSeatData": "N/A"
+    },
+    "alertBanner": {
+      "noPaymentData": {
+        "title": "No Payment Records",
+        "message": "Upload your payment records to enable accurate cost analysis and automatic SaaS matching. Get started now."
+      },
+      "terminatedWithSub": {
+        "title": "Unrecovered Subscriptions from Offboarded Users",
+        "message": "There are offboarded users who still have subscription assignments. Review and recover these subscriptions."
+      },
+      "subAnomalyFlatRate": {
+        "title": "Subscription with No Assigned Users: {appName}",
+        "message": "This flat-rate subscription has no assigned users but is still being billed. Consider canceling or reassigning."
+      },
+      "subAnomalyPerSeat": {
+        "title": "Unused Seats Available: {appName}",
+        "message": "Using {usedLicenses} of {totalLicenses} seats. You can reduce costs by removing unused seats."
+      },
+      "pendingOnboarding": {
+        "title": "Extension Onboarding Incomplete",
+        "message": "{count} users have not yet completed Extension onboarding."
+      },
+      "pendingSubscriptions": {
+        "title": "Subscriptions Pending Registration",
+        "message": "{count} subscriptions detected from payment records. Check the subscription list and register them."
+      }
+    },
+    "kpi": {
+      "totalCost": {
+        "title": "Total Cost",
+        "ariaLabel": "Go to subscription list to view total cost details",
+        "vsLastMonth": "vs Last Month",
+        "noChange": "No change vs last month"
+      },
+      "anomaly": {
+        "title": "Cost Anomaly Detection",
+        "ariaLabel": "View cost anomaly detection details",
+        "count": "{count} items",
+        "severity": "Severity: {level}",
+        "noAnomalies": "No anomalies detected",
+        "severityHigh": "High",
+        "severityMedium": "Medium",
+        "severityLow": "Low"
+      },
+      "terminated": {
+        "title": "Terminated User Accounts",
+        "ariaLabel": "View terminated user recovery details",
+        "count": "{count} users",
+        "countSuffix": "accounts",
+        "subAccess": "{count} subscriptions unrecovered",
+        "allRecovered": "All accounts recovered"
+      },
+      "appsWithoutSub": {
+        "title": "Apps Without Subscription",
+        "ariaLabel": "View apps without subscription details",
+        "count": "{count} apps",
+        "detail": "{count} of {total} apps",
+        "allLinked": "All apps have subscriptions linked"
+      }
+    }
+  },
+  "dashboard2": {
+    "appStatus": {
+      "title": "App Status",
+      "ariaLabel": "View all apps",
+      "totalApps": "total apps",
+      "viewAll": "View All",
+      "inUse": "In Use",
+      "discontinued": "Discontinued",
+      "blocked": "Blocked",
+      "percentInUse": "{percent}% in use"
+    },
+    "licensesChart": {
+      "title": "Assigned Seats vs Total Seats",
+      "unusedBadge": "{count} unassigned",
+      "potentialSavings": "~{amount}/mo potential savings ({percent}% unassigned)",
+      "utilizationTrend": "Seat utilization trend",
+      "period6months": "Last 6 months",
+      "period3months": "Last 3 months",
+      "totalSeats": "Total Seats",
+      "assignedSeats": "Assigned Seats",
+      "unused": "Unassigned",
+      "unassignedSeats": "Unassigned Seats"
+    },
+    "seatUtilization": {
+      "title": "Seat Utilization Bottom 5",
+      "description": "Apps with the lowest seat utilization — wasted seats",
+      "assigned": "Assigned Seats",
+      "unassigned": "Unassigned Seats",
+      "rate": "Utilization",
+      "legendLow": "< 50%",
+      "legendMid": "50–79%",
+      "legendHigh": "≥ 80%",
+      "empty": "No active subscriptions",
+      "export": {
+        "appName": "App Name",
+        "assigned": "Assigned Seats",
+        "total": "Total Seats",
+        "rate": "Utilization (%)"
+      }
+    },
+    "licenseApps": {
+      "title": "License Issued Top 5",
+      "description": "Apps ranked by total licenses issued",
+      "rank": "Rank",
+      "appName": "App Name",
+      "usage": "Usage",
+      "issued": "Issued",
+      "licenses": "Active Users",
+      "empty": "No license data available",
+      "summaryLabel": "Total Users",
+      "summaryValue": "{count}",
+      "legendValue": "{count} users",
+      "tooltipLicenses": "{count} users",
+      "export": {
+        "appName": "App Name",
+        "licenses": "User Count"
+      }
+    }
+  },
+  "sync": {
+    "rematch": {
+      "button": "Rematch",
+      "buttonWithCount": "Rematch ({count})",
+      "running": "Rematching...",
+      "alreadyRunning": "Rematch is already in progress",
+      "success": "Rematch complete: {matched} matched, {unmatched} unmatched",
+      "error": "Rematch failed"
+    },
+    "history": {
+      "title": "Sync History",
+      "empty": "No sync history found",
+      "loadMore": "Load more",
+      "type": {
+        "CARD_SYNC": "Card Sync",
+        "CSV_IMPORT": "CSV Upload",
+        "REMATCH": "Rematch"
+      },
+      "status": {
+        "RUNNING": "Running",
+        "SUCCESS": "Success",
+        "PARTIAL": "Partial Success",
+        "FAILED": "Failed"
+      },
+      "triggeredBy": {
+        "USER": "Manual",
+        "CRON": "Automatic",
+        "RETRY": "Retry"
+      }
+    },
+    "cardStatus": {
+      "normal": "Normal",
+      "syncFailed": "Sync Failed",
+      "consecutiveFail": "{count} consecutive failures",
+      "notSynced": "Not Synced"
+    },
+    "retry": {
+      "button": "Retry",
+      "running": "Retrying..."
+    }
+  },
+  "superAdmin": {
+    "nav": {
+      "dashboard": "Overview",
+      "tenant": "Tenant Settings",
+      "admins": "Admin Management",
+      "extensionBuilds": "Extension Builds"
+    },
+    "dashboard": {
+      "title": "Overview",
+      "description": "View overall tenant usage statistics."
+    },
+    "tenant": {
+      "title": "Tenant Settings",
+      "description": "Manage organization basic information."
+    },
+    "admins": {
+      "title": "Admin Management",
+      "description": "Invite and manage tenant administrators."
+    },
+    "extensionBuilds": {
+      "title": "Extension Builds",
+      "description": "Manage browser extension builds."
+    }
+  }
+}
