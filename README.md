@@ -36,7 +36,9 @@
 </p>
 
 <p align="center">
-  <img src="docs/screenshots/dashboard.png" alt="saaslens Dashboard" width="800" />
+  <video src="docs/screenshots/saaslens-demo-nosound.mp4" controls muted autoplay loop playsinline width="800">
+    saaslens Dashboard demo video
+  </video>
 </p>
 
 ## Why saaslens
