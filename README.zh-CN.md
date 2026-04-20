@@ -20,7 +20,11 @@
 
 <p align="center"><sub>如果您觉得saaslens有用，请考虑给它一个<a href="https://github.com/Wondermove-Inc/saaslens">star</a>。这有助于更多人发现这个项目。</sub></p>
 
-<p align="center"><img src="docs/screenshots/dashboard.png" alt="saaslens 仪表板" width="800" /></p>
+<p align="center">
+  <video src="docs/screenshots/saaslens-demo-nosound.mp4" controls muted autoplay loop playsinline width="800">
+    saaslens 仪表板演示视频
+  </video>
+</p>
 
 ## 为什么选择saaslens
 

@@ -20,7 +20,11 @@
 
 <p align="center"><sub>saaslensが役に立ったら、ぜひ<a href="https://github.com/Wondermove-Inc/saaslens">star</a>をお願いします。より多くの人がプロジェクトを発見できます。</sub></p>
 
-<p align="center"><img src="docs/screenshots/dashboard.png" alt="saaslens ダッシュボード" width="800" /></p>
+<p align="center">
+  <video src="docs/screenshots/saaslens-demo-nosound.mp4" controls muted autoplay loop playsinline width="800">
+    saaslens ダッシュボードデモ動画
+  </video>
+</p>
 
 ## なぜsaaslensか
 
