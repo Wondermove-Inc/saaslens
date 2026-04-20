@@ -33,8 +33,8 @@ export default async function AuthLayout({
             {/* 브랜드 로고 */}
             <Image
               src="/logo-white.svg"
-              alt="Sublex"
-              width={200}
+              alt="saaslens"
+              width={240}
               height={38}
               priority
             />
@@ -68,9 +68,9 @@ export default async function AuthLayout({
         <div className="mb-8 flex items-center lg:hidden">
           <Image
             src="/logo-white.svg"
-            alt="Sublex"
-            width={140}
-            height={26}
+            alt="saaslens"
+            width={170}
+            height={27}
             priority
           />
         </div>
