@@ -35,11 +35,7 @@
   <sub>If you find saaslens useful, please consider giving it a <a href="https://github.com/Wondermove-Inc/saaslens">star</a>. It helps others discover the project.</sub>
 </p>
 
-<p align="center">
-  <video src="docs/screenshots/saaslens-demo-nosound.mp4" controls muted autoplay loop playsinline width="800">
-    saaslens Dashboard demo video
-  </video>
-</p>
+https://github.com/user-attachments/assets/47632ce2-cef5-4e8d-90a1-d4c6627099b3
 
 ## Why saaslens
 

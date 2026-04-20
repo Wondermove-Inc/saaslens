@@ -4,17 +4,16 @@ This directory contains visual assets for the saaslens README and documentation.
 
 ## Current Assets
 
-| File                        | Purpose                          | Status |
-| --------------------------- | -------------------------------- | ------ |
-| `saaslens-demo-nosound.mp4` | Hero demo video (no audio)       | Ready  |
-| `hero-banner.svg`           | README top banner (1280x640)     | Ready  |
-| `architecture.svg`          | How it works diagram             | Ready  |
-| `social-preview.svg`        | GitHub Social Preview (1280x640) | Ready  |
-| `dashboard.png`             | Main dashboard screenshot        | TODO   |
-| `subscriptions.png`         | Subscription list screenshot     | TODO   |
-| `payment-matching.png`      | Payment matching screenshot      | TODO   |
-| `cost-analytics.png`        | Cost analytics screenshot        | TODO   |
-| `ai-agent.png`              | AI agent screenshot              | TODO   |
+| File                   | Purpose                          | Status |
+| ---------------------- | -------------------------------- | ------ |
+| `hero-banner.svg`      | README top banner (1280x640)     | Ready  |
+| `architecture.svg`     | How it works diagram             | Ready  |
+| `social-preview.svg`   | GitHub Social Preview (1280x640) | Ready  |
+| `dashboard.png`        | Main dashboard screenshot        | TODO   |
+| `subscriptions.png`    | Subscription list screenshot     | TODO   |
+| `payment-matching.png` | Payment matching screenshot      | TODO   |
+| `cost-analytics.png`   | Cost analytics screenshot        | TODO   |
+| `ai-agent.png`         | AI agent screenshot              | TODO   |
 
 ## How to Generate Screenshots
 
