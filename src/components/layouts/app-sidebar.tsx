@@ -225,9 +225,9 @@ export function AppSidebar({
               <Link href="/dashboard" className="flex items-center">
                 <Image
                   src="/logo.svg"
-                  alt="Sublex"
-                  width={140}
-                  height={26}
+                  alt="saaslens"
+                  width={170}
+                  height={28}
                   priority
                 />
               </Link>
